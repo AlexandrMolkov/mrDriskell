@@ -1,0 +1,228 @@
+
+    .hero{
+        width: 100%;
+        overflow: hidden;
+
+
+
+        min-height: 700px;
+        background-color: $black;
+/*         //background-image: url('../img/hero.png');
+        background-image: url('../img/hero.png');
+        background-size: cover;
+        background-position: center;
+        
+        .webp & {
+            background-image: url('../img/hero.webp');
+        } */
+
+        &__wrapper{
+            //max-width: 1440px;
+            margin: 0 auto;
+        }   
+        
+        @media (max-width:  $laptop){
+
+        }
+    
+
+
+    
+    
+        &__content{
+            display: flex;
+            position: relative;
+    
+            @media (max-width: $desktop){
+                height: 720px;
+            }
+    
+            @media (max-width: $laptop){
+                height: 568px;
+            }
+        }
+    
+        &__item{
+            padding-top: 83px;
+            padding-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+            
+            padding-left: 160px;
+            z-index: 0;
+    
+    
+            @media (max-width:  $desktop){
+                padding-left: 87px;
+                padding-top: 0;
+                max-width: none;
+                 
+            }
+    
+            @media (max-width:  $laptop){
+                padding-left: 0;
+                align-items: center;
+                width: 100%;
+                z-index: 0;
+            }
+        }
+    }
+
+
+.slider-main{
+
+    max-width: 1920px;
+    width: 100%;
+    height: 700px;
+    position: relative;
+
+    &__slide{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-position: center;
+    }
+
+    &__image{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title,  &__subtitle{
+        position: relative;
+        z-index: 2;
+        text-align: start;
+
+    }
+    &__title{
+        max-width: 600px;
+
+        font-size: 75px;
+        line-height: 100%;
+        color: $accent;
+
+        animation-fill-mode: forwards;
+
+        margin-bottom: 30px;
+
+        @media (max-width:  $laptop){
+
+        }
+
+
+    }
+
+    &__subtitle {
+        font-size: 25px;
+        line-height: 140%;
+
+        max-width: 430px;
+
+        margin-bottom: 60px;
+
+        @media (max-width:  $laptop){
+
+
+        }
+    }
+    &__control{
+
+        padding: 0 30px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &__control-container{
+        max-width: 1216px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+    &__control-buttons{
+        padding: 86px 0;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 40px;
+        z-index: 100;
+
+        @media (max-width: $tablet){
+            width: auto;
+            padding: 0;
+            right: 50%;
+            top: auto;
+            bottom: 52px;
+            transform: translateX(50%) translateY(-50%);
+        }
+    }
+
+
+}
+.slider-main__btn-prev, .slider-main__btn-next {
+
+    @media (max-width: $tablet){
+        display: none;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+
+}
+.slider-main__btn-next{
+    bottom: 0 ;
+}
+
+.slider-main__btn-prev{
+    top: 0;
+}
+
+.swiper-button-disabled{
+    opacity: 0.3;
+}
+
+.slider-main-pagination{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    @media (max-width: $tablet){
+        flex-direction: row;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $darkOrange;
+    border-radius: 0;
+    background: transparent;
+    position: relative;
+}
+.swiper-pagination-bullet-active{
+    &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;   
+        background-color: $accent;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,40 @@
+- 
+    const slides = [{},{},{}]
+
+    
+
+section.hero
+    .hero__wrapper
+        //.hero__content
+        h1.hero__title.visually-hidden Товары для татуировок
+        .swiper.hero__slider.slider-main
+            .swiper-wrapper
+
+                each slide in slides
+                    .swiper-slide(data-hash="slide1")
+                        .slider-main__slide(data-background="img/hero.png")
+                            //picture
+                                source(srcset="img/hero.webp" type="image/webp")
+                                img.slider-main__image(src="img/hero.png" alt="тату машинка")
+                            .container
+                                h2.slider-main__title Лучшие товары в мире татуировок
+                                .slider-main__subtitle.
+                                    Оборудование и расходники для самых ярких и качественных работ
+                                a.btn.btn--orange.slider-main__link(href="catalog.html") Смотреть каталог
+
+            .slider-main__control
+                .slider-main__control-container
+                    .slider-main__control-buttons
+                        <svg class="slider-main__btn-prev" width="40" height="63" viewBox="0 0 40 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.75" y="62.25" width="38.5" height="38.5" transform="rotate(-90 0.75 62.25)" stroke="#BB8C5F" stroke-width="1.5"/>
+                            <path d="M20 0.669872L15.6699 5L20 9.33013L24.3301 5L20 0.669872ZM20.75 41L20.75 5L19.25 5L19.25 41L20.75 41Z" fill="#BB8C5F"/>
+                        </svg>
+
+                        .slider-main-pagination
+
+                        <svg class="slider-main__btn-next" style="bottom: 0" width="40" height="91" viewBox="0 0 40 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.75" y="0.75" width="38.5" height="38.5" transform="matrix(4.37114e-08 1 1 -4.37114e-08 3.27835e-08 -3.27835e-08)" stroke="#BB8C5F" stroke-width="1.5"/>
+                            <path d="M20 90.3301L15.6699 86L20 81.6699L24.3301 86L20 90.3301ZM20.75 22L20.75 86L19.25 86L19.25 22L20.75 22Z" fill="#BB8C5F"/>
+                        </svg>
+
+

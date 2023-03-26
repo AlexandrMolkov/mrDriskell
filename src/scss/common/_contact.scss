@@ -1,0 +1,47 @@
+.contact-location, .contact-phone, .contact-mail{
+    position: relative;
+    padding-left: 40px;
+    white-space: pre;
+    
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+    }
+
+    @media (max-width: $laptop){
+        font-size: 14px;
+    }
+
+    @media (max-width: 960px){
+        margin-left: 0px;
+    }
+
+    &_top_6{
+        top: 6px;
+    }
+
+
+}
+.contact-location{
+    &::before {
+        background-image: url('../img/svg/icons/location.svg');
+    }
+}
+.contact-phone{
+    &::before {
+        background-image: url('../img/svg/icons/phone.svg');
+    }
+}
+.contact-mail{
+    &::before {
+        background-image: url('../img/svg/icons/mail.svg');
+    }
+}

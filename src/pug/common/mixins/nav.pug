@@ -1,0 +1,22 @@
+mixin nav(data, idName, current)
+    -var className = 'nav'
+    -var classes=className + ' ' + attributes.class
+    nav(class=classes id=idName)
+        ul(class=className + '__ul')
+            each item in data
+                if(typeof item.content === 'string')
+                    if current == item.content
+                        -var liClasses= className + '__li '
+                        li(class=liClasses)
+                            a(class=className + '__link ' + className + '__link_current' href=item.link)= item.content
+                    else
+                        li(class=className + '__li')
+                            a(class=className + '__link' href=item.link)= item.content
+                else
+                    -var liClasses= className + '__li '
+                    li(class=liClasses) 
+                        span= item.content.name
+                        ul(class=className + '__ul sub-menu')
+                            each listItem in item.content.list
+                                li(class=liClasses)
+                                    a(class=className + '__link ' + className href=listItem.link)= listItem.content

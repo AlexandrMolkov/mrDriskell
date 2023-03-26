@@ -1,0 +1,5 @@
+mixin burg(target, idName, content = '')
+    .burg(class=attributes.class id=idName data-target=target)
+        if content
+            div.burg__content #{content}
+        .burg__icon

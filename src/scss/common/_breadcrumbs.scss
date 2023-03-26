@@ -1,0 +1,51 @@
+
+.breadcrumbs{
+
+    padding-top: 60px;
+    padding-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__item{
+
+        &:first-child{
+            text-decoration: underline;
+        }
+
+
+        &:not(:last-child){
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+
+        &:last-child{
+            &:hover{
+                cursor: default;
+            }
+        }
+
+        &:not(:first-child){
+
+            margin-left: 15px;
+            padding-left: 15px;
+
+            &::before {
+                content: "/";
+                position: relative;
+                left: -15px;
+                
+                
+            }
+        }
+
+
+
+    }
+}

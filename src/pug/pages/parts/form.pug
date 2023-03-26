@@ -1,0 +1,25 @@
+section.form-section
+    .form-section__content.container(data-aos="flip-down" data-aos-duration="1000")
+        h2.form-section__title.title.rectangles ответим на любой вопрос
+        form.form#form(action="#" method="POST")
+            .form__row
+                input.form__input.form__input_email#email(type="text" name="name" placeholder="имя" required minlength="3" maxlength="32")
+                input.form__input.form__input_phone(type="tel" name="phone" placeholder="телефон" required)
+            .form__row
+                <textarea class="form__textarea" placeholder="Вопрос по дизайну, тюнингу и др." value=""></textarea>
+                ul.social
+                    li.social__li.social-telegram
+                        a.social__link(href="#")
+                            img.social__icon(src="img/svg/social/telegram.svg", alt="телеграм")
+                    li.social__li.social-youtube
+                        a.social__link(href="#")
+                            img.social__icon(src="img/svg/social/youtube.svg", alt="ютуб")
+                    li.social__li.social-vk
+                        a.social__link(href="#")
+                            img.social__icon(src="img/svg/social/vk.svg", alt="вконтакте")
+            .form__row
+                button.btn.form__btn(type="submit") Отправить
+                address
+                    .contact-location Eu faucibus et rutrum fringilla orci nunc
+                    a.contact-phone.contact-phone_top_6(href="tel:88121234567") 8 (812) 123-45-67
+                    a.contact-mail.contact-mail_top_6(href="mailto:test@test.ru") test@test.ru

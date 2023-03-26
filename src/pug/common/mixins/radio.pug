@@ -1,0 +1,22 @@
+mixin radio(title,name,options,checked,position,req)
+    -var classes=attributes.class
+    if title
+        span.radio-title=title
+    if position=='after'
+        each option, index in options
+            label.custom-radio-label
+                if index == checked
+                    input.hidden(type="radio" name=name checked required=req value=option)
+                else
+                    input.hidden(type="radio" name=name required=req value=option)
+                span.custom-radio.custom-radio_after
+                span.custom-radio-text=option
+    if position=='before'        
+        each option, index in options
+            label.custom-radio-label
+                if index == checked
+                    input.hidden(type="radio" name=name checked required=req value=option)
+                else
+                    input.hidden(type="radio" name=name required=req value=option)
+                span.custom-radio-text=option
+                span.custom-radio.custom-radio_before

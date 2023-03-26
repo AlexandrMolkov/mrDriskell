@@ -1,0 +1,33 @@
+- 
+    var products = [
+        {images: [{src:'', alt: '' },{src:'', alt: '' },{src:'', alt: '' },{src:'', alt: '' }], name:'', price: '', new: true},
+        {images: [{src:'', alt: '' },{src:'', alt: '' },{src:'', alt: '' },{src:'', alt: '' }], name:'', price: '', new: true},
+        {images: [{src:'', alt: '' },{src:'', alt: '' },{src:'', alt: '' },{src:'', alt: '' }], name:'', price: '', new: true}
+    ]
+
+section.products
+    .products__content.container
+        h2.products__title.visually-hidden Товары
+        .tabs
+            .tabs__buttons
+                button.tabs__button(data-target="#tab1") Хиты продаж
+                button.tabs__button(data-target="#tab2") Самые популярные
+                button.tabs__button(data-target="#tab3") Новые поступления
+                button.tabs__button(data-target="#tab3") Акционные товары
+                
+            .tabs__content#tab1
+                .products__grid
+                    each product, i in products
+                        a.product-card(href="product.html")
+                            .product-card__slider
+                                each slide, j in product.images
+                                    .product-card__slide(id=i+j)
+                                        img(src=slide.src, alt=slide.alt)
+                                    - j++
+                            label.product-card__label(for="1")
+                            - j++
+
+            .tabs__content#tab2
+            .tabs__content#tab3
+            .tabs__content#tab3
+        a.btn(href="catalog.html") Показать ещё

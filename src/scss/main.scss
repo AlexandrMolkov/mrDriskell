@@ -1,0 +1,306 @@
+body {
+    font-family: Jost, Arial, sans-serif;
+    color: #fff;
+    background-color: $black;
+    font-size: 17px;
+    line-height: 140%;
+    
+    &.lock{
+        overflow: hidden;
+
+        .main{
+            z-index: 0;
+        }
+    }
+}
+.main{
+    z-index: 1;
+}
+.blur{
+
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 1s;
+    pointer-events: none;
+
+    &_active{
+        backdrop-filter: blur(6px);
+        pointer-events:visible;
+    }
+}
+
+.main{
+    background-color: $black;
+    overflow: hidden;
+}
+
+.title, .subtitle {
+    text-transform: uppercase;
+    font-weight: 60;
+}
+
+.title{
+    font-size: 60px;
+    line-height: 100%;
+
+    padding-bottom: 40px;
+
+    @media (max-width: $tablet){
+        font-size: 50px;
+        padding-bottom: 30px;
+    }
+    @media (max-width: $mobileL){
+        font-size: 25px;
+    }
+
+    &_center{
+        text-align: center;
+    }
+    
+
+}
+
+
+.subtitle {
+    font-size: 21px;
+    line-height: 44;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 15px;
+
+}
+.text {
+    font-size: 16;
+    line-height: 20;
+
+    @media (max-width: $tablet){
+        font-size: 12;
+        line-height: 18;
+    }
+}
+
+.cover{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.fill{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+*:focus, *:focus-visible{
+/*     outline: 1px solid #fff;*/
+    outline-offset: 5px; 
+}
+
+.laptop-hidden{
+    @media (max-width: $laptop){
+        display: none;
+    }
+}
+
+.tablet-hidden{
+    @media (max-width: $tablet){
+        display: none;
+    }
+}
+
+.address{
+    font-style: normal;
+    font-size: 15px;
+    line-height: 150%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &--header{
+        gap: 5px;
+    }
+    
+    @media (max-width: 539px){
+        width: auto;
+        margin-left: auto;
+        flex-direction: column;
+    }
+
+    &__soc-link{
+        font-size: 12px;
+        line-height: 150%;
+
+        &_icon-telegram,&_icon-watsapp,&_icon-viber{
+            width: 40px;
+            height: 40px;
+        }
+        &_icon-telegram{
+            background-image: url(../img/svg/social/telegram.svg);
+        }
+        &_icon-watsapp{
+            background-image: url(../img/svg/social/whatsapp.svg);
+        }
+        &_icon-viber{
+            background-image: url(../img/svg/social/viber.svg);
+        }
+    }
+
+    &__time {
+        color: $grey2;
+        margin-bottom: 10px;
+    }
+
+    &__row{
+        display: flex;
+        gap: 10px;
+    }
+}
+.btn{
+    padding: 15px;
+    display: inline-block;
+    color: $white;
+    background-color: transparent;
+
+    font-size: 20px;
+    line-height: 150%;
+    
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    min-width: 144px;
+
+    position: relative;
+    z-index: 1;
+
+    transition: background-color .3s;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $accent;
+
+
+    }
+
+    &:active{
+        background-color: $darkOrange;
+        transform: scale(0.97);
+    }
+
+    @media (max-width: $mobileL){
+        min-width: fit-content;
+    }
+
+    &--orange{
+        background-color: $darkOrange;
+        border: $accent 2px solid;
+
+        &:hover{
+            
+        }
+    }
+
+    &.w-100{
+        width: 100%;
+
+        &:hover{
+            
+        }
+    }
+
+}
+.btn-basket,
+.btn-favorite,
+.btn-account{
+    width: 28px;
+    height: 28px;
+
+    color: $white;
+    line-height: 150%;
+    font-size: 15px;
+            
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.btn-basket{
+    white-space: pre;
+    width: auto;
+    padding-right: 36px;
+
+    &::before {
+        left: auto;
+        right: 0;
+        background-image: url('../img/svg/icons/union.svg');
+    }
+}
+.btn-favorite{
+    &::before {
+        background-image: url('../img/svg/icons/favorite.svg');
+    }
+    @media (max-width: $mobileL){
+        display: none;
+    }
+}
+.btn-account{
+    &::before {
+        background-image: url('../img/svg/icons/account.svg');
+    }
+    @media (max-width: $mobileL){
+        display: none;
+    }
+}
+
+a{
+    transition: color .3s;
+
+    &:hover{
+        color: $accent;
+    }
+}
+  
+.social{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__li{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon{
+        display: block;
+    }
+
+    @media (max-width: 539px){
+        flex-direction: row;
+    }
+}
+
+.copy{
+    font-size: 16px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+    line-height: 140%;
+}

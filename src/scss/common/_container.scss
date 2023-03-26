@@ -1,0 +1,14 @@
+@mixin container($maxWidth: 1216px, $padding: 20px) {
+    max-width: $maxWidth + ($padding * 2);
+    width: 100%;
+    padding: 0 $padding;
+    margin: 0 auto;
+}
+
+.container {
+    @include container()
+}
+
+.container--big {
+    @include container(1920px)
+}

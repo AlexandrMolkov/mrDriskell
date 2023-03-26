@@ -1,0 +1,10 @@
+mixin checkbox(label,name,checked,position,req)
+    -var classes = 'custom-checkbox-label ' + attributes.class
+    label(class=classes)
+        input.checkbox.hidden(type="checkbox" name=name checked=checked required=req)
+        if position=='after'
+            span.custom-checkbox.custom-checkbox_after
+            span.custom-checkbox-text=label
+        if position=='before'
+            span.custom-checkbox-text=label
+            span.custom-checkbox.custom-checkbox_before
