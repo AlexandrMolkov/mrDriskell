@@ -1,7 +1,7 @@
 body {
     font-family: Jost, Arial, sans-serif;
-    color: #fff;
-    background-color: $black;
+    color: $dark;
+    background-color: $background;
     font-size: 17px;
     line-height: 140%;
     
@@ -15,6 +15,8 @@ body {
 }
 .main{
     z-index: 1;
+    background-color: $background;
+    overflow: hidden;
 }
 .blur{
 
@@ -34,14 +36,10 @@ body {
     }
 }
 
-.main{
-    background-color: $black;
-    overflow: hidden;
-}
-
 .title, .subtitle {
     text-transform: uppercase;
     font-weight: 60;
+    color: $dark;
 }
 
 .title{
@@ -163,8 +161,9 @@ body {
 .btn{
     padding: 15px;
     display: inline-block;
-    color: $white;
+    color: $accent;
     background-color: transparent;
+    border: $accent 2px solid;
 
     font-size: 20px;
     line-height: 150%;
@@ -177,12 +176,12 @@ body {
     position: relative;
     z-index: 1;
 
-    transition: background-color .3s;
+    transition: background-color .3s, color .3s;
 
     &:hover{
         cursor: pointer;
         background-color: $accent;
-
+        color: $white;
 
     }
 
@@ -197,10 +196,10 @@ body {
 
     &--orange{
         background-color: $darkOrange;
-        border: $accent 2px solid;
+        color: $white;
 
         &:hover{
-            
+            color: $white;
         }
     }
 

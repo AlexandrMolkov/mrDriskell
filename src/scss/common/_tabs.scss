@@ -45,14 +45,7 @@
         display: none;
 
         @media (max-width: 1200px){
-            padding-left: 80px;
-            padding-right: 80px;
             position: relative;
-        }
-
-        @media (max-width: 539px){
-            padding-left: 0px;
-            padding-right: 0px;
         }
         
         &--active{

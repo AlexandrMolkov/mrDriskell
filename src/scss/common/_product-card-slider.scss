@@ -1,0 +1,142 @@
+.product-card-slider{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+
+    &__wrapper{
+        overflow: hidden;
+    }
+
+    &__slide{
+        opacity: 0;
+        transition: opacity .6s;
+
+        &:not(:first-child){
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &_active{
+            opacity: 1;
+        }
+
+        & img{
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    
+    &__pagination{
+        padding: 5px 0;
+        position: relative;
+        //bottom: 50px;
+        //left: 50%;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+
+        //transform: translateX(-50%);
+    }
+
+    &__pagination-btn{
+        width: 6px;
+        height: 6px;
+        border: 0;
+
+        
+        background: #E3E3E3;
+
+        &:hover{
+            cursor: pointer;
+        }
+        &_active{
+            background-color: $darkOrange;
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+
+        .product-card-slider__navigation{
+            opacity: 1;
+        }
+    }
+    &__navigation{
+        width: 100%;
+
+        opacity: 0;
+        transition: opacity .3s;
+
+        &-prev, &-next{
+            top: 50%;
+            background: transparent;
+            width: 32px;
+            height: 32px;
+            border: 0;
+
+            transition: opacity .5;
+
+            opacity: .7;
+
+            &.disabled {
+                opacity: .2;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 32px;
+                height: 3px;
+                
+                background-color: $accent;   
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 32px;
+                height: 3px;
+
+                background-color: $accent;   
+            }
+
+        }
+        &-prev{
+            position: absolute;
+            left: 5px;
+
+            &::before { 
+                transform: rotate(-30deg) translateY(8px);
+            }
+            &::after {
+                transform: rotate(30deg) translateY(-8px);
+            }
+        }
+        &-next{
+            position: absolute;
+            right: 5px;
+            transform: rotate(180deg);
+            &::before { 
+                transform: rotate(-30deg) translateY(8px);
+            }
+            &::after {
+                transform: rotate(30deg) translateY(-8px);
+            }
+
+        }
+    }
+}

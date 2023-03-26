@@ -12,6 +12,7 @@ tabs.forEach( (tab)=> {
                 
             }
         })
+        content[0].classList.add('tabs__content--active')
 
     tab.addEventListener('click', (e)=> {
         if(e.target.classList.contains('tabs__button')){
@@ -28,7 +29,7 @@ tabs.forEach( (tab)=> {
             c.classList.remove('tabs__content--active')
             
           })
-          const target = document.querySelector(e.target.dataset.target)
+          const target = tab.querySelector(e.target.dataset.target)
 
           target.classList.add('tabs__content--active')
 
