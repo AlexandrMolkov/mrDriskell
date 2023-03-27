@@ -59,16 +59,22 @@
     display: flex;
     flex-direction: column;
 
+    position: relative;
+    
+    &__wrapper{
+        overflow: hidden;
+    }
+
     &:hover{
         cursor: pointer;
     }
 
     &__content{
         padding: 11px 30px 30px;
+        position: relative;
     }
 
     &__name{
-        //padding: 0px 30px 10px;
         max-width: 230px;
         margin-bottom: 10px;
     }
@@ -79,5 +85,62 @@
         font-size: 24px;
         line-height: 130%;
         color: $accent;
+    }
+
+    &__wrapper {
+        z-index: 2;
+        
+     }
+
+    &:hover &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        box-shadow: 0px 0px 20px 0px #cecece;
+        
+     }
+
+
+    &__btn-add{
+        padding: 10px;
+        font-size: 20px;
+        line-height: 150%;
+
+        min-width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 60px);
+        
+    }
+
+    &:hover &__wrapper {
+        height: calc(100% + 84px);
+        z-index: 3;
+        background-color: $bgCard;
+    }
+
+
+    &__bottom{
+        padding-bottom: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        pointer-events: none;
+        background-color: $bgCard;
+        z-index: 20;
+        transition: transform .3s;
+        transform: translateY(100%);
+        opacity: 0;
+
+        z-index: -1;
+    }
+
+    &:hover &__bottom{
+        position: absolute;
+        transform: translateY(0%);
+        opacity: 1;
+        pointer-events: all;
     }
 }

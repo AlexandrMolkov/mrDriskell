@@ -29,6 +29,8 @@
     }
 
 
+
+
 }
 .contact-location{
     &::before {
@@ -38,6 +40,9 @@
 .contact-phone{
     &::before {
         background-image: url('../img/svg/icons/phone.svg');
+    }
+    &_mr_25{
+        margin-right: 25px;
     }
 }
 .contact-mail{

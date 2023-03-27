@@ -49,7 +49,7 @@
         }
     }
 
-    &__slide-image-wrapper{
+    &__link{
         padding: 0 20px;
         margin: 0 20px;
         background-color: #fff;
@@ -60,5 +60,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        filter: grayscale(1);
+        transition: filter .3s;
+
+        &:hover{
+            cursor: pointer;
+            filter: grayscale(0);
+        }
     }
 }

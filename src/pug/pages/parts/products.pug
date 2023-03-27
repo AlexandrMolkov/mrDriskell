@@ -65,19 +65,24 @@ section.products
                     .products__grid
                         each product in products
                                 a.product-card(href="#")
-                                    .product-card-slider
-                                        .product-card-slider__wrapper
-                                            each slide in product.images
-                                                .product-card-slider__slide
-                                                    img(src=slide.src alt=slide.alt)
-                                        .product-card-slider__pagination
-                                        .product-card-slider__navigation
-                                            .product-card-slider__navigation-prev
-                                            .product-card-slider__navigation-next
+                                    .product-card__wrapper
+                                        .product-card-slider
+                                            .product-card-slider__wrapper
+                                                each slide in product.images
+                                                    .product-card-slider__slide
+                                                        img(src=slide.src alt=slide.alt)
+                                            .product-card-slider__pagination
+                                            .product-card-slider__navigation
+                                                .product-card-slider__navigation-prev
+                                                .product-card-slider__navigation-next
 
-                                    .product-card__content
-                                        .product-card__name= product.name
-                                        .product-card__price= product.price
+                                        .product-card__content
+                                            .product-card__name= product.name
+                                            .product-card__price= product.price
+
+                                        .product-card__bottom
+                                            .product-card__bottom-inner
+                                                button.btn.product-card__btn-add Добавить в корзину
 
                 .tabs__content#prodtab2
                     .products__grid
