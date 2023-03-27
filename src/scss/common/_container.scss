@@ -9,6 +9,6 @@
     @include container()
 }
 
-.container--big {
-    @include container(1920px)
+.container_big {
+    @include container(1376px);
 }

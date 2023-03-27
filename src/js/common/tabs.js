@@ -7,12 +7,12 @@ tabs.forEach( (tab)=> {
     buttons[0].classList.add('tabs__button_current')
     content.forEach((content, index)=> {
             if(index != 0) {
-                content.classList.remove('tabs__content--active')
+                content.classList.remove('tabs__content_active')
                 content.classList.add('tabs__content_hidden')
                 
             }
         })
-        content[0].classList.add('tabs__content--active')
+        content[0].classList.add('tabs__content_active')
 
     tab.addEventListener('click', (e)=> {
         if(e.target.classList.contains('tabs__button')){
@@ -26,12 +26,12 @@ tabs.forEach( (tab)=> {
           tab.querySelectorAll('.tabs__content').forEach( (c)=>{
             
             c.classList.add('tabs__content_hidden')
-            c.classList.remove('tabs__content--active')
+            c.classList.remove('tabs__content_active')
             
           })
           const target = tab.querySelector(e.target.dataset.target)
 
-          target.classList.add('tabs__content--active')
+          target.classList.add('tabs__content_active')
 
           setTimeout(() => {
             target.classList.remove('tabs__content_hidden')

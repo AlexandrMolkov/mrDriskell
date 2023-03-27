@@ -1,0 +1,24 @@
+include ../../common/mixins/checkbox
+section.form-section
+    .form-section__content
+        .form-section__item.form-section__item_left
+            h2.title.form-section__title Узнавайте первыми
+            p.form-section__text Подпишитесь на новостную рассылку с самыми интересными новостями и акциями
+
+            .form.form-section__form
+                .form__row
+                    label.form__label Эл. почта
+                        input.form__input(type="e-mail" placeholder="Figur@mail.ru")
+                .form__row
+                    label.form__label Имя
+                        input.form__input(type="text" placeholder="Введите имя")
+                .form__row
+                    +checkbox('Вы соглашаетесь на обработку ваших персональных данных','agree',false,'after',false)(class='form-cb')
+                .form__row
+                    button.form__btn.btn.btn_orange(type="submit") Подписаться
+
+
+        .form-section__item
+            picture
+                source(srcset="img/form.webp" type="image/webp")
+                img.form-section__image(src="img/form.jpg" alt="татуированная рука с тату машинкой" width="952" height="562")

@@ -1,0 +1,35 @@
+.form-section{
+    padding-top: 100px;
+    padding-bottom: 200px;
+
+    &__content{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__text{
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 115%; 
+        margin-bottom: 33px;  
+    }
+
+    &__item{
+
+        &_left{
+            
+            padding-left: 20px;
+            margin-right: 92px;
+            max-width: 526px;
+            flex: 1 1 526px;
+        }
+    }
+    &__image{
+        max-width: 952px;
+        width: 100%;
+        height: auto;
+
+        flex-grow: 1;
+    }
+}

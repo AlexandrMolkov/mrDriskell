@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.btn-catalog').addEventListener('click', e => {
         e.target.closest('.btn-catalog').classList.toggle('open')
        document.querySelector(e.target.closest('.btn-catalog').dataset.target)
-            .classList.toggle('header__catalog--active',
+            .classList.toggle('header__catalog_active',
                 e.target.closest('.btn-catalog').classList.contains('open')
             )
     })

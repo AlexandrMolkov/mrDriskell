@@ -1,4 +1,4 @@
-mixin checkbox(label,name,checked,position,req)
+mixin checkbox(label, name, checked, position, req)
     -var classes = 'custom-checkbox-label ' + attributes.class
     label(class=classes)
         input.checkbox.hidden(type="checkbox" name=name checked=checked required=req)

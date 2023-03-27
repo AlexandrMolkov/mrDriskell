@@ -51,7 +51,7 @@
         align-items: center;
         gap: 30px;
 
-        &--dec{
+        &_dec{
             padding-bottom: 12px;
             border-bottom: $darkOrange 1px solid;
             margin-bottom: 12px;
@@ -74,7 +74,7 @@
         opacity: 0;
         transition: opacity .3s;
 
-        &--active{
+        &_active{
             opacity: 1;
         }
 

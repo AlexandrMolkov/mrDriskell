@@ -26,9 +26,9 @@
 
 @import "../node_modules/@fancyapps/ui/dist/fancybox";
 
-/* @import "scss/common/_checkbox.scss";
-@import "scss/common/_radio.scss";
-@import "scss/common/_form.scss"; */
+@import "scss/common/_checkbox.scss";
+/*@import "scss/common/_radio.scss";*/
+//@import "scss/common/_form.scss"; 
 
 @import "scss/main";
 @import "scss/header";
@@ -42,5 +42,9 @@
 @import 
     "scss/pages/index/hero.scss",
     "scss/pages/index/catalog.scss",
-    "scss/pages/index/banners.scss"
+    "scss/pages/index/banners.scss",
+    "scss/pages/index/brands.scss",
+    "scss/pages/index/about.scss",
+    "scss/pages/index/reviews.scss",
+    "scss/pages/index/form.scss"
 ;

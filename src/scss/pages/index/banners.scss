@@ -1,0 +1,64 @@
+.banners{
+
+    padding: 120px 0;
+
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+        
+        > * {
+            grid-column: span 6;
+        }
+        @media (max-width: $tablet){
+        
+            > * {
+                grid-column: span 12;
+            }
+        }
+    }
+
+}
+.banner{
+    height: 470px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    &__image{
+        object-fit: cover;
+        width: 100%;
+        min-height: 100%;
+    }
+
+    &__text-block{
+        padding: 40px 50px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__text{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 130%;
+        color: $white;
+    }
+    &__link{
+        font-size: 20px;
+        line-height: 150%;
+        color: $accent;
+        display: flex;
+
+        border-bottom: 1px solid $accent;
+    }
+}

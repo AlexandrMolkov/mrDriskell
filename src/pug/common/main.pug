@@ -19,8 +19,8 @@ html(lang="ru")
                 .blur
                 .container
                     .header__content(data-aos="fade-down")
-                        .header__content-row.header__content-row--dec.header__top
-                            address.address.address--header
+                        .header__content-row.header__content-row_dec.header__top
+                            address.address.address_header
                                 .address__row
                                     a.contact-phone(href="tel:79525525252") +7 952 552-52-52
                                     a.contact-mail(href="mailto:Mr.Driskell@mail.ru") Mr.Driskell@mail.ru
@@ -39,7 +39,7 @@ html(lang="ru")
                             button.btn-catalog(data-target=".header__catalog")
                                 span.btn-catalog__content Каталог
                                 span.btn-catalog__icon 
-                            form.form.form--search(action="#")
+                            form.form.form_search(action="#")
                                 input.form__input
                             .header__buttons.header__buttons_mobile
                                 button.btn-basket 37 280 ₽
@@ -63,7 +63,7 @@ html(lang="ru")
                                         .tabs__buttons
                                             button.tabs__button(data-target="#tab1") По категории
                                             button.tabs__button(data-target="#tab2") По брендам
-                                        .tabs__content.tabs__content--active#tab1
+                                        .tabs__content.tabs__content_active#tab1
                                             ul.header__catalog-list
                                                 li.header__catalog-list-item
                                                     a(href="#") Новинки 
@@ -235,7 +235,7 @@ html(lang="ru")
                                 {link:'#', content:'Личный кабинет'}
                             ], 'mobile_nav', currentPage)(class="nav_mobile root-nav")
 
-                        form.form.form--search.form--search-mobile(action="#")
+                        form.form.form_search.form_search-mobile(action="#")
                             input.form__input
 
                         address.address

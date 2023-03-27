@@ -2,5 +2,36 @@ include mixins/nav
 footer.footer
     .container
         .footer__content
+            .footer__item
+                include ../pages/parts/logo
+                a(href="#") Политика конфенедциальности
+            .footer__item
+                ul.footer__list
+                    li.footer__list-item
+                        a.footer__link(href="#") Промокоды
+                    li.footer__list-item
+                        a.footer__link(href="#") Скидки
+                    li.footer__list-item
+                        a.footer__link(href="#") Помощь
+            .footer__item
+                ul.footer__list
+                    li.footer__list-item
+                        a.footer__link(href="#") О нас
+                    li.footer__list-item
+                        a.footer__link(href="#") Контакты
+
+            .footer__item.footer__item_flex-end
+                address.address
+                    .address__row
+                        a.contact-phone(href="tel:79525525252") +7 952 552-52-52
+                    .address__row
+                        a.address__soc-link.address__soc-link_icon-telegram(href="#")
+                        a.address__soc-link.address__soc-link_icon-watsapp(href="#")
+                        a.address__soc-link.address__soc-link_icon-viber(href="#") 
+                    .address__row
+                        .address__time Время работы: с 9:00 до 20:00 по мск
+                    .address__row
+                        a.contact-mail(href="mailto:Mr.Driskell@mail.ru") Mr.Driskell@mail.ru
+
 
 
