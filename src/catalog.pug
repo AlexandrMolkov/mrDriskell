@@ -1,0 +1,53 @@
+extends pug/common/main
+
+block variables
+    -var title = 'Главная страница'
+    -var headerClasses = ''
+    -var currentPage = ''
+
+block content
+    main.main
+        section.catalog-page
+            .container
+                .breadcrumbs
+                    a.breadcrumbs__item(href="index.html") Главная
+                    a.breadcrumbs__item(href="catalog.html") Каталог
+                    a.breadcrumbs__item Тату машинки
+                .catalog-page__content
+                    h2.title.catalog-page__title Тату машинки
+                    .catalog-page__categories
+                        button.btn.btn_cat Для начинающих
+                        button.btn.btn_cat От билдеров
+                        button.btn.btn_cat Для профессионалов
+                        button.btn.btn_cat Расходники
+                    .catalog-page__filter.filter
+                        .filter__item 
+                            label.filter__label Цена
+                                input#filter-price.filter__input(type="number", name="price-min" min="0")
+                                input#filter-price.filter__input(type="number", name="price-max" min="0")
+                        .filter__item
+                            label.filter__label Тип машинки
+                                select.js-choice.js-choice-brand.filter__select(name="brand")
+                                    option(data-hide="true") Тип машинки 
+                                    option(value="brand 1") brand 1
+                                    option(value="brand 2") brand 2
+                                    option(value="brand 3") brand 3
+                                    option(value="brand 4") brand 4
+                        .filter__item
+                            label.filter__label Только в наличии
+                                input#filter-price.filter__input(type="checkbox", name="instock")      
+                        .filter__item
+                            label.filter__label Сортировка
+                                select.js-choice.js-choice-brand.filter__select(name="brand")
+                                    option(data-hide="true") Сортировка 
+                                    option(value="brand 1") Цена (дороже)
+                                    option(value="brand 2") Цена (Дешевле)
+                                    option(value="brand 3") Популярные
+        
+                    include pug/pages/catalog/catalog
+
+    include pug/common/footer
+    script(src="js/app.min.js")
+       
+
+        

@@ -1,0 +1,66 @@
+.catalog-page{
+    padding-bottom: 178px;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__btn{
+        
+        align-self: center;
+    }
+}
+
+
+.filter{
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    &__label{
+        color: $grey2;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &:hover{
+            cursor: pointer;
+            
+        }
+    }
+
+    &__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__select{
+        width: 186px;
+        height: 40px;
+        background-color: $bgCard;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__input{
+        width: 83px;
+        height: 40px;
+        border: 1px solid $grey2;
+        background-color: $background;
+
+        &[type="checkbox"]{
+            width: 35px;
+            height: 20px;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

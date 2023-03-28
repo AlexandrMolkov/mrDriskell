@@ -14,7 +14,7 @@
     &__slider{
         overflow: visible;
 
-        @media (max-width: $laptop){
+        @media (max-width: 768px){
             max-width: 598px;
         }
         

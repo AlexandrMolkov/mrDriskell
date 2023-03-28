@@ -201,10 +201,25 @@ body {
     &:active{
         background-color: $darkOrange;
         transform: scale(0.97);
+
+        .btn__dec-left, .btn__dec-right{
+            &::after {
+                border-left-color: $darkOrange;
+            }
+        }
+        
     }
 
     @media (max-width: $mobileL){
         min-width: fit-content;
+    }
+
+    &_cat{
+        min-width: auto;
+        padding: 14px 24px;
+        background-color: $bgCard;
+        font-size: 20px;
+        line-height: 100%;
     }
 
     &_orange{
@@ -220,6 +235,19 @@ body {
                 border-left-color: $darkOrange;
             }
         }
+    }
+
+    &_center{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:active{
+            transform: translateX(-50%) scale(0.97);
+            
+        }
+
+        
     }
 
     &.w-100{

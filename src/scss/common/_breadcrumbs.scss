@@ -9,17 +9,16 @@
     line-height: 150%;
     
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
     &__item{
 
-        &:first-child{
-            text-decoration: underline;
-        }
-
+        color: $grey2;
 
         &:not(:last-child){
+            color: $grey;
+            
             &:hover{
                 opacity: 0.7;
             }
@@ -33,13 +32,14 @@
 
         &:not(:first-child){
 
-            margin-left: 15px;
-            padding-left: 15px;
+            margin-left: 10px;
+            padding-left: 10px;
 
             &::before {
                 content: "/";
+                color: $grey;
                 position: relative;
-                left: -15px;
+                left: -10px;
                 
                 
             }

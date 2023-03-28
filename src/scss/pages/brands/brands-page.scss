@@ -1,0 +1,18 @@
+.brands-page{
+
+    padding-bottom: 160px;
+
+    &__categories{
+        gap: 10px;
+    }
+
+    &__btn{
+        margin: 0 auto;   
+    }
+}
+.brands-page__categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

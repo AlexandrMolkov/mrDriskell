@@ -14,7 +14,7 @@
 //@import "scss/common/_scrollbar.scss";
 @import "scss/common/tabs.scss";
 @import "scss/common/_contact.scss";
-//@import "scss/common/_breadcrumbs.scss";
+@import "scss/common/_breadcrumbs.scss";
 //@import "scss/common/_keyframes.scss";
 @import "../node_modules/aos/dist/aos";
 
@@ -46,5 +46,12 @@
     "scss/pages/index/brands.scss",
     "scss/pages/index/about.scss",
     "scss/pages/index/reviews.scss",
-    "scss/pages/index/form.scss"
-;
+    "scss/pages/index/form.scss";
+
+@import 
+    "scss/pages/catalog/catalog-page.scss";
+
+@import 
+    "scss/pages/brands/brands-page.scss";
+@import 
+    "scss/pages/404/404.scss";

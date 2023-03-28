@@ -1,0 +1,89 @@
+include ../../common/mixins/card
+
+- 
+    var products = [
+        {images: [
+            {src:'img/catalog/product/foxxx_kitsume_mini_black.png', alt:'foxxx kitsume mini black' },
+            {src:'img/catalog/product/foxxx_kitsume_mini_black.png', alt:'foxxx kitsume mini black' },
+            {src:'img/catalog/product/foxxx_kitsume_mini_black.png', alt:'foxxx kitsume mini black' },
+            {src:'img/catalog/product/foxxx_kitsume_mini_black.png', alt:'foxxx kitsume mini black' }
+            ], name:'Foxxx Kitsune Mini Black Vintage RCA', price: '6 000 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/foxxx_viper_fox_golden_vintage.png', alt:'foxxx viper fox golden vintage' },
+            {src:'img/catalog/product/foxxx_viper_fox_golden_vintage.png', alt:'foxxx viper fox golden vintage' },
+            {src:'img/catalog/product/foxxx_viper_fox_golden_vintage.png', alt:'foxxx viper fox golden vintage' },
+            {src:'img/catalog/product/foxxx_viper_fox_golden_vintage.png', alt:'foxxx viper fox golden vintage' }
+            ], name:'Foxxx Viper Fox Golden Vintage Lot #1 RCA', price: '8 730 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/wally_plastic_s.png', alt:'wally_plastic_s' },
+            {src:'img/catalog/product/wally_plastic_s.png', alt:'wally_plastic_s' },
+            {src:'img/catalog/product/wally_plastic_s.png', alt:'wally_plastic_s' },
+            {src:'img/catalog/product/wally_plastic_s.png', alt:'wally_plastic_s' }
+            ], name:'Нитровиниловые перчатки Wally Plastic S', price: '20 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/forever_cartridge_grip_ergo_30.png', alt:'forever cartridge grip ergo' },
+            {src:'img/catalog/product/forever_cartridge_grip_ergo_30.png', alt:'forever cartridge grip ergo' },
+            {src:'img/catalog/product/forever_cartridge_grip_ergo_30.png', alt:'forever cartridge grip ergo' },
+            {src:'img/catalog/product/forever_cartridge_grip_ergo_30.png', alt:'forever cartridge grip ergo' }
+            ], name:'Forever Cartridge Grip Ergo 30 mm Огненно-Рыжий', price: '2 037 ₽', new: true},
+
+        {images: [
+            {src:'img/catalog/product/verge_direct_2_1_pink.png', alt:'verge direct 2.1 pink' },
+            {src:'img/catalog/product/verge_direct_2_1_pink.png', alt:'verge direct 2.1 pink' },
+            {src:'img/catalog/product/verge_direct_2_1_pink.png', alt:'verge direct 2.1 pink' },
+            {src:'img/catalog/product/verge_direct_2_1_pink.png', alt:'verge direct 2.1 pink' }
+            ], name:'Verge Direct 2.1 Pink gip EGO 4 mm liners', price: '2 037 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/deuce_machine_direct_drive.png', alt:'deuce machine direct drive' },
+            {src:'img/catalog/product/deuce_machine_direct_drive.png', alt:'deuce machine direct drive' },
+            {src:'img/catalog/product/deuce_machine_direct_drive.png', alt:'deuce machine direct drive' },
+            {src:'img/catalog/product/deuce_machine_direct_drive.png', alt:'deuce machine direct drive' }
+            ], name:'Deuce Machines Direct Drive #7 RCA Samurai', price: '8 000 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/cyborg_machines_alter_rotary.png', alt:'cyborg machines alter rotary' },
+            {src:'img/catalog/product/cyborg_machines_alter_rotary.png', alt:'cyborg machines alter rotary' },
+            {src:'img/catalog/product/cyborg_machines_alter_rotary.png', alt:'cyborg machines alter rotary' },
+            {src:'img/catalog/product/cyborg_machines_alter_rotary.png', alt:'cyborg machines alter rotary' }
+            ], name:'Cyborg Machines Alter Rotary Axis Cross Sexy Nymph', price: '11 000 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/verge_direct_2_1_gunmetal.png', alt:'verge direct 2.1 gunmetal.png' },
+            {src:'img/catalog/product/verge_direct_2_1_gunmetal.png', alt:'verge direct 2.1 gunmetal.png' },
+            {src:'img/catalog/product/verge_direct_2_1_gunmetal.png', alt:'verge direct 2.1 gunmetal.png' },
+            {src:'img/catalog/product/verge_direct_2_1_gunmetal.png', alt:'verge direct 2.1 gunmetal.png' }
+            ], name:'Verge Direct 2.1 Gunmetal', price: '10 900 ₽', new: true},
+            
+        {images: [
+            {src:'img/catalog/product/verge_direct_2_1_pink.png', alt:'verge direct 2.1 pink' },
+            {src:'img/catalog/product/verge_direct_2_1_pink.png', alt:'verge direct 2.1 pink' },
+            {src:'img/catalog/product/verge_direct_2_1_pink.png', alt:'verge direct 2.1 pink' },
+            {src:'img/catalog/product/verge_direct_2_1_pink.png', alt:'verge direct 2.1 pink' }
+            ], name:'Verge Direct 2.1 Pink gip EGO 4 mm liners', price: '2 037 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/deuce_machine_direct_drive.png', alt:'deuce machine direct drive' },
+            {src:'img/catalog/product/deuce_machine_direct_drive.png', alt:'deuce machine direct drive' },
+            {src:'img/catalog/product/deuce_machine_direct_drive.png', alt:'deuce machine direct drive' },
+            {src:'img/catalog/product/deuce_machine_direct_drive.png', alt:'deuce machine direct drive' }
+            ], name:'Deuce Machines Direct Drive #7 RCA Samurai', price: '8 000 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/cyborg_machines_alter_rotary.png', alt:'cyborg machines alter rotary' },
+            {src:'img/catalog/product/cyborg_machines_alter_rotary.png', alt:'cyborg machines alter rotary' },
+            {src:'img/catalog/product/cyborg_machines_alter_rotary.png', alt:'cyborg machines alter rotary' },
+            {src:'img/catalog/product/cyborg_machines_alter_rotary.png', alt:'cyborg machines alter rotary' }
+            ], name:'Cyborg Machines Alter Rotary Axis Cross Sexy Nymph', price: '11 000 ₽', new: true},
+        {images: [
+            {src:'img/catalog/product/verge_direct_2_1_gunmetal.png', alt:'verge direct 2.1 gunmetal.png' },
+            {src:'img/catalog/product/verge_direct_2_1_gunmetal.png', alt:'verge direct 2.1 gunmetal.png' },
+            {src:'img/catalog/product/verge_direct_2_1_gunmetal.png', alt:'verge direct 2.1 gunmetal.png' },
+            {src:'img/catalog/product/verge_direct_2_1_gunmetal.png', alt:'verge direct 2.1 gunmetal.png' }
+            ], name:'Verge Direct 2.1 Gunmetal', price: '10 900 ₽', new: true},
+
+    ]
+
+
+                    
+
+.products__grid
+    each product,i in products
+        +card(product,i + 1)
+
+a.btn.catalog-page__btn(href="catalog.html") Показать ещё
