@@ -14,19 +14,9 @@
         > * {
             grid-column: span 3;
         }
-        
-        @media (max-width: $tablet){
-        
-            > * {
-                grid-column: span 6;
-            }
-        }
-        @media (max-width: $mobileL){
-        
-            > * {
-                grid-column: span 12;
-            }
-        }
+
+
+
     }
 }
 
@@ -35,6 +25,7 @@
     background-color: $bgCard;
 
     height: 350px;
+    overflow: hidden;
 
     display: flex;
     align-items: flex-end;
@@ -59,17 +50,51 @@
         left: 0;
         width: 100%;
         height: 100%;
+
+        @media (max-width: $tablet){
+            font-size: 30px;
+        }
     }
 
+    &__image{
+        max-width: 100%;
+        height: auto;
+    }
 
     &_sm{
         grid-column: span 3;
     }
     &_md{
         grid-column: span 4;
+
+        @media (max-width: $tablet){
+            grid-column: span 5;
+        }
     }
     &_bg{
         grid-column: span 6;
+
+        @media (max-width: $tablet){
+            grid-column: span 7;
+        }
+    }
+
+    &_tablet-6{
+        @media (max-width: $tablet){
+            grid-column: span 6;
+        }
+    }
+
+    &_tablet-12{
+        @media (max-width: $tablet){
+            grid-column: span 12;
+        }
+    }
+
+    &_tablet-hidden{
+        @media (max-width: $tablet){
+            display: none;
+        }
     }
 
     &__link{

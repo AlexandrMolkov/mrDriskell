@@ -33,6 +33,8 @@
             border-bottom: $borderWeight solid transparent;
 
         }
+
+
     }
 
     &__content{
@@ -51,6 +53,7 @@
         &_active{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         &_hidden{

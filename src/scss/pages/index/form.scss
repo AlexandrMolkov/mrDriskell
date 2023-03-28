@@ -2,6 +2,13 @@
     padding-top: 100px;
     padding-bottom: 200px;
 
+    @media (max-width: $tablet){
+        max-width: calc(1216px + 40px);
+        width: 100%;
+        padding: 0 40px;
+        margin: 0 auto;
+    }
+
     &__content{
         display: flex;
         justify-content: flex-end;
@@ -23,6 +30,13 @@
             margin-right: 92px;
             max-width: 526px;
             flex: 1 1 526px;
+
+            @media (max-width: $laptop){
+                padding: 0;
+                flex: 1 1 100%;
+                margin: 0 auto;
+                max-width: 768px;
+            }
         }
     }
     &__image{
@@ -31,5 +45,15 @@
         height: auto;
 
         flex-grow: 1;
+        flex-shrink: 1;
+
+        @media (max-width: $laptop){
+            display: none;
+        }
     }
+
+    &__form{
+    }
+
+
 }

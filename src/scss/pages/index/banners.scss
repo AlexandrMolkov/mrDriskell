@@ -10,7 +10,7 @@
         > * {
             grid-column: span 6;
         }
-        @media (max-width: $tablet){
+        @media (max-width: 640px){
         
             > * {
                 grid-column: span 12;
@@ -25,6 +25,11 @@
     position: relative;
 
     overflow: hidden;
+
+    @media (max-width: $tablet){
+        overflow: hidden;
+        height: 300px;
+    }
 
     &__image{
         object-fit: cover;
@@ -52,6 +57,10 @@
         font-size: 40px;
         line-height: 130%;
         color: $white;
+
+        @media (max-width: $tablet){
+            font-size: 30px;
+        }
     }
     &__link{
         font-size: 20px;

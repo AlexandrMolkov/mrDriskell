@@ -14,6 +14,9 @@
     &__slider{
         overflow: visible;
 
+        @media (max-width: $laptop){
+            max-width: 598px;
+        }
         
     }
     &__slide{
@@ -24,9 +27,17 @@
         transform: translateZ(0) scale(0.8) !important;
         transition: .5s ;
     
-        &.swiper-slide-active, &.swiper-slide-active + &.swiper-slide{
+        &.swiper-slide-active{
+
             opacity: 1;
-            transform: translateZ(0) scale(1) !important;
+                transform: translateZ(0) scale(1) !important;
+        } 
+        &.swiper-slide-active + &.swiper-slide{
+
+            @media (min-width: 769px){
+                opacity: 1;
+                transform: translateZ(0) scale(1) !important;
+            }
         } 
     }
 

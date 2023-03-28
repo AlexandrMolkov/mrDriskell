@@ -15,7 +15,7 @@ mixin nav(data, idName, current)
                 else
                     -var liClasses= className + '__li '
                     li(class=liClasses) 
-                        span= item.content.name
+                        span.nav__submenu= item.content.name
                         ul(class=className + '__ul sub-menu')
                             each listItem in item.content.list
                                 li(class=liClasses)

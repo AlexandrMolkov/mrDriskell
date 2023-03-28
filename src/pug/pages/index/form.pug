@@ -6,17 +6,16 @@ section.form-section
             p.form-section__text Подпишитесь на новостную рассылку с самыми интересными новостями и акциями
 
             .form.form-section__form
-                .form__row
-                    label.form__label Эл. почта
+                .form__row.form__row_wrap
+                    label.form__label.form__label_laptop_50.form__label_mob_100 Эл. почта
                         input.form__input(type="e-mail" placeholder="Figur@mail.ru")
-                .form__row
-                    label.form__label Имя
+                    label.form__label.form__label_laptop_50.form__label_mob_100 Имя
                         input.form__input(type="text" placeholder="Введите имя")
+
                 .form__row
                     +checkbox('Вы соглашаетесь на обработку ваших персональных данных','agree',false,'after',false)(class='form-cb')
                 .form__row
                     button.form__btn.btn.btn_orange(type="submit") Подписаться
-
 
         .form-section__item
             picture

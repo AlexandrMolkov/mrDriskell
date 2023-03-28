@@ -39,8 +39,8 @@ html(lang="ru")
                             button.btn-catalog(data-target=".header__catalog")
                                 span.btn-catalog__content Каталог
                                 span.btn-catalog__icon 
-                            form.form.form_search(action="#")
-                                input.form__input
+                            form.form.form_search.laptop-hidden(action="#")
+                                input.form__input.form__input_search(placeholder="Поиск")
                             .header__buttons.header__buttons_mobile
                                 button.btn-basket 37 280 ₽
                                 button.btn-favorite 
@@ -236,7 +236,7 @@ html(lang="ru")
                             ], 'mobile_nav', currentPage)(class="nav_mobile root-nav")
 
                         form.form.form_search.form_search-mobile(action="#")
-                            input.form__input
+                            input.form__input.form__input_search(placeholder="Поиск")
 
                         address.address
                             .address__row

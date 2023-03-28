@@ -1,14 +1,46 @@
 .about{
     padding: 120px 0;
     &__content{
+        $gap: 40px;
+        
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+        gap: $gap;
+        
+        > * {
+            flex: 1 1 calc((100% / 2) - ($gap*2));
+        }
+        
+        @media (max-width: $laptop){
+        
+            > * {
+                flex: 1 1 calc((100% / 1) - ($gap*2));
+            }
+        }
+
     }
+
+    &__image{
+        width: 100%;
+        height: auto;   
+        
+        @media (max-width: $tablet){
+            height: 400px;
+            object-fit: cover;
+
+        }
+        
+    }
+
 }
 
 .about-article{
     max-width: 582px;
     padding-left: 55px;
+    padding-right: 20px;
 
     &__title{
         font-size: 50px;

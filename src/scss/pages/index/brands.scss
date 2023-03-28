@@ -3,6 +3,7 @@
     &__slider-container{
         
         position: relative;
+        padding: 0 80px;
     }
 
     &__items{
@@ -42,6 +43,10 @@
             border-right: 1px solid $grey;
         }
 
+        &:not(:first-child){
+            padding-left: 20px;
+        }
+
         
         img{
             max-width: 100%;
@@ -68,5 +73,12 @@
             cursor: pointer;
             filter: grayscale(0);
         }
+    }
+
+    .slider-button-prev{
+        left: 15px;
+    }
+    .slider-button-next{
+        right: 15px;
     }
 }

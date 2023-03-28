@@ -1,9 +1,6 @@
 
 
 .form{
-/*     max-width: 636px;
-    width: 100%; */
-
     margin: 0 auto;
 
     display: flex;
@@ -19,6 +16,10 @@
         @media (max-width: 539px){
             flex-wrap: wrap;
         }
+
+        &_wrap{
+            flex-wrap: wrap;
+        }
     }
 
     &__label{
@@ -27,6 +28,29 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+
+        &_tablet_100{
+            @media (max-width: $tablet){
+                width: 100%;
+            }
+        }
+        &_tablet_50{
+            @media (max-width: $tablet){
+                width: 50%;
+            }
+        }
+
+        &_laptop_50{
+            @media (max-width: $laptop){
+                width: 47%;
+            }
+        }
+        &_mob_100{
+            @media (max-width: $mobileL){
+                width: 100%;
+            }
+        }
     }
 
     &__input, &__textarea{
@@ -35,7 +59,7 @@
         color: $black;
         line-height: 150%;
         font-size: 17px;
-        
+        width: 100%;
 
         flex-grow: 1;
 
@@ -47,6 +71,13 @@
             color: $grey;
 
         }
+
+        &_width_100{
+            width: 100%;
+        }
+
+
+
     }
 
     &__textarea{
@@ -63,25 +94,41 @@
     &_search{
         
         flex-grow: 1;
+
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            width: 28px;
+            height: 28px;
+            background-image: url('../img/svg/icons/search.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
         
         .form__input, .form__textarea{
             padding: 10px;
             padding-left: 54px;
+            font-size: 15px;
 
             background: transparent;
             color: #fff;
 
             border: $darkOrange 1px solid;
+
+            &::placeholder{
+                color: $grey2;
+                font-size: 15px;
+            }
         }
 
-        &::placeholder{
-            color: $grey2;
-            font-size: 15px;
-        }
 
-        @media (max-width: 630px){
+
+/*         @media (max-width: 630px){
             display: none;
-        }
+        } */
     }
     &_search-mobile{
         padding-bottom: 40px;
@@ -89,7 +136,7 @@
 
         //border-bottom: $darkOrange 1px solid;
         position: relative;
-        &::before {
+        &::after {
             content: "";
             position: absolute;
             bottom: 0;
