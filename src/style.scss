@@ -48,10 +48,15 @@
     "scss/pages/index/reviews.scss",
     "scss/pages/index/form.scss";
 
-@import 
-    "scss/pages/catalog/catalog-page.scss";
+@import "scss/pages/catalog/catalog-page.scss";
+
+@import "scss/pages/brands/brands-page.scss";
+
+@import "scss/pages/404/404.scss";
 
 @import 
-    "scss/pages/brands/brands-page.scss";
-@import 
-    "scss/pages/404/404.scss";
+    "scss/pages/product/product-main.scss",
+    "scss/pages/product/product-descr.scss",
+    "scss/pages/product/more.scss"
+    ;
+@import "scss/pages/product/product-slider.scss";

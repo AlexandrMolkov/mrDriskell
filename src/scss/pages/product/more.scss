@@ -1,0 +1,93 @@
+.more-products{
+
+    &__additional {
+        padding-top: 40px;
+        padding-bottom: 30px;
+
+        background-color: $bgCard;
+    }
+    &__additional-title{
+        padding-left: 30px;
+        color: $dark;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 115%;
+        margin-bottom: 20px;
+    }
+
+    &__additional-grid{
+        padding: 0 20px;
+
+        max-width: 947px;
+        margin-bottom: 20px;
+
+       $gap: 40px;
+       
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: flex-start;
+       gap: $gap;
+
+       
+       > * {
+        flex: 1 1 calc((100% / 3) - ($gap*2));
+       }
+       .product-card{
+            &:hover{
+                transform: none;
+            }
+
+            .product-card__wrapper{
+                position: relative;
+            }
+       }
+       @media (max-width: $mobileL){
+       
+        > * {
+            flex: 1 1 calc((100% / 1) - ($gap*2));
+        }
+       }
+
+
+        > *:not(:last-child){
+
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 11px;
+                height: 1px;
+                background-color: #3e424b;
+                top: 50%;
+                right: -30px;
+                transform: translate(-50%);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 11px;
+                height: 1px;
+                background-color: #3e424b;
+                top: 50%;
+                right: -30px;
+                transform: translate(-50%) rotate(90deg);   
+            }
+        }
+    }
+
+    &__bottom{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 30px 30px 0;
+    }
+
+    &__red-block{
+        padding: 15px;
+        color: $white;
+        background-color: #CB3229;
+        display: inline-block;
+    }
+}

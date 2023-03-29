@@ -1,0 +1,28 @@
+extends pug/common/main
+
+block variables
+    -var title = 'Товар'
+    -var headerClasses = ''
+    -var currentPage = ''
+
+block content
+    main.main 
+        section.product
+            .container
+                .breadcrumbs
+                    a.breadcrumbs__item(href="index.html") Главная
+                    a.breadcrumbs__item(href="catalog.html") Каталог
+                    a.breadcrumbs__item Тату машинки
+                    a.breadcrumbs__item Foxxx Viper Fox Golden Vintage Lot #1 RCA
+                .product__content
+                    include pug/pages/product/product-main
+                    include pug/pages/product/product-description
+        include pug/pages/product/more
+        include pug/pages/product/recomended
+        include pug/pages/product/this-brand
+        include pug/pages/product/similar
+    include pug/common/footer
+    script(src="js/app.min.js")
+       
+
+        

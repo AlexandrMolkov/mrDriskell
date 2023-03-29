@@ -1,0 +1,18 @@
+include card
+
+mixin product-slider(data, title='', sliderClass='', sectionClass='')
+    -var datahash= `slide` + i
+    section.products-slider(class=sectionClass)
+        .container_big
+            .reviews__content
+                .container
+                    h2.title.product-slider__title= title
+                .reviews__slider-wrapper
+                    .container
+                        .swiper(class=sliderClass)
+                            .swiper-wrapper
+                                each slide,i in data
+                                    +card(slide,i + 1)
+                            .reviews__slider-pagination#reviews-slider-pagination
+                    .slider-button.slider-button-prev#reviews-slide-prev
+                    .slider-button.slider-button-next#reviews-slide-next 

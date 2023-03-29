@@ -102,6 +102,96 @@ import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay} from 'swiper';
             },
         },
     })
+    const thisBrandSlider = new Swiper('.this-brand-slider', {
+        modules: [Navigation,Pagination],
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        speed: 300,
+
+        navigation: {
+            nextEl: '#reviews-slide-next',
+            prevEl: '#reviews-slide-prev',
+        },
+        pagination: {
+            el: '#reviews-slider-pagination',
+            type: 'bullets',
+            clickable: 'false',
+            dynamicBullets: false,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: -30
+            },
+
+            769: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+        },
+    })
+    const recomendedSlider = new Swiper('.recomended-slider', {
+        modules: [Navigation,Pagination],
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        speed: 300,
+
+        navigation: {
+            nextEl: '#reviews-slide-next',
+            prevEl: '#reviews-slide-prev',
+        },
+        pagination: {
+            el: '#reviews-slider-pagination',
+            type: 'bullets',
+            clickable: 'false',
+            dynamicBullets: false,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: -30
+            },
+
+            769: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+        },
+    })
+    const similarSlider = new Swiper('.similar-slider', {
+        modules: [Navigation,Pagination],
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        speed: 300,
+
+        navigation: {
+            nextEl: '#reviews-slide-next',
+            prevEl: '#reviews-slide-prev',
+        },
+        pagination: {
+            el: '#reviews-slider-pagination',
+            type: 'bullets',
+            clickable: 'false',
+            dynamicBullets: false,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: -30
+            },
+
+            769: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+        },
+    })
 /*     const prod1Slider = new Swiper('.products__slider-cat-1', {
         modules: [Pagination],
         direction: 'horizontal',

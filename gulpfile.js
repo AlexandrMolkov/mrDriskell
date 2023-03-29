@@ -40,10 +40,7 @@ const html = ()=> {
 
 const scss = () => {
     return gulp.src(`${SOURCE_FOLDER}/style.scss`, {sourcemaps: true})
-        .pipe(plumber(notify.onError({
-            title: "SCSS",
-            message: "Error: <%= error.message %>"
-        })))
+        .pipe(plumber())
         .pipe(sass({
             outputStyle: 'expanded'
         }))
@@ -66,12 +63,7 @@ const scss = () => {
 
 const images = ()=> {
     return gulp.src(`${SOURCE_FOLDER}/img/**/*`)
-        .pipe(plumber(
-            notify.onError({
-                title: "IMAGES",
-                message: "Error: <%= error.message %>"
-            }))
-        )
+        .pipe(plumber())
         .pipe(imagemin([
             mozjpeg({quality: 90, progressive: true}),
             optipng({optimizationLevel: 7}),
@@ -91,12 +83,7 @@ const js = () => {
 
 const buildJS = ()=> {
     return gulp.src(`${SOURCE_FOLDER}/js/script.js`, {sourcemaps: true})
-    .pipe(plumber(
-        notify.onError({
-            title: "JS",
-            message: "Error: <%= error.message %>"
-            }))
-    )
+    .pipe(plumber())
     .pipe(webpack({
         mode: 'development',
         devtool: 'source-map',
@@ -125,12 +112,7 @@ const server = () => {
 
 const fonts = () => {
     return gulp.src(`${SOURCE_FOLDER}/fonts/*.*`)
-        .pipe(plumber(
-            notify.onError({
-                title: "Fonts",
-                message: "Error: <%= error.message %>"
-                }))
-        )
+        .pipe(plumber())
         .pipe(gulp.dest(`${BUILD_FOLDER}/fonts`))
 
         .pipe(fonterFix({

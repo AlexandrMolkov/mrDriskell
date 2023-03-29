@@ -1,0 +1,46 @@
+.products-slider{
+    padding-top: 15px;
+    padding-bottom: 60px;
+
+    overflow: visible;
+
+    &_pb_200{
+        padding-bottom: 200px;
+    }
+
+    .swiper-slide{
+        opacity: .3;
+        pointer-events: none;
+        transform: scale(0.8);
+        filter: blur(1px);
+
+        transition: .3s;
+
+        height: auto;
+        display: flex;
+    }
+
+    %active{
+        opacity: 1;
+        pointer-events: all;
+        transform: scale(1);
+        filter: blur(0);
+    }
+
+    .swiper-slide-active{
+        @extend %active;
+    }
+    .swiper-slide-active + .swiper-slide{
+        @extend %active;
+        & + .swiper-slide{
+            @extend %active;
+            & + .swiper-slide{
+                @extend %active;
+            }
+        }
+    }
+}
+
+.recomended-slider,.this-brand-slider,.similar-slider{
+    overflow: visible;
+}
