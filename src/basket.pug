@@ -8,15 +8,16 @@ block variables
 block content
     main.main
         section.basket-page
-            .container
-                .breadcrumbs
-                    a.breadcrumbs__item(href="index.html") Главная
-                    a.breadcrumbs__item(href="catalog.html") Каталог
-                    a.breadcrumbs__item Корзина
-            .basket-page__content
-                .container
-                    h2.title.basket-page__title Корзина
-                include pug/pages/basket/form
+            .container_laptop-off
+                .container_laptop-on
+                    .breadcrumbs
+                        a.breadcrumbs__item(href="index.html") Главная
+                        a.breadcrumbs__item(href="catalog.html") Каталог
+                        a.breadcrumbs__item Корзина
+                .basket-page__content
+                    .container_laptop-on
+                        h2.title.basket-page__title Корзина
+                    include pug/pages/basket/form
 
     include pug/common/footer
     script(src="js/app.min.js")

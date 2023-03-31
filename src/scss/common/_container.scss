@@ -12,3 +12,13 @@
 .container_big {
     @include container(1376px);
 }
+.container_laptop-on {
+    @media (max-width: $laptop){
+        @include container();
+    }
+}
+.container_laptop-off {
+    @media (min-width: $laptop){
+        @include container();
+    }
+}
