@@ -1,0 +1,68 @@
+.add-seriveces{
+
+    padding-bottom: 160px;
+
+    &__title{
+        margin-bottom: 10px; 
+        
+        @media (max-width: $tablet){
+            margin-bottom: 0px;
+        }
+    }
+
+    &__content{
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+
+    }
+
+    &__title{
+        grid-column: span 12;
+    }
+
+    &__grid{
+        grid-column: span 8;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        @media (max-width: $laptop){
+            max-width: 728px;
+            margin: 0 auto;
+            grid-column: span 12;
+        }
+    }
+
+    &__card{
+        @media (max-width: $tablet){
+            grid-column: span 2;
+        }
+    }
+}
+.cart-side-wrapper{
+    grid-column: span 4;
+
+    @media (max-width: $laptop){
+        max-width: 728px;
+        width: 100%;
+        margin: 0 auto;
+        grid-column: span 12;
+
+        .cart-side{
+            margin-left: 0 ; 
+           }
+    }
+
+    @media (max-width: $tablet){
+        .cart-side{
+            margin: 0 auto; 
+           }
+    }
+
+
+
+    
+}

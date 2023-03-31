@@ -1,0 +1,76 @@
+.cart-side
+    .cart-side__block
+        .cart-side__row 
+            .cart-side__total 
+                .cart-side__total-item  
+                    span Всего единиц товара: 
+                    span.cart-sidetotal-value#totaCount 17
+                .cart-side__total-item 
+                    span Общая скидка: 
+                    span.cart-side__total-value#totalSale 1080₽
+                .cart-side__total-item  
+                    span Доп. услуги 
+                    span.cart-side__total-value#totalAddServ 1080₽
+                .cart-side__total-item.cart-side__total-item_bold
+                    span Итого:
+                    span#total 37 820₽
+        .cart-side__row
+            lable.cart-side__label Промокод
+                input.cart-side__input.cart-side__input_border(type="text" placeholder="Driskell2000|")  
+        .cart-side__row
+            button.cart-side__btn-promo Активировать промокод    
+                span.dec-underline 
+    .dec-line
+    .cart-side__block
+        .cart-side__row
+            .cart-side__row-title Оплата
+        .cart-side__row.cart-side__row_mb_30
+            <div class="custom-radio-wrapper">
+                <label class="custom-radio-label">
+                    <input class="hidden" type="radio" name="payment" checked required="" value="Онлайн на сайте">
+                    <span class="custom-radio custom-radio_after"></span>
+                    <span class="custom-radio-text">Онлайн на сайте</span>
+                    span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                </label>
+                <label class="custom-radio-label">
+                <input class="hidden" type="radio" name="payment" required value="Наложенным платежом">
+                    <span class="custom-radio custom-radio_after"></span>
+                    <span class="custom-radio-text">Наложенным платежом</span>
+                    span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                </label>
+                <label class="custom-radio-label">
+                <input class="hidden" type="radio" name="payment" required value="Безналичный расчет">
+                    <span class="custom-radio custom-radio_after"></span>
+                    <span class="custom-radio-text">Безналичный расчет</span>
+                    span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                </label>
+            </div>
+        .cart-side__row
+            .cart-side__row-title Доставка
+        .cart-side__row
+            <div class="custom-radio-wrapper">
+                <label class="custom-radio-label">
+                    <input class="hidden" type="radio" name="delivery" checked="" required="" value="Курьерская служба">
+                    <span class="custom-radio custom-radio_after"></span>
+                    <span class="custom-radio-text">Курьерская служба</span>
+                    span.custom-radio-info(title='Стоимость доставки рассчитывается при звонке менеджером')
+                </label>
+                <label class="custom-radio-label">
+                    <input class="hidden" type="radio" name="delivery" required="" value="Почта России">
+                    <span class="custom-radio custom-radio_after"></span>
+                    <span class="custom-radio-text">Почта России</span>
+                    <span class="custom-radio-text">Курьерская служба</span>
+                    span.custom-radio-info(title='Стоимость доставки рассчитывается при звонке менеджером')
+                </label>
+            </div>
+
+    .dec-line
+    .cart-side__block
+        .cart-side__row
+            button.btn.btn_orange.cart-side__btn Оформить заказ
+        .cart-side__row
+            button.btn.cart-side__btn Купить в 1 клик
+        .cart-side__row
+            <label class="custom-checkbox-label form-cb">
+                <input class="checkbox hidden" type="checkbox" name="agree"><span class="custom-checkbox custom-checkbox_after"></span><span class="custom-checkbox-text agree-text">Согласен с <a class='agree-link' href="#">публичной офертой</a> и <a class='agree-link' href="#">обработкой персональных данных</a></span>
+            </label>

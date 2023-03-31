@@ -1,0 +1,143 @@
+.cart-item{
+
+    position: relative;
+
+    @media (max-width: 690px){
+        font-size: 15px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    &__image-wrapper{
+
+        width: 100px;
+        height: 100px;
+
+        flex-shrink: 0;
+        
+        @media (max-width: 690px){
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: auto;   
+    }
+
+    &__group{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__td-group{
+        @media (max-width: 690px){
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+
+        }
+    }
+
+
+    &__name{
+        max-width: 192px;
+
+        > div:first-child{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        @media (max-width: 690px){
+            padding-top: 5px;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+        }
+    }
+
+
+    &__price{
+        @media (max-width: 690px){
+            display: none;
+        }
+    }
+
+    &__price-mobile{
+        display: none;
+        color: $grey2;
+        @media (max-width: 690px){
+            display: block;
+        }
+    }
+
+    &__cost_mobile{
+        display: none;
+
+        @media (max-width: 690px){
+            display: inline;
+        }
+    }
+
+    &__cost, &__price{
+        white-space: pre;
+    }
+
+    &__delete{
+        width: 10px;
+        height: 10px;
+
+        position: relative;
+
+        @media (max-width: 690px){
+            position: absolute;
+            top: 40px;
+            right: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            transform: rotate(45deg);
+            background-color: $grey2;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-color: $grey2;
+        }
+        
+    }
+
+    &__line-mobile{
+        display: none;
+        width: 100%;
+
+        @media (max-width: 690px){
+            display: block;
+        }
+    }
+}

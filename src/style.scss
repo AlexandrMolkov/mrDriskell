@@ -61,4 +61,16 @@
     ;
 @import "scss/pages/product/product-slider.scss";
 
-@import "scss/pages/basket/form.scss";
+@import 
+    "scss/pages/cart/form.scss",
+    "scss/pages/cart/cart-item.scss",
+    "scss/pages/parts/cart-side.scss"
+    ;
+    
+@import "scss/pages/cart/form.scss";
+
+@import "scss/pages/parts/card.scss";
+
+@import "scss/pages/additional-services/additional.scss";
+
+@import "scss/pages/promo/promo.scss";

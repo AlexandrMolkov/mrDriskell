@@ -1,0 +1,23 @@
+extends pug/common/main
+
+block variables
+    -var title = 'Доп. услуги'
+    -var headerClasses = ''
+    -var currentPage = ''
+
+block content
+    main.main
+        section.promo
+            .container
+                .breadcrumbs
+                    a.breadcrumbs__item(href="index.html") Главная
+                    a.breadcrumbs__item(href="#") Промокоды
+                .promo__content
+                    h2.title.promo__title Промокоды
+                    include pug/pages/promo/promo
+
+    include pug/common/footer
+    script(src="js/app.min.js")
+       
+
+        

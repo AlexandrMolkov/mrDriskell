@@ -1,0 +1,93 @@
+form.cart-form(action="#")
+    .cart-form__main.container_laptop-on
+        .dec-line.cart-form__dec-line
+        table.cart-form__table
+            thead
+                tr
+                    th Наименование
+                    th Цена
+                    th Количество
+                    th Стоимость
+                   
+            tbody 
+                tr.cart-item
+                    td.cart-item__td-group
+                        .cart-item__group
+                            .cart-item__image-wrapper
+                                img.cart-item__image(src="img/cart/foxxx_viper_fox_golden_vintage.png", alt="foxxx viper fox golden vintage")
+                            .cart-item__name 
+                                div Foxxx Viper Fox Golden Vintage Lot #1 RCA
+                                div.cart-item__price-mobile 
+                                    span Цена: 9000₽
+                    td.cart-item__price 9000₽
+                    td
+                        .product-main__count
+                            button.product-main__count-button.product-main__count-button_subtr#prodCountSubtr
+                            input.product-main__input(type="text" value="1")
+                            button.product-main__count-button.product-main__count-button_add#prodCountAdd
+                    td
+                        .cart-item__cost
+                            span.cart-item__cost_mobile Стоимость: 
+                            span 34 920₽
+                    td
+                        button.cart-item__delete
+                        
+                    td.cart-item__line-mobile
+                        .dec-line
+
+                tr.cart-item
+                    td.cart-item__td-group
+                        .cart-item__group
+                            .cart-item__image-wrapper
+                                img.cart-item__image(src="img/cart/verge_grip.png", alt="verge grip")
+                            .cart-item__name
+                                div Verge Grip 35 мм
+                                div.cart-item__price-mobile 
+                                    span Цена: 1400₽
+                    td
+                        .cart-item__price 1400₽
+                    td
+                        .product-main__count
+                            button.product-main__count-button.product-main__count-button_subtr#prodCountSubtr
+                            input.product-main__input(type="text" value="1")
+                            button.product-main__count-button.product-main__count-button_add#prodCountAdd
+                    td
+                        .cart-item__cost
+                            span.cart-item__cost_mobile Стоимость: 
+                            span 1400₽
+                    td
+                        button.cart-item__delete
+
+        .cart-form__item           
+            .cart-form__row 
+                .cart-form__row-title 01. Информация о получателе
+            .cart-form__row
+                lable.cart-form__label.cart-form__label_md ФИО*
+                    input.cart-form__input(type="text" placeholder="Иванов Иван Иванович")
+                lable.cart-form__label.cart-form__label_tel Телефон*
+                    input.cart-form__input(type="tel" placeholder="8(800)555-35-35")
+                lable.cart-form__label.cart-form__label_md Эл. почта
+                    input.cart-form__input(type="email" placeholder="Ivanov2021@mail.ru")
+        .cart-form__item
+            .cart-form__row
+                .cart-form__row-title 02. Адрес доставки
+            .cart-form__row.cart-form__row_mb_30
+                lable.cart-form__label.cart-form__label_md Город*
+                    input.cart-form__input(type="text" placeholder="Москва")
+                lable.cart-form__label.cart-form__label_bg Улица, дом*
+                    input.cart-form__input(type="text" placeholder="ул. Ленина д. 25")
+            .cart-form__row
+                lable.cart-form__label.cart-form__label_sm 
+                    span Квартира / офис*
+                    input.cart-form__input(type="text" placeholder="589")
+                lable.cart-form__label.cart-form__label_sm 
+                    span Подъезд
+                    input.cart-form__input(type="text" placeholder="5")
+                lable.cart-form__label.cart-form__label_sm 
+                    span Этаж
+                    input.cart-form__input(type="text" placeholder="5")
+                lable.cart-form__label.cart-form__label_sm
+                    span Домофон
+                    input.cart-form__input(type="text" placeholder="7350")
+    
+    include ../parts/cart-side

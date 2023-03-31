@@ -1,0 +1,27 @@
+extends pug/common/main
+
+block variables
+    -var title = 'Доп. услуги'
+    -var headerClasses = ''
+    -var currentPage = ''
+
+block content
+    main.main
+        section.add-seriveces
+            .container
+                .breadcrumbs
+                    a.breadcrumbs__item(href="index.html") Главная
+                    a.breadcrumbs__item(href="catalog.html") Каталог
+                    a.breadcrumbs__item Корзина
+                    a.breadcrumbs__item Доп. услуги
+                .add-seriveces__content
+                    h2.title.add-seriveces__title Доп. услуги
+                    include pug/pages/additional-services/additional
+                    .cart-side-wrapper
+                        include pug/pages/parts/cart-side
+
+    include pug/common/footer
+    script(src="js/app.min.js")
+       
+
+        

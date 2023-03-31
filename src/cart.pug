@@ -1,23 +1,23 @@
 extends pug/common/main
 
 block variables
-    -var title = 'Брэнды'
+    -var title = 'Корзина'
     -var headerClasses = ''
     -var currentPage = ''
 
 block content
     main.main
-        section.basket-page
+        section.cart-page
             .container_laptop-off
                 .container_laptop-on
                     .breadcrumbs
                         a.breadcrumbs__item(href="index.html") Главная
                         a.breadcrumbs__item(href="catalog.html") Каталог
                         a.breadcrumbs__item Корзина
-                .basket-page__content
+                .cart-page__content
                     .container_laptop-on
-                        h2.title.basket-page__title Корзина
-                    include pug/pages/basket/form
+                        h2.title.cart-page__title Корзина
+                    include pug/pages/cart/form
 
     include pug/common/footer
     script(src="js/app.min.js")

@@ -1,0 +1,143 @@
+.cart-side{
+
+    max-width: 392px;
+    background-color: $bgCard;
+    grid-column: span 4;
+
+    @media (max-width: $laptop){
+        grid-column: span 12;
+        margin-left: 20px;
+    }
+    @media (max-width: 630px){
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    &__block{
+        padding: 30px 40px 30px 40px;
+    }
+
+    &__total{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        margin-bottom: 30px;
+    }
+    &__total-value{
+        font-weight: 500;
+    }
+    &__total-item{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        &_bold{
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 115%;
+        }
+    }
+
+    &__btn-promo{
+        margin: 0 auto;
+        padding-top: 15px;
+        position: relative;
+        color: $accent;
+        font-size: 20px;
+        line-height: 150%;
+        display: block;
+        
+    }
+
+    &__btn{
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+        &:last-child{
+            margin-bottom: 20px;
+        }
+    }
+    &__row{
+
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 20px;
+
+        > * {
+            grid-column: span 8;
+        }
+
+        &_mb_30{
+            margin-bottom: 30px;
+        }
+    }
+    &__row-title{
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 115%;
+        margin-bottom: 20px;
+
+        @media (max-width: $tablet){
+            font-size: 17px;
+        }
+
+        @media (max-width: $mobileL){
+
+        }
+    }
+
+    &__label{
+        width: 100%;
+        min-width: 100px;
+        color: $grey2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+
+        &_sm{
+            grid-column: span 2;
+            @media (max-width: 630px){
+                grid-column: span 4;
+            }
+        }
+        &_tel{
+            grid-column: span 2;
+            @media (max-width: 630px){
+                grid-column: span 8;
+            }
+        }
+        &_md{
+            grid-column: span 3;
+            @media (max-width: 630px){
+                grid-column: span 8;
+            }
+        }
+        &_bg{
+            grid-column: span 5;
+            @media (max-width: 630px){
+                grid-column: span 8;
+            }
+        }
+    }
+    &__input{
+        padding: 23px 14px 23px 30px;
+
+        font-family: Jost;
+        background-color: $bgCard;
+
+        @media (max-width: 690px){
+            padding: 23px 14px;
+        }
+
+        &::placeholder{
+            color: $grey;
+        }
+
+        &_border{
+            border: 1px solid $grey;
+        }
+    }
+}
