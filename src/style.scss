@@ -27,7 +27,7 @@
 @import "../node_modules/@fancyapps/ui/dist/fancybox";
 
 @import "scss/common/_checkbox.scss";
-/*@import "scss/common/_radio.scss";*/
+@import "scss/common/_radio.scss";
 //@import "scss/common/_form.scss"; 
 
 @import "scss/main";
@@ -60,3 +60,5 @@
     "scss/pages/product/more.scss"
     ;
 @import "scss/pages/product/product-slider.scss";
+
+@import "scss/pages/basket/form.scss";

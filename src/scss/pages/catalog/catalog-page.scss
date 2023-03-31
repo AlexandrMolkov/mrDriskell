@@ -7,6 +7,10 @@
         justify-content: center;
     }
 
+    &__title{
+        margin-bottom: 30px;   
+    }
+
     &__btn{
         
         align-self: center;
@@ -49,6 +53,7 @@
     }
 
     &__input{
+        text-align: center;
         width: 83px;
         height: 40px;
         border: 1px solid $grey2;

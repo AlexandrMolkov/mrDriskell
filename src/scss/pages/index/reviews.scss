@@ -2,13 +2,14 @@
 
     padding-bottom: 72px;
 
+    &__title{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
     &__slider-wrapper{
         position: relative;
 
-    }
-
-    &__content{
-        
     }
 
     &__slider{
@@ -118,8 +119,6 @@
             content: "";
             display: inline-block;
             margin-right: 15px;
-/*             top: 0;
-            left: 0; */
             width: 28px;
             height: 28px;
             background-image: url('/img/svg/social/inst.svg');

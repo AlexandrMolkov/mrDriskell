@@ -1,0 +1,174 @@
+include ../../common/mixins/checkbox
+include ../../common/mixins/radio
+
+form.basket-form(action="#")
+    .basket-form__main.container
+        .dec-line.basket-form__dec-line
+        table.basket-form__table
+            thead
+                tr
+                    th Наименование
+                    th Цена
+                    th Количество
+                    th Стоимость
+                   
+            tbody 
+                tr.basket-item
+                    td.basket-item__td-group
+                        .basket-item__group
+                            .basket-item__image-wrapper
+                                img.basket-item__image(src="img/basket/foxxx_viper_fox_golden_vintage.png", alt="foxxx viper fox golden vintage")
+                            .basket-item__name 
+                                div Foxxx Viper Fox Golden Vintage Lot #1 RCA
+                                div.basket-item__price-mobile 
+                                    span Цена: 9000₽
+                    td.basket-item__price 9000₽
+                    td
+                        .product-main__count
+                            button.product-main__count-button.product-main__count-button_subtr#prodCountSubtr
+                            input.product-main__input(type="text" value="1")
+                            button.product-main__count-button.product-main__count-button_add#prodCountAdd
+                    td
+                        .basket-item__cost
+                            span.basket-item__cost_mobile Стоимость: 
+                            span 34 920₽
+                    td
+                        button.basket-item__delete
+                        
+                    td.basket-item__line-mobile
+                        .dec-line
+
+                tr.basket-item
+                    td.basket-item__td-group
+                        .basket-item__group
+                            .basket-item__image-wrapper
+                                img.basket-item__image(src="img/basket/verge_grip.png", alt="verge grip")
+                            .basket-item__name
+                                div Verge Grip 35 мм
+                                div.basket-item__price-mobile 
+                                    span Цена: 1400₽
+                    td
+                        .basket-item__price 1400₽
+                    td
+                        .product-main__count
+                            button.product-main__count-button.product-main__count-button_subtr#prodCountSubtr
+                            input.product-main__input(type="text" value="1")
+                            button.product-main__count-button.product-main__count-button_add#prodCountAdd
+                    td
+                        .basket-item__cost
+                            span.basket-item__cost_mobile Стоимость: 
+                            span 1400₽
+                    td
+                        button.basket-item__delete
+
+        .basket-form__item           
+            .basket-form__row 
+                .basket-form__row-title 01. Информация о получателе
+            .basket-form__row
+                lable.basket-form__label.basket-form__label_md ФИО*
+                    input.basket-form__input(type="text" placeholder="Иванов Иван Иванович")
+                lable.basket-form__label.basket-form__label_tel Телефон*
+                    input.basket-form__input(type="tel" placeholder="8(800)555-35-35")
+                lable.basket-form__label.basket-form__label_md Эл. почта
+                    input.basket-form__input(type="email" placeholder="Ivanov2021@mail.ru")
+        .basket-form__item
+            .basket-form__row
+                .basket-form__row-title 02. Адрес доставки
+            .basket-form__row.basket-form__row_mb_30
+                lable.basket-form__label.basket-form__label_md Город*
+                    input.basket-form__input(type="text" placeholder="Москва")
+                lable.basket-form__label.basket-form__label_bg Улица, дом*
+                    input.basket-form__input(type="text" placeholder="ул. Ленина д. 25")
+            .basket-form__row
+                lable.basket-form__label.basket-form__label_sm 
+                    span Квартира / офис*
+                    input.basket-form__input(type="text" placeholder="589")
+                lable.basket-form__label.basket-form__label_sm 
+                    span Подъезд
+                    input.basket-form__input(type="text" placeholder="5")
+                lable.basket-form__label.basket-form__label_sm 
+                    span Этаж
+                    input.basket-form__input(type="text" placeholder="5")
+                lable.basket-form__label.basket-form__label_sm
+                    span Домофон
+                    input.basket-form__input(type="text" placeholder="7350")
+    
+    .basket-form__side
+        .basket-form__side-block
+            .basket-form__row 
+                .basket-form__total 
+                    .basket-form__total-item  
+                        span Всего единиц товара: 
+                        span.basket-form__total-value#totaCount 17
+                    .basket-form__total-item 
+                        span Общая скидка: 
+                        span.basket-form__total-value#totalSale 1080₽
+                    .basket-form__total-item  
+                        span Доп. услуги 
+                        span.basket-form__total-value#totalAddServ 1080₽
+                    .basket-form__total-item.basket-form__total-item_bold
+                        span Итого:
+                        span#total 37 820₽
+            .basket-form__row
+                lable.basket-form__label Промокод
+                    input.basket-form__input.basket-form__input_border(type="text" placeholder="Driskell2000|")  
+            .basket-form__row
+                button.basket-form__btn-promo Активировать промокод    
+                    span.dec-underline 
+        .dec-line
+        .basket-form__side-block
+            .basket-form__row
+                .basket-form__row-title Оплата
+            .basket-form__row.basket-form__row_mb_30
+                //+radio('','payment',['Онлайн на сайте','Наложенным платежом','Безналичный расчет'],0,'after',true)
+                <div class="custom-radio-wrapper">
+                    <label class="custom-radio-label">
+                        <input class="hidden" type="radio" name="payment" checked required="" value="Онлайн на сайте">
+                        <span class="custom-radio custom-radio_after"></span>
+                        <span class="custom-radio-text">Онлайн на сайте</span>
+                        span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                    </label>
+                    <label class="custom-radio-label">
+                    <input class="hidden" type="radio" name="payment" required value="Наложенным платежом">
+                        <span class="custom-radio custom-radio_after"></span>
+                        <span class="custom-radio-text">Наложенным платежом</span>
+                        span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                    </label>
+                    <label class="custom-radio-label">
+                    <input class="hidden" type="radio" name="payment" required value="Безналичный расчет">
+                        <span class="custom-radio custom-radio_after"></span>
+                        <span class="custom-radio-text">Безналичный расчет</span>
+                        span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                    </label>
+                </div>
+            .basket-form__row
+                .basket-form__row-title Доставка
+            .basket-form__row
+                //+radio('','delivery',['Курьерская служба','Почта России'],0,'after',true)
+                <div class="custom-radio-wrapper">
+                    <label class="custom-radio-label">
+                        <input class="hidden" type="radio" name="delivery" checked="" required="" value="Курьерская служба">
+                        <span class="custom-radio custom-radio_after"></span>
+                        <span class="custom-radio-text">Курьерская служба</span>
+                        span.custom-radio-info(title='Стоимость доставки рассчитывается при звонке менеджером')
+                    </label>
+                    <label class="custom-radio-label">
+                        <input class="hidden" type="radio" name="delivery" required="" value="Почта России">
+                        <span class="custom-radio custom-radio_after"></span>
+                        <span class="custom-radio-text">Почта России</span>
+                        <span class="custom-radio-text">Курьерская служба</span>
+                        span.custom-radio-info(title='Стоимость доставки рассчитывается при звонке менеджером')
+                    </label>
+                </div>
+
+        .dec-line
+        .basket-form__side-block
+            .basket-form__row
+                button.btn.btn_orange.basket-form__btn Оформить заказ
+            .basket-form__row
+                button.btn.basket-form__btn Купить в 1 клик
+            .basket-form__row
+                //+checkbox('Согласен с публичной офертой и обработкой персональных данных','agree',false,'after',false)(class='form-cb')
+                <label class="custom-checkbox-label form-cb">
+                    <input class="checkbox hidden" type="checkbox" name="agree"><span class="custom-checkbox custom-checkbox_after"></span><span class="custom-checkbox-text agree-text">Согласен с <a class='agree-link' href="#">публичной офертой</a> и <a class='agree-link' href="#">обработкой персональных данных</a></span>
+                </label>
