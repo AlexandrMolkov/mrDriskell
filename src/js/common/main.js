@@ -3,7 +3,6 @@ import {burgInit, burgResize} from './burger.js'
 import '../libs/inputmask.js'
 import AOS from 'aos';
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('[data-background]').forEach( el => {

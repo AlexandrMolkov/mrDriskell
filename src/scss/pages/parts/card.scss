@@ -2,24 +2,24 @@
     grid-column: span 1;
 
     background-color: $bgCard;
-    //padding: 0 40px 40px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     
     display: flex;
+    flex-direction: column;
 
     max-width: 400px;
 
-/*     @media (max-width: $tablet){
-        grid-column: span 2;
-    } */
-
     &__content{
+        padding: 0 40px;
         display: flex;
         flex-direction: column;
+
+        height: 100%;
     }
 
     &__image-wrapper{
 
+        width: 100%;
         margin-bottom: 22px;
 
         img{
@@ -30,36 +30,32 @@
     }
 
     &__title{
-        padding: 0 40px;
         font-weight: 700;
         font-size: 24px;
         line-height: 115%; 
         margin-bottom: 10px; 
         
         @media (max-width: $tablet){
-            font-size: 20;
+            font-size: 20px;
         }
     }
 
     &__text{
-        padding: 0 40px;
         margin-bottom: 22px;
         font-size: 16px;
         flex-grow: 1;
     }
 
     &__cost {
-        padding: 0 40px;
         color: $grey2;
         margin-bottom: 15px;
     }
 
     &__btn{
-        padding: 0 40px;
-        //margin: 0 auto;
-        min-width: auto;
-        width: fit-content;
+        padding: 18px 0;
         align-self: center;
-        margin: 0 20px;
+        white-space: pre;
+        width: 100%;
+        min-width: auto;
     }
 }

@@ -10,6 +10,7 @@
 @import "scss/common/_burg.scss";
 @import "scss/common/_nav.scss";
 @import "scss/common/_logo.scss";
+@import "scss/common/_drop.scss";
 @import "scss/common/_product-card-slider.scss";
 //@import "scss/common/_scrollbar.scss";
 @import "scss/common/tabs.scss";
@@ -74,3 +75,8 @@
 @import "scss/pages/additional-services/additional.scss";
 
 @import "scss/pages/promo/promo.scss";
+
+@import 
+    "scss/pages/account/account.scss",
+    "scss/pages/parts/person-card.scss",
+    "scss/pages/account/history.scss";

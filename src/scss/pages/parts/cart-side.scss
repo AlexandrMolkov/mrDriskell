@@ -1,17 +1,23 @@
 .cart-side{
-
+    margin: 0 auto;
     max-width: 392px;
     background-color: $bgCard;
     grid-column: span 4;
 
+    &_left{
+        @media (max-width: $laptop){
+            margin-left: 20px;
+        }
+        @media (max-width: 630px){
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+
     @media (max-width: $laptop){
         grid-column: span 12;
-        margin-left: 20px;
     }
-    @media (max-width: 630px){
-        max-width: 400px;
-        margin: 0 auto;
-    }
+
 
     &__block{
         padding: 30px 40px 30px 40px;
@@ -38,17 +44,6 @@
             font-size: 25px;
             line-height: 115%;
         }
-    }
-
-    &__btn-promo{
-        margin: 0 auto;
-        padding-top: 15px;
-        position: relative;
-        color: $accent;
-        font-size: 20px;
-        line-height: 150%;
-        display: block;
-        
     }
 
     &__btn{

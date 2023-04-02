@@ -2,14 +2,6 @@
 
     padding-bottom: 160px;
 
-    &__title{
-        margin-bottom: 10px; 
-        
-        @media (max-width: $tablet){
-            margin-bottom: 0px;
-        }
-    }
-
     &__content{
 
         display: grid;
@@ -19,7 +11,7 @@
     }
 
     &__title{
-        grid-column: span 12;
+        margin-bottom: 40px;
     }
 
     &__grid{
@@ -42,7 +34,9 @@
         }
     }
 }
+
 .cart-side-wrapper{
+
     grid-column: span 4;
 
     @media (max-width: $laptop){
@@ -61,8 +55,5 @@
             margin: 0 auto; 
            }
     }
-
-
-
     
 }

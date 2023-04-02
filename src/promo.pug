@@ -1,7 +1,7 @@
 extends pug/common/main
 
 block variables
-    -var title = 'Доп. услуги'
+    -var title = 'Промокоды'
     -var headerClasses = ''
     -var currentPage = ''
 
@@ -12,8 +12,9 @@ block content
                 .breadcrumbs
                     a.breadcrumbs__item(href="index.html") Главная
                     a.breadcrumbs__item(href="#") Промокоды
+                h2.title.promo__title Промокоды
+            .container_mob-off
                 .promo__content
-                    h2.title.promo__title Промокоды
                     include pug/pages/promo/promo
 
     include pug/common/footer

@@ -1,0 +1,60 @@
+.account{/* 
+
+    &__top{
+        padding-top: 50px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    } */
+
+
+
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+    }
+
+    &__main{
+        grid-column: span 8;
+
+        @media (max-width: 1260px){
+            grid-column: span 12;
+            max-width: 800px;
+
+            margin: 0 auto;
+        }
+    }
+
+
+
+
+    &__title{
+        grid-column: span 12;   
+    }
+
+    &__form{
+        
+        margin-bottom: 50px;
+    }
+
+    &__title{
+        margin-bottom: 40px;
+    }
+
+    &__person-card-wrapper{
+        grid-column: span 4;
+
+        @media (max-width: 1260px){
+            position: fixed;
+
+            bottom: 20%;
+            right: 0;
+
+            z-index: 10;
+            
+        }
+    }
+}

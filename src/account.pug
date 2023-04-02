@@ -1,0 +1,28 @@
+extends pug/common/main
+
+block variables
+    -var title = 'Личный кабинет'
+    -var headerClasses = ''
+    -var currentPage = ''
+
+block content
+    main.main
+        section.account
+            .container
+                .breadcrumbs
+                    a.breadcrumbs__item(href="index.html") Главная
+                    a.breadcrumbs__item(href="#") Личный кабинет
+                .account__content
+                    include pug/pages/account/account
+                    .account__person-card-wrapper
+                        include pug/pages/account/person-card
+                        
+            .container_mob-off
+                include pug/pages/account/history
+        
+
+    include pug/common/footer
+    script(src="js/app.min.js")
+       
+
+        

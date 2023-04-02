@@ -2,9 +2,17 @@
     &__title{
            padding-bottom: 48px;
     }
+
+    &__form{
+        padding-bottom: 160px;
+    
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+    }
 }
 
-.cart-form{
+/* .cart-form{
     padding-bottom: 160px;
     
     display: grid;
@@ -160,6 +168,42 @@
             display: none;
         }
     }
+} */
+
+.cart-table{
+
+    width: 100%;
+    margin-bottom: 60px;
+
+    th{
+        font-size: 15px;
+        font-weight: 400;
+        text-align: start;
+        padding-bottom: 40px;
+
+        @media (max-width: 690px){
+            display: none;
+        }
+    }
+
+    td:not(:last-child){
+        padding-right: 40px;
+        
+        @media (max-width: 1200px){
+            padding-right: 20px;
+
+            @media (max-width: 690px){
+                padding-right: 0px !important;
+            }
+        }
+    }
+    td{
+        padding-bottom: 20px;
+        
+    }
+
+
+
 }
 
 .agree-link{

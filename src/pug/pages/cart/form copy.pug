@@ -1,7 +1,7 @@
-form.form.cart-page__form(action="#")
-    .form.form__main.container_laptop-on
-        .dec-line.form__dec-line
-        table.cart-table
+form.cart-form(action="#")
+    .cart-form__main.container_laptop-on
+        .dec-line.cart-form__dec-line
+        table.cart-form__table
             thead
                 tr
                     th Наименование
@@ -58,36 +58,36 @@ form.form.cart-page__form(action="#")
                     td
                         button.cart-item__delete
 
-        .form__item           
-            .form__row 
-                .form__row-title 01. Информация о получателе
-            .form__row
-                lable.form__label.form__label_md ФИО*
-                    input.form__input(type="text" placeholder="Иванов Иван Иванович")
-                lable.form__label.form__label_tel Телефон*
-                    input.form__input(type="tel" placeholder="8(800)555-35-35")
-                lable.form__label.form__label_md Эл. почта
-                    input.form__input(type="email" placeholder="Ivanov2021@mail.ru")
-        .form__item
-            .form__row
-                .form__row-title 02. Адрес доставки
-            .form__row.form__row_mb_30
-                lable.form__label.form__label_md Город*
-                    input.form__input(type="text" placeholder="Москва")
-                lable.form__label.form__label_bg Улица, дом*
-                    input.form__input(type="text" placeholder="ул. Ленина д. 25")
-            .form__row
-                lable.form__label.form__label_sm 
+        .cart-form__item           
+            .cart-form__row 
+                .cart-form__row-title 01. Информация о получателе
+            .cart-form__row
+                lable.cart-form__label.cart-form__label_md ФИО*
+                    input.cart-form__input(type="text" placeholder="Иванов Иван Иванович")
+                lable.cart-form__label.cart-form__label_tel Телефон*
+                    input.cart-form__input(type="tel" placeholder="8(800)555-35-35")
+                lable.cart-form__label.cart-form__label_md Эл. почта
+                    input.cart-form__input(type="email" placeholder="Ivanov2021@mail.ru")
+        .cart-form__item
+            .cart-form__row
+                .cart-form__row-title 02. Адрес доставки
+            .cart-form__row.cart-form__row_mb_30
+                lable.cart-form__label.cart-form__label_md Город*
+                    input.cart-form__input(type="text" placeholder="Москва")
+                lable.cart-form__label.cart-form__label_bg Улица, дом*
+                    input.cart-form__input(type="text" placeholder="ул. Ленина д. 25")
+            .cart-form__row
+                lable.cart-form__label.cart-form__label_sm 
                     span Квартира / офис*
-                    input.form__input(type="text" placeholder="589")
-                lable.form__label.form__label_sm 
+                    input.cart-form__input(type="text" placeholder="589")
+                lable.cart-form__label.cart-form__label_sm 
                     span Подъезд
-                    input.form__input(type="text" placeholder="5")
-                lable.form__label.form__label_sm 
+                    input.cart-form__input(type="text" placeholder="5")
+                lable.cart-form__label.cart-form__label_sm 
                     span Этаж
-                    input.form__input(type="text" placeholder="5")
-                lable.form__label.form__label_sm
+                    input.cart-form__input(type="text" placeholder="5")
+                lable.cart-form__label.cart-form__label_sm
                     span Домофон
-                    input.form__input(type="text" placeholder="7350")
+                    input.cart-form__input(type="text" placeholder="7350")
     
     include ../parts/cart-side

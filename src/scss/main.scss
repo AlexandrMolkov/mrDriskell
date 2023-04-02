@@ -164,9 +164,9 @@ body {
     padding: 18px;
     display: inline-block;
     color: $accent;
-    background-color: transparent;
+    background-color: #EEEEEE;
     border: $accent 2px solid;
-    min-width: 275px;
+    width: 100%;
 
     font-size: 20px;
     line-height: 150%;
@@ -344,6 +344,32 @@ body {
     }
     @media (max-width: $mobileL){
         display: none;
+    }
+}
+
+.btn-underline{
+    margin: 0 auto;
+    position: relative;
+    color: #bb8c5f;
+    font-size: 20px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+
+    @media (max-width: $mobileL){
+        font-size: 15px;
+    }
+
+    &_edit{
+        margin: 0;
+        margin-left: auto;
+        left: -7px;
+        grid-column: span 2;
+    }
+
+    &_p-top_15{
+        padding-top: 15px;
     }
 }
 

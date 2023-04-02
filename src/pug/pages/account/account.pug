@@ -1,0 +1,39 @@
+.account__main
+    h2.title.account__title Личный кабинет
+    form.form.account__form(action="#")
+    .form.form__main
+        .form__item           
+            .form__flex-row
+                .form__row-title.form__row-title_gcol_span_6 Информация о получателе
+                button.btn-underline.btn-underline_edit Редактировать
+                    .dec-underline
+            .form__row
+                lable.form__label.form__label_md ФИО*
+                    input.form__input(type="text" placeholder="Иванов Иван Иванович")
+                lable.form__label.form__label_tel Телефон*
+                    input.form__input(type="tel" placeholder="8(800)555-35-35")
+                lable.form__label.form__label_md Эл. почта
+                    input.form__input(type="email" placeholder="Ivanov2021@mail.ru")
+        .form__item
+            .form__flex-row
+                .form__row-title.form__row-title_gcol_span_6  Адрес доставки
+                button.btn-underline.btn-underline_edit Редактировать
+                    .dec-underline
+            .form__row.form__row_mb_30
+                lable.form__label.form__label_md Город*
+                    input.form__input(type="text" placeholder="Москва")
+                lable.form__label.form__label_bg Улица, дом*
+                    input.form__input(type="text" placeholder="ул. Ленина д. 25")
+            .form__row
+                lable.form__label.form__label_sm 
+                    span Квартира / офис*
+                    input.form__input(type="text" placeholder="589")
+                lable.form__label.form__label_sm 
+                    span Подъезд
+                    input.form__input(type="text" placeholder="5")
+                lable.form__label.form__label_sm 
+                    span Этаж
+                    input.form__input(type="text" placeholder="5")
+                lable.form__label.form__label_sm
+                    span Домофон
+                    input.form__input(type="text" placeholder="7350")

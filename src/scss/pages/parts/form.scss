@@ -5,25 +5,103 @@
 
     display: flex;
     flex-direction: column;
-    gap: 23px;
 
-    &__row{
-        display: flex;
-        gap: 24px;
-        justify-content: space-between;
-        align-items: flex-end;
+    &__main{
+        grid-column: span 8;
+        position: relative;
 
-        @media (max-width: 539px){
-            flex-wrap: wrap;
+        @media (max-width: $laptop){
+            grid-column: span 12;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item{
+        width: 100%;
+        &:not(:last-child){
+            margin-bottom: 50px;
         }
 
-        &_wrap{
-            flex-wrap: wrap;
+        @media (max-width: 690px){
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+
+    &__row{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 20px;
+
+        &_mb_30{
+            margin-bottom: 30px;
+        }
+    }
+
+    &__flex-row{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__row-title{
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 115%;
+        margin-bottom: 20px;
+        grid-column: span 8;
+
+        @media (max-width: $tablet){
+            font-size: 17px;
+            max-width: 50%;
+        }
+
+        @media (max-width: $mobileL){
+            
+        }
+
+        &_gcol_span_6{
+            grid-column: span 6;
         }
     }
 
     &__label{
+
         width: 100%;
+        min-width: 100px;
+        color: $grey2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+
+        &_sm{
+            grid-column: span 2;
+            @media (max-width: 690px){
+                grid-column: span 4;
+            }
+        }
+        &_tel{
+            grid-column: span 2;
+            @media (max-width: 690px){
+                grid-column: span 8;
+            }
+        }
+        &_md{
+            grid-column: span 3;
+            @media (max-width: 690px){
+                grid-column: span 8;
+            }
+        }
+        &_bg{
+            grid-column: span 5;
+            @media (max-width: 690px){
+                grid-column: span 8;
+            }
+        }
+
+
+/*         width: 100%;
         
         display: flex;
         flex-direction: column;
@@ -50,11 +128,15 @@
             @media (max-width: $mobileL){
                 width: 100%;
             }
-        }
+        } */
+
+
+
+
     }
 
     &__input, &__textarea{
-        padding: 12px 25px;
+/*         padding: 12px 25px;
         background-color: $bgCard;
         color: $black;
         line-height: 150%;
@@ -74,9 +156,24 @@
 
         &_width_100{
             width: 100%;
+        } */
+
+        padding: 23px 14px 23px 30px;
+
+        font-family: Jost;
+        background-color: $bgCard;
+
+        @media (max-width: 690px){
+            padding: 23px 14px;
         }
 
+        &::placeholder{
+            color: $grey;
+        }
 
+        &_border{
+            border: 1px solid $grey;
+        }
 
     }
 
@@ -87,6 +184,15 @@
 
         @media (max-width: 539px){
             margin-right: 0;
+        }
+    }
+    &__dec-line{
+        top: 35px;
+        position: absolute;
+        width: 100%;
+
+        @media (max-width: 690px){
+            display: none;
         }
     }
 
@@ -126,7 +232,7 @@
 
 
 
-/*         @media (max-width: 630px){
+/*         @media (max-width: 690px){
             display: none;
         } */
     }

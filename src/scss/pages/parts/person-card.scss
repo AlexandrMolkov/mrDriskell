@@ -1,0 +1,152 @@
+.person-card{
+
+    position: relative;
+    grid-column: span 4;
+
+    padding: 40px;
+    background-color: $bgCard;
+
+    @media (max-width: 1260px){
+        padding: 0px;
+        
+    }
+
+    &__main{
+        display: flex;
+        gap: 17px;
+        margin-bottom: 42px;
+
+        @media (max-width: 1260px){
+            gap: 0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__image-wrapper{
+        width: 166px;
+        height: 166px;
+
+        @media (max-width: 1260px){
+            width: 60px;
+            height: 60px;
+            
+        }
+    }
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+
+    &__main-info{
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 1260px){
+            padding: 7px 10px;
+        }
+    }
+
+    &__your-manager{
+        color: $grey2;
+
+        @media (max-width: 1260px){
+            font-size: 15px;
+        }
+    }
+
+    &__name{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        flex-grow: 1;
+
+        @media (max-width: 1260px){
+            font-size: 15px;
+            line-height: 22px;
+        }
+
+    }
+
+    &__status{
+        position: relative;
+        color: $grey2;
+        padding-left: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #C91B1B;   
+        }
+
+        &__active{
+            &::before {
+                content: "";
+                background-color: #32df2d;   
+            }
+        }
+
+        @media (max-width: 1260px){
+            padding: 0;
+            font-size: 0;
+            height: 0;
+            position: absolute;
+            left: 54px;
+            bottom: 0;
+        }
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media (max-width: 1260px){
+            display: none;
+            
+        }
+    }
+
+    &__phone{
+        font-weight: 700;
+    }
+
+    &__social{
+        display: flex;
+        gap: 10px;
+
+        margin-bottom: 30px;
+    }
+
+    &__mail{
+        color: $accent;
+        margin-bottom: 25px;
+    }
+
+    &__discount{
+
+        position: absolute;
+        width: 100%;
+        top: -60px;
+        left: 0;
+
+        font-size: 25px;
+        line-height: 115%;
+
+        @media (max-width: 1260px){
+            display: none;
+            
+        }
+    }
+    &__discount-value{
+        color: $accent;
+
+
+    }
+
+}

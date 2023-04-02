@@ -3,11 +3,7 @@
     padding-bottom: 160px;
 
     &__title{
-        margin-bottom: 10px; 
-        
-        @media (max-width: $tablet){
-            margin-bottom: 0px;
-        }
+        margin-bottom: 30px;
     }
 
     &__content{
@@ -16,10 +12,6 @@
         grid-template-columns: repeat(12, 1fr);
         gap: 20px;
 
-    }
-
-    &__title{
-        grid-column: span 12;
     }
 
     &__grid{
