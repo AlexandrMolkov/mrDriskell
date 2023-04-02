@@ -1,0 +1,21 @@
+extends pug/common/main
+
+block variables
+    -var title = 'Контакты'
+    -var headerClasses = ''
+    -var currentPage = ''
+
+block content
+    main.main
+        .container
+            .breadcrumbs
+                a.breadcrumbs__item(href="index.html") Главная
+                a.breadcrumbs__item(href="#") Контакты
+        include pug/pages/contacts/contacts
+        include pug/pages/contacts/managers
+
+    include pug/common/footer
+    script(src="js/app.min.js")
+       
+
+        

@@ -22,7 +22,7 @@
         @include container();
     }
 }
-.container_mob-off {
+.container-mob-off {
     @media (min-width: $mobileL){
         @include container();
     }

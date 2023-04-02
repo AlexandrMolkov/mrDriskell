@@ -21,14 +21,6 @@
         background-position: center;
     }
 
-    @media (max-width: $laptop){
-        font-size: 14px;
-    }
-
-    @media (max-width: 960px){
-        margin-left: 0px;
-    }
-
     &_top_6{
         top: 6px;
     }
