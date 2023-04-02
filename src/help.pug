@@ -1,0 +1,21 @@
+extends pug/common/main
+
+block variables
+    -var title = 'Основные инструменты для художественной татуировки'
+    -var headerClasses = ''
+    -var currentPage = ''
+
+block content
+    main.main
+        .container
+            .breadcrumbs
+                a.breadcrumbs__item(href="index.html") Главная
+                a.breadcrumbs__item(href="#") Помощь
+                a.breadcrumbs__item(href="#") Всё о тату оборудовании и инстументах
+                a.breadcrumbs__item(href="#") Основные инструменты для художественной татуировки
+        include pug/pages/help/help
+    include pug/common/footer
+    script(src="js/app.min.js")
+       
+
+        

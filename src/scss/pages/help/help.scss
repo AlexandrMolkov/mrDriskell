@@ -1,0 +1,160 @@
+.help{
+
+    padding-bottom: 200px;
+
+    @media (max-width: $tablet){
+        padding-bottom: 160px;
+    }
+
+    @media (max-width: $mobileL){
+        padding-bottom: 120px;
+    }
+
+    &__title{
+        font-family: Forum;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    &__content{
+        max-width: 596px;
+        margin: 0 auto;
+    }
+
+    &__text{
+        margin-bottom: 50px;
+    }
+}
+
+.article{
+
+    @media (max-width: $mobileL){
+        font-size: 15px;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 37px;
+        line-height: 115%;
+
+        margin-bottom: 35px;
+
+        @media (max-width: $mobileL){
+            font-size: 25px;
+        }
+    }
+
+    &__image-wrapper{
+        max-width: 598px;
+        width: 100%;
+    }
+    &__image{
+        width: 100%;  
+        height: auto; 
+    }
+
+    &__text-block{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 30px;
+
+        &_pl_40{
+            padding-left: 40px;
+        }
+
+        &_mb_70{
+            margin-bottom: 70px;
+        }
+    }
+
+    &__link-bold{
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 150%;
+
+        margin-bottom: 10px;
+
+        @media (max-width: $mobileL){
+            font-size: 15px;
+        }
+    }
+
+    &__link-bold-big{
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 115%;
+
+        margin-bottom: 20px;
+
+        @media (max-width: $mobileL){
+            font-size: 20px;
+        }
+    }
+
+    &__list{
+        margin-bottom: 20px;
+    }
+
+    &__link{
+        color: $grey2;
+    }
+
+    &__list{
+        li{
+            position: relative;
+            padding-left: 20px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                background-color: $grey2;
+            }
+        }
+    }
+}
+
+.vertical-dec{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: $darkOrange;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        border-bottom: 10px solid $darkOrange;
+        border-top: 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        border-top: 10px solid $darkOrange;
+        border-bottom: 0;
+    }
+}
