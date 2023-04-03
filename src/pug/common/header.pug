@@ -1,0 +1,239 @@
+header(class='header ' + headerClasses)
+    .blur
+    .container
+        .header__content(data-aos="fade-down")
+            .header__content-row.header__content-row_dec.header__top
+                address.address.address_header
+                    .address__row
+                        a.contact-phone(href="tel:79525525252") +7 952 552-52-52
+                        a.contact-mail(href="mailto:Mr.Driskell@mail.ru") Mr.Driskell@mail.ru
+                    .address__row
+                        a.address__soc-link(href="#") Viber 
+                        a.address__soc-link(href="#") Whats App 
+                        a.address__soc-link(href="#") Telegram 
+                include ../pages/parts/logo
+                .header__buttons
+                    button.btn-cart 37 280 ₽
+                        span.btn-cart__count 17
+                    button.btn-favorite 
+                    button.btn-account 
+
+            .header__content-row
+                +burg('#mobile-menu','burger', 'Меню')(class="header-burg")
+                button.btn-catalog(data-target=".header__catalog")
+                    span.btn-catalog__content Каталог
+                    span.btn-catalog__icon 
+                form.form.form_search.form_search-header(action="#")
+                    input.form__input.form__input_header(placeholder="Поиск")
+                .header__buttons.header__buttons_mobile
+                    button.btn-cart 37 280 ₽
+                        span.btn-cart__count 17
+                    button.btn-favorite 
+                    button.btn-account 
+
+                +nav(
+                    [
+                        {link:'#', content:'Промокоды'},
+                        {link:'#', content:'Скидки'},
+                        {link:'#', content:'Помощь'},
+                        {link:'#', content:'О нас'},
+                        {link:'#', content:'Контакты'}
+                    ], 'headNav', currentPage)(class="header__nav")
+
+            
+            .header__catalog
+                .container
+                    .header__catalog-wrapper
+                        .tabs.header__tabs
+                            .tabs__buttons
+                                button.tabs__button(data-target="#tab1") По категории
+                                    span.dec-line.dec-line__button.dec-line__button_switchable.dec-line_square.dec-line_square-small
+                                button.tabs__button(data-target="#tab2") По брендам
+                                    span.dec-line.dec-line__button.dec-line__button_switchable.dec-line_square.dec-line_square-small
+                            .dec-line
+                            .tabs__content.tabs__content_active#tab1
+                                ul.header__catalog-list
+                                    li.header__catalog-list-item
+                                        a(href="#") Новинки 
+                                    li.header__catalog-list-item
+                                        a(href="#") Наборы для татуировок
+                                    li.header__catalog-list-item
+                                        a(href="#") Тату машинки
+                                    li.header__catalog-list-item
+                                        a(href="#") Тату краски
+                                    li.header__catalog-list-item
+                                        a(href="#") Тату иглы
+                                    li.header__catalog-list-item
+                                        a(href="#") Тату держатели
+                                ul.header__catalog-list
+                                    li.header__catalog-list-item
+                                        a(href="#") Тату наконечники 
+                                    li.header__catalog-list-item
+                                        a(href="#") Блоки питания
+                                    li.header__catalog-list-item
+                                        a(href="#") Педали и провода
+                                    li.header__catalog-list-item
+                                        a(href="#") Аксессуары
+                                    li.header__catalog-list-item
+                                        a(href="#") Принтеры и планшеты
+                                    li.header__catalog-list-item
+                                        a(href="#") Защита, ёмкости, расходные материалы
+                            .tabs__content#tab2
+                                ul.header__catalog-list
+                                    li.header__catalog-list-item
+                                        a(href="#") Aliance
+                                    li.header__catalog-list-item
+                                        a(href="#") Aloe Tattoo
+                                    li.header__catalog-list-item
+                                        a(href="#") Anchored by Nikko Hurtado
+                                    li.header__catalog-list-item
+                                        a(href="#") BC Invention Comrany
+                                    li.header__catalog-list-item
+                                        a(href="#") Beauty Bit
+                                    li.header__catalog-list-item
+                                        a(href="#") Bishop Rotary
+                                    li.header__catalog-list-item
+                                        a(href="#") Burlak Tattoo Machines
+                                    li.header__catalog-list-item
+                                        a(href="#") Cheyenne HAWK
+                                    li.header__catalog-list-item
+                                        a(href="#") Critical Tattoo
+                                    li.header__catalog-list-item
+                                        a(href="#") Dermalize Protective
+                                    li.header__catalog-list-item
+                                        a(href="#") Dynamic Colors
+                                ul.header__catalog-list
+                                    li.header__catalog-list-item
+                                        a(href="#") EGO Bez’s Rotary
+                                    li.header__catalog-list-item
+                                        a(href="#") Eikon Device Inc.
+                                    li.header__catalog-list-item
+                                        a(href="#") Electrum
+                                    li.header__catalog-list-item
+                                        a(href="#") EQUALISER by Kwadron
+                                    li.header__catalog-list-item
+                                        a(href="#") Eternal
+                                    li.header__catalog-list-item
+                                        a(href="#") Excalibur
+                                    li.header__catalog-list-item
+                                        a(href="#") Fantasia Art Supply
+                                    li.header__catalog-list-item
+                                        a(href="#") FKirons
+                                    li.header__catalog-list-item
+                                        a(href="#") Hanafy
+                                    li.header__catalog-list-item
+                                        a(href="#") HM Tattoo Machines
+                                    li.header__catalog-list-item
+                                        a(href="#") Ink Machines 
+                                ul.header__catalog-list
+                                    li.header__catalog-list-item
+                                        a(href="#") InkJecta Tattoo Machine
+                                    li.header__catalog-list-item
+                                        a(href="#") Intenze
+                                    li.header__catalog-list-item
+                                        a(href="#") JACK & ALEXX
+                                    li.header__catalog-list-item
+                                        a(href="#") Kashalot Rotary
+                                    li.header__catalog-list-item
+                                        a(href="#") Kuro Sumi
+                                    li.header__catalog-list-item
+                                        a(href="#") KWADRON™
+                                    li.header__catalog-list-item
+                                        a(href="#") Lauro Paolini
+                                    li.header__catalog-list-item
+                                        a(href="#") Lithuanian Irons
+                                    li.header__catalog-list-item
+                                        a(href="#") Lucky Supply
+                                    li.header__catalog-list-item
+                                        a(href="#") Mercator Medical
+                                    li.header__catalog-list-item
+                                        a(href="#") Millenium Mom’s Ink
+                                ul.header__catalog-list
+                                    li.header__catalog-list-item
+                                        a(href="#") NEMESIS
+                                    li.header__catalog-list-item
+                                        a(href="#") Nocturnal Tattoo Ink
+                                    li.header__catalog-list-item
+                                        a(href="#") Panthera
+                                    li.header__catalog-list-item
+                                        a(href="#") Perma Blend
+                                    li.header__catalog-list-item
+                                        a(href="#") Precision Needles
+                                    li.header__catalog-list-item
+                                        a(href="#") Precision Tattoo Supply
+                                    li.header__catalog-list-item
+                                        a(href="#") Premier Products
+                                    li.header__catalog-list-item
+                                        a(href="#") Radiant
+                                    li.header__catalog-list-item
+                                        a(href="#") Reprofx® Spirit™
+                                    li.header__catalog-list-item
+                                        a(href="#") Right Stuuf
+                                    li.header__catalog-list-item
+                                        a(href="#") S8TATTOO
+                                ul.header__catalog-list
+                                    li.header__catalog-list-item
+                                        a(href="#") Skinductor
+                                    li.header__catalog-list-item
+                                        a(href="#") Starbrite
+                                    li.header__catalog-list-item
+                                        a(href="#") Tattoorevive
+                                    li.header__catalog-list-item
+                                        a(href="#") TURANIUM Fabrika Rotary
+                                    li.header__catalog-list-item
+                                        a(href="#") UNI–CART
+                                    li.header__catalog-list-item
+                                        a(href="#") Vlad Blad
+                                    li.header__catalog-list-item
+                                        a(href="#") World Famous Bala
+                                    li.header__catalog-list-item
+                                        a(href="#") World Famous Tattoo Ink
+                                    li.header__catalog-list-item
+                                        a(href="#") 2K2BT
+                                    li.header__catalog-list-item
+                                        a(href="#") БРОВИ
+                                    li.header__catalog-list-item
+                                        a(href="#") КРАСКА Tattoo Ink
+    
+    .mobile-menu.header__mobile-menu#mobile-menu
+        .mobile-menu__wrapper
+            +nav(
+                [
+                    {link:'#', content: {name:'Каталог', list:[
+                        {link:'#', content:'Новинки'},
+                        {link:'#', content:'Наборы для татуировок'},
+                        {link:'#', content:'Тату машинки'},
+                        {link:'#', content:'Тату краски'},
+                        {link:'#', content:'Тату иглы'},
+                        {link:'#', content:'Тату держатели'},
+                        {link:'#', content:'Тату наконечники'},
+                        {link:'#', content:'Блоки питания'},
+                        {link:'#', content:'Педали и провода'},
+                        {link:'#', content:'Аксессуары'},
+                        {link:'#', content:'Принтеры и планшеты'},
+                        {link:'#', content:'Защита, ёмкости, расходн…'}
+                    ]
+                    }},
+                    {link:'#', content:'Контакты'},
+                    {link:'#', content:'Промокоды'},
+                    {link:'#', content:'Скидки'},
+                    {link:'#', content:'Помощь'},
+                    {link:'#', content:'О нас'},
+                    {link:'#', content:'Избранное'},
+                    {link:'#', content:'Личный кабинет'}
+                ], 'mobile_nav', currentPage)(class="nav_mobile root-nav")
+
+            form.form.form_search.form_search-mobile(action="#")
+                input.form__input.form__input_search(placeholder="Поиск")
+
+            address.address
+                .address__row
+                    a.contact-phone(href="tel:79525525252") +7 952 552-52-52
+                .address__row
+                    a.address__soc-link.address__soc-link_icon-telegram(href="#")
+                    a.address__soc-link.address__soc-link_icon-watsapp(href="#")
+                    a.address__soc-link.address__soc-link_icon-viber(href="#") 
+                .address__row
+                    .address__time Время работы: с 9:00 до 20:00 по мск
+                .address__row
+                    a.contact-mail(href="mailto:Mr.Driskell@mail.ru") Mr.Driskell@mail.ru

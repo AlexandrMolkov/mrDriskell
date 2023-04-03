@@ -42,6 +42,21 @@
         display: flex;
         justify-content: space-between;
         gap: 30px;
+
+        &_wrap{
+            flex-wrap: wrap;
+        }
+        &_form-sec{
+            flex-wrap: wrap;
+
+            @media (max-width: $laptop){
+                flex-wrap: nowrap;
+            }
+
+            @media (max-width: 539px ){
+                flex-wrap: wrap;
+            }
+        }
     }
 
     &__row-title{
@@ -136,27 +151,6 @@
     }
 
     &__input, &__textarea{
-/*         padding: 12px 25px;
-        background-color: $bgCard;
-        color: $black;
-        line-height: 150%;
-        font-size: 17px;
-        width: 100%;
-
-        flex-grow: 1;
-
-        @media (max-width: 539px){
-            width: 100%;
-        }
-
-        &::placeholder{
-            color: $grey;
-
-        }
-
-        &_width_100{
-            width: 100%;
-        } */
 
         padding: 23px 14px 23px 30px;
 
@@ -174,6 +168,8 @@
         &_border{
             border: 1px solid $grey;
         }
+
+
 
     }
 
@@ -196,6 +192,21 @@
         }
     }
 
+    .custom-checkbox-label{
+        
+        width: 100%;
+
+        @media (max-width: $laptop){
+
+            width: auto;
+            order: 2;
+        }
+        @media (max-width: $mobileL){
+
+            width: 100%;
+            order: 2;
+        }
+    }
 
     &_search{
         
@@ -224,17 +235,18 @@
 
             border: $darkOrange 1px solid;
 
+            &_header{
+                @media (max-width: $tablet){
+                    padding-left: 40px;
+                }
+            }
+
             &::placeholder{
                 color: $grey2;
                 font-size: 15px;
             }
         }
 
-
-
-/*         @media (max-width: 690px){
-            display: none;
-        } */
     }
     &_search-mobile{
         padding-bottom: 40px;
@@ -250,6 +262,19 @@
             width: calc(100% + 50px);
             height: 1px;
             background-color: $darkOrange;
+        }
+    }
+
+    &_search-header{
+
+        @media (max-width: $tablet){
+            &::before {
+                left: 5px;                
+            }
+        }
+
+        @media (max-width: 630px){
+            display: none;
         }
     }
 }

@@ -1,0 +1,225 @@
+.product-card{
+    background-color: $bgCard;
+    color: $dark;
+    line-height: 140%;
+
+    width: 100%;
+    transition: .3s;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    
+    &__wrapper{
+        overflow: hidden;
+    }
+
+    &:hover{
+        cursor: pointer;
+        transform: translateY(-10%);
+        z-index: 100;
+        height: auto;
+
+        .product-card-slider{
+            z-index: 12;
+            pointer-events: none;
+        }
+
+        .product-card-slider__navigation{
+            opacity: 1;
+            pointer-events: all;
+        }
+        .product-card-slider__pagination{
+            pointer-events: all;
+        }
+        
+    }
+    &:hover &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        box-shadow: 0px 0px 20px 0px #cecece;
+
+        height: calc(100% + 80px);
+        z-index: 3;
+        background-color: $bgCard;
+     }
+    &:active{
+        transition: .1s;
+        transform: translateY(-10%) scale(0.98);
+    }
+
+    &__content{
+        padding: 11px 30px 20px;
+        position: relative;
+    }
+
+    &__name{
+        max-width: 230px;
+        margin-bottom: 10px;
+    }
+
+    &__price{
+
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 130%;
+        color: $accent;
+    }
+
+    &__wrapper {
+        z-index: 2;
+        
+     }
+
+
+     &:hover &__btn-add{
+        pointer-events: all;
+    }
+    &__btn-add{
+        padding: 10px;
+        font-size: 20px;
+        line-height: 150%;
+
+        min-width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 60px);
+
+        &:active{
+            transform: translateX(-50%) scale(0.97);
+        }
+        
+    }
+
+    &:hover &__bottom{
+        pointer-events: none;
+        
+    }
+
+    &__bottom{
+        padding-bottom: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        pointer-events: none;
+        background-color: $bgCard;
+        z-index: 20;
+        transition: transform .3s;
+        transform: translateY(100%);
+        opacity: 0;
+
+       /*  z-index: -1; */
+
+
+        z-index: 12;
+    }
+
+    &:hover &__bottom{
+        position: absolute;
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    &__favourite{
+        position: absolute;
+        z-index: 12;
+        top: 30px;
+        right: 30px;
+        width: 28px;
+        height: 28px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:active{
+            transform: scale(1.1);
+        }
+
+        &-checbox{
+            display: none;
+        }
+        &-checbox:checked + svg{
+            .favourite-inner{
+                fill: $accent;
+            }
+            .favourite-outline{
+                fill: transparent;
+            }
+        }
+
+        .favourite-inner{
+            transition: .3s;
+        }
+        .favourite-outline{
+            transition: .3s;
+        }
+
+        &:hover {
+            .favourite-inner{
+                fill: $accent;
+            }
+            .favourite-outline{
+                fill: transparent;
+            }
+        }
+    }
+
+    &__new{
+        position: absolute;
+        pointer-events: none;
+        z-index: 13;
+        top: 30px;
+        left: 30px;
+
+        width: 150px;
+        height: 29px;
+
+        background-image: url('../img/svg/icons/new.svg');
+    }
+
+    &__link{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+
+        }
+    }
+
+    &__cb{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 40px;
+        height: 40px;
+
+        z-index: 12;
+
+        .custom-checkbox_after{
+            background-color: $bgCard;
+        }
+
+        * {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

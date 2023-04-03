@@ -129,7 +129,6 @@
 }
 
 .sub-menu{
-    /* padding-left: 50px; */
     padding-left: 25px;
     margin: 20px 0px 0px 5px;
     display: none;
@@ -142,8 +141,6 @@
     }
 
     position: relative;
-    
-    border-left: 1px solid $darkOrange;
 
     &::before {
 /*         content: "";

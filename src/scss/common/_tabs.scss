@@ -2,8 +2,6 @@
     $borderWeight: 0px;
     $borderColor: #dee2e6;  
 
-    
-
     &__buttons{
         display: flex;
         border-bottom: $borderWeight solid $borderColor;
@@ -22,6 +20,8 @@
         border: $borderWeight solid transparent;
         margin-bottom: -1px;
         transition: background-color 0.3s;
+        position: relative;
+        transition: color .3s;
 
         font-weight: 600;
         font-size: 17px;
@@ -31,10 +31,7 @@
             color: #000;
             border: $borderWeight solid $borderColor;
             border-bottom: $borderWeight solid transparent;
-
         }
-
-
     }
 
     &__content{

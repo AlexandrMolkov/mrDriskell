@@ -65,8 +65,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+    /////////////////////  js-choice
+
+    if(document.querySelector('.js-choice-type')){
+        const element = document.querySelector('.js-choice-type');
+        const choices = new Choices(element,{
+        searchEnabled: false,
+        itemSelectText: '',
+        });
+    }
+    if(document.querySelector('.js-choice-sort')){
+        const element = document.querySelector('.js-choice-sort');
+        const choices = new Choices(element,{
+        searchEnabled: false,
+        itemSelectText: '',
+        });
+    }
   
 
+    document.querySelectorAll('.filter-checkbox').forEach(cb =>{
+
+        if(cb.querySelector('input').checked) {
+            cb.classList.add('active')
+        }
+
+        cb.addEventListener('click', e => {
+            if(e.target.classList.contains('active')) {
+                e.target.querySelector('input').checked = false
+            } else {
+                e.target.querySelector('input').checked = true
+            }
+            e.target.classList.toggle('active')
+        })
+
+        /* if(cb.classList.contains('active')){
+            cb.querySelector('input')
+        } */
+    })
 
 
     ///////// input mask

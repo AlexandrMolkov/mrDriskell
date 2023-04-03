@@ -4,7 +4,9 @@ export const burgInit = () => {
     const blur = document.querySelector('.blur')
 
     document.addEventListener('click', (e) => {
-        if(e.target.classList.contains('blur')){
+        console.log('click')
+        if(e.target.classList.contains('blur') || e.target.classList.contains('mobile-menu')){
+            console.log('blur')
             document.querySelectorAll(`.burg`)
                 .forEach( b => {
                     b.classList.remove(`open`)
@@ -17,11 +19,8 @@ export const burgInit = () => {
 
 document.querySelectorAll(`.burg`)
     .forEach( b => {
-        //const inner = document.createElement('div')
         const target = document.querySelector(b.dataset.target)
         const inner = document.querySelector('burg__icon')
-        //inner.classList.add('burg__icon')
-        //b.append(inner)
         target.classList.add(`nav-burg`)
         
         target.addEventListener('click', e => {

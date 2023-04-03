@@ -101,10 +101,8 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 130%;
-
         white-space: nowrap;
-
-        //position: relative;
+        
         &::after {
             content: "";
             position: absolute;

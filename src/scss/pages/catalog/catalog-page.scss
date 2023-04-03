@@ -25,6 +25,7 @@
     justify-content: space-between;
 
     &__label{
+        position: relative;
         color: $grey2;
         display: flex;
         align-items: center;
@@ -67,5 +68,123 @@
         &:hover{
             cursor: pointer;
         }
+    }
+
+    &__dec{
+        width: 10px;
+        height: 1px;
+        position: absolute;
+        left: 147px;
+        background-color: $dark;
+    }
+}
+
+.filter-checkbox {
+
+    font-size: 17px;
+    padding: 0 0 0 70px;
+    position: relative;
+    cursor: pointer;
+
+    &.active::before{
+        background-color: $accent;
+
+        transition: left 0.3s, background-color 0s 0.2s;
+    }
+    &.active::after{
+        left: 18px;
+
+        transition: left 0.3s, background-color 0s 0.2s;
+    }
+
+    &::before {
+        content: "";
+
+        width: 35px;
+        height: 20px;
+        background-color: $darkOrange;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) ;
+        
+        transition: left 0.3s, background-color 0s;
+    }
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: 2px;
+        top: 2px;
+        background-color: $bgCard;
+
+        transition: left 0.3s, background-color 0s;
+    }
+
+    input{
+        display: none;
+
+        position: absolute;
+        top: -5px;
+        left: 0;
+
+        width: 30px;
+        height: 30px;
+        background-color: #bfc0c4;
+        border-radius: 50%;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.choices{
+    z-index: 20;
+    width: 186px;
+}
+.choices *{
+    border: 0 !important;
+}
+.choices__list--dropdown{
+    border: 0 !important;
+    border-top: 0 !important;    
+}
+.choices__inner{
+    padding: 12px 20px !important;
+    border-bottom: 1px solid $grey !important;
+    background: $background !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 150% !important;
+    
+
+    background-color: $bgCard !important;
+}
+.choices__item{
+    background: $background !important;
+    border: 0;
+
+    text-transform: capitalize;
+    background-color: $bgCard !important;
+}
+
+.is-highlighted{
+    background-color: #fff !important;
+}
+.choices{
+
+    &::after {
+        
+    }
+
+    @media (max-width: $laptop){
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 640px){
+    .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+        padding-right: 5px !important; 
     }
 }

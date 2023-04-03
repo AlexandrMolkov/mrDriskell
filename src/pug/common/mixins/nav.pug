@@ -17,6 +17,7 @@ mixin nav(data, idName, current)
                     li(class=liClasses) 
                         span.nav__submenu= item.content.name
                         ul(class=className + '__ul sub-menu')
+                            .vertical-dec
                             each listItem in item.content.list
                                 li(class=liClasses)
                                     a(class=className + '__link ' + className href=listItem.link)= listItem.content
