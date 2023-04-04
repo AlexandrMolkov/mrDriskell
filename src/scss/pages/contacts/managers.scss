@@ -3,12 +3,21 @@
     padding-top: 50px;
     padding-bottom: 200px;
 
+    @media (max-width: $mobileL){
+        padding-bottom: 60px;
+    }
+
     &__title{
         font-weight: 700;
         font-size: 25px;
         line-height: 115%;
 
         margin-bottom: 30px;
+
+        @media (max-width: $mobileL){
+            font-size: 17px;
+            line-height: 115%;
+        }
     }
 
     &__grid{

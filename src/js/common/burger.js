@@ -4,7 +4,6 @@ export const burgInit = () => {
     const blur = document.querySelector('.blur')
 
     document.addEventListener('click', (e) => {
-        console.log('click')
         if(e.target.classList.contains('blur') || e.target.classList.contains('mobile-menu')){
             console.log('blur')
             document.querySelectorAll(`.burg`)

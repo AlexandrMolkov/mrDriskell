@@ -20,6 +20,44 @@ block content
                         button.btn.btn_cat От билдеров
                         button.btn.btn_cat Для профессионалов
                         button.btn.btn_cat Расходники
+                    
+                    button.catalog-page__filter-btn Фильтр
+                    .catalog-page__filter-mobile
+                        .catalog-page__filter-mobile-wrapper
+                            .catalog-page__filter-mobile-close-btn#closefilter
+                            p.catalog-page__filter-mobile-title Фильтр
+                            .filter__item 
+                                label.filter__label Цена
+                                    input#filter-price.filter__input(type="number", name="price-min" min="0" value="4500")
+                                    span.filter__dec 
+                                    input#filter-price.filter__input(type="number", name="price-max" min="0" value="38000")
+                            .dec-line
+            
+                            .filter__item
+                                label.filter__label Тип машинки
+                                    select.js-choice.js-choice-type-mobile.filter__select(name="type")
+                                        option(value="brand 1") все
+                                        option(value="brand 2") роторная
+                                        option(value="brand 3") Индукционная
+                                        option(value="brand 4") другая
+                                        option(value="brand 5") другая
+                            .dec-line
+
+                            .filter__item
+                                .filter-checkbox
+                                    .filter-checkbox__inner Только в наличии
+                                        input(type="checkbox", name="instock")  
+                            .dec-line
+
+                            .filter__item
+                                label.filter__label Сортировка
+                                    select.js-choice.js-choice-sort-mobile.filter__select(name="sort")
+                                        option(value="sort 1") Цена (дороже)
+                                        option(value="sort 2") Цена (Дешевле)
+                                        option(value="sort 3") Популярные
+        
+
+
                     .catalog-page__filter.filter
                         .filter__item 
                             label.filter__label Цена
@@ -38,10 +76,7 @@ block content
                         .filter__item
                             .filter-checkbox
                                 .filter-checkbox__inner Только в наличии
-                                    input(type="checkbox", name="instock")    
-
-                            //label.filter__label Только в наличии
-                                input#filter-price.filter__input(type="checkbox", name="instock")      
+                                    input(type="checkbox", name="instock")       
                         .filter__item
                             label.filter__label Сортировка
                                 select.js-choice.js-choice-sort.filter__select(name="sort")
@@ -52,7 +87,6 @@ block content
                     include pug/pages/catalog/catalog
 
     include pug/common/footer
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     script(src="js/app.min.js")
        
 

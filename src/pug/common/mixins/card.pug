@@ -13,11 +13,19 @@ mixin card(product,i)
                     .product-card-slider__navigation-prev
                     .product-card-slider__navigation-next
             .product-card__content
-                .product-card__name= product.name
-                .product-card__price= product.price
+                .product-card__name.clamp= product.name
+                .product-card__price-block
+                    .product-card__price= product.price
+                    .product-card__old-price= product.oldprice
             .product-card__bottom
                 .product-card__bottom-inner
-                    button.btn.product-card__btn-add Добавить в корзину
+                    button.btn.product-card__btn-add В корзину
+                    .product-card__count-block
+                        button.product-card__count-block-btn-subtr
+                        .product-card__count-block-text
+                            p.product-card__count-block-count 1шт
+                            p.product-card__count-block-in-cart В корзине
+                        button.product-card__count-block-btn-add
             label.product-card__favourite
                 input.product-card__favourite-checbox(type="checkbox")
                 svg(width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg")

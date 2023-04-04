@@ -1,5 +1,6 @@
 include mixins/burg
 include mixins/nav
+include mixins/checkbox
 
 block variables
 
@@ -12,9 +13,10 @@ html(lang="ru")
         meta(name="description", content="Кастомизация автомобилей")
         link(rel="shortcut icon" href="img/logo/logo.svg" type="image/x-icon")
         link(rel="stylesheet" href="css/style.min.css")  
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" >
         title= title
     body
         .wrapper
             include header
             block content
+        include ../pages/parts/popup
+        

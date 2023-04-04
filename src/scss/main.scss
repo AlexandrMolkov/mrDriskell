@@ -300,6 +300,13 @@ body {
     &__dec-right{
         right: -20px;
     }
+
+    &_code{
+        font-size: 20px;
+        line-height: 150%;
+        color: $accent;
+        margin: 0 auto;
+    }
 }
 .btn-cart,
 .btn-favorite,

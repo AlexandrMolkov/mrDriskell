@@ -1,22 +1,33 @@
-.popup-registration#popupreg
-    .popup-registration__inner
-        .title.popup-registration__title Региcтрация
-        button.popup-registration__exit-button
-        form#regform.form.popup-registration__form(action="#")
-            .form__row.form__row_w-100.form__row_mb_30
-                input#regmail.form__input(type="email" placeholder="Введите вашу почту")     
-                input#regtel.form__input(type="tel" placeholder="Введите ваш телефон")
-                input#regpass.form__input(type="text" placeholder="Придумайте пароль")
-                input#regpassconf.form__input(type="text" placeholder="Повторите пароль")
-            button.btn.btn_white(type="submit") Отправить
 
-.popup-registration#popupauth
-    .popup-registration__inner
-        .title.popup-registration__title Вход
-        button.popup-registration__exit-button
-        form#authform.form.popup-registration__form(action="#")
-            .form__row.form__row_w-100.form__row_mb_30
-                input#authmail.form__input(type="email" placeholder="Введите почту")  
-                input#authpass.form__input(type="text" placeholder="Введите пароль")
-            button.btn.btn_white(type="submit") Войти
-        
+.popup.popup-account
+    .popup__inner.account
+        button.popup__close-btn
+        .popup__title Личный кабинет
+        .form.popup__form
+            .form__flex-row
+                label.form__label Введите номер
+                    input.form__input(type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ")
+            .form__flex-row
+                button.form__btn.btn.btn_orange#getcode Получить код в SMS
+            .form__flex-row
+                +checkbox('При воходе или регистрации вы соглашаетесь с условиями предоставления сервиса','option1',false,'after',false)(class='form-cb')
+    .popup__inner.code
+        button.popup__close-btn
+        .popup__title.popup__title_center Введите код
+        .form.popup__form
+            .form__flex-row.form__flex-row_code
+                    input.form__input.form__input_num(type="text" min="0" max="9")
+                    input.form__input.form__input_num(type="text" min="0" max="9")
+                    input.form__input.form__input_num(type="text" min="0" max="9")
+                    input.form__input.form__input_num(type="text" min="0" max="9")
+                    button.form__btn.form__btn_small ok
+
+            .form__flex-row.form__flex-row_wrap.form__flex-row_wrap-gap-5
+                p Вам потупит звонок на <b>+7 (999)529-00-01</b>
+                p Введите последние 4 цифры звонящего номера.
+                p Получить новый код можно будет через 01:48
+            .form__flex-row
+                button.form__btn.btn_code Не приходит код
+                    span.dec-line.dec-line__button.dec-line_square.dec-line_square-small
+            .form__flex-row
+                +checkbox('При воходе или регистрации вы соглашаетесь с условиями предоставления сервиса','option1',false,'after',false)(class='form-cb')

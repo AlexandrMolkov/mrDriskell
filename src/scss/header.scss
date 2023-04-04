@@ -67,6 +67,10 @@
         
     }
 
+    &.back{
+        z-index: -1;
+    }
+
     &__catalog{
         width: 100%;
         position: relative;

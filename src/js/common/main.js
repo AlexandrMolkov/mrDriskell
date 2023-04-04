@@ -2,11 +2,18 @@ import {burgInit, burgResize} from './burger.js'
 //import anime from 'animejs/lib/anime.es.js';
 import '../libs/inputmask.js'
 import AOS from 'aos';
+import Choices from "choices.js"
+import ellipsis from 'ellipsis.js'
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    Ellipsis({
+        lines: 3
+      })
+
     document.querySelectorAll('[data-background]').forEach( el => {
-        console.log(el.dataset.background)
         el.style.backgroundImage = `url(${el.dataset.background})`
     })
 
@@ -24,6 +31,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } )
 
+    
+    // account popup
+
+    document.querySelectorAll('.btn-account').forEach( btn => {
+        btn.addEventListener('click', e =>{
+            document.querySelector('.popup-account').classList.add('active')
+            document.body.classList.add(`lock`)
+        })
+    })
+
+    document.querySelectorAll('.popup__close-btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+            let popup
+            const f = (target) => {
+                if(target.parentNode.classList.contains('popup')) popup = target.parentNode
+                else{
+                    f(target.parentNode)
+                }
+            }
+            f(e.target)
+            popup.classList.remove('active')
+            document.body.classList.remove(`lock`)
+        })
+    })
+
+    document.querySelector('#getcode')?.addEventListener('click', () => {
+            document.querySelector('.popup__inner.code').classList.add('active')
+    })
+
+
+
+
+
+    // filter mobile button
+
+    document.querySelector('.catalog-page__filter-btn')?.addEventListener('click', () => {
+        document.querySelector('.catalog-page__filter-mobile').classList.add('active')
+        document.querySelector('header').classList.add('back')
+        document.body.classList.add('lock')
+    })
+
+    document.querySelector('#closefilter')?.addEventListener('click', () => {
+        document.querySelector('.catalog-page__filter-mobile').classList.remove('active')
+        document.querySelector('header').classList.add('back')
+        document.body.classList.remove('lock')
+    })
+
+
+
+
+
+
+    //  add to cart
+    document.addEventListener('click', e => {
+        if(e.target.classList.contains('product-card__btn-add')) {
+            let card
+            const f = (target) => {
+                if(target.parentNode.classList.contains('product-card')) card = target.parentNode
+                else{
+                    f(target.parentNode)
+                }
+            }
+            f(e.target)
+            card.classList.add('added')
+        }
+    })
 
 
     //  Catalog btn
@@ -82,26 +155,38 @@ document.addEventListener('DOMContentLoaded', () => {
         itemSelectText: '',
         });
     }
+    if(document.querySelector('.js-choice-type-mobile')){
+        const element = document.querySelector('.js-choice-type-mobile');
+        const choices = new Choices(element,{
+        searchEnabled: false,
+        itemSelectText: '',
+        });
+    }
+    if(document.querySelector('.js-choice-sort-mobile')){
+        const element = document.querySelector('.js-choice-sort-mobile');
+        const choices = new Choices(element,{
+        searchEnabled: false,
+        itemSelectText: '',
+        });
+    }
   
 
-    document.querySelectorAll('.filter-checkbox').forEach(cb =>{
+
+    // filter checkbox
+    document.querySelectorAll('.filter-checkbox').forEach( cb =>{
 
         if(cb.querySelector('input').checked) {
             cb.classList.add('active')
         }
 
         cb.addEventListener('click', e => {
-            if(e.target.classList.contains('active')) {
-                e.target.querySelector('input').checked = false
+            if(cb.classList.contains('active')) {
+                cb.querySelector('input').checked = false
             } else {
-                e.target.querySelector('input').checked = true
+                cb.querySelector('input').checked = true
             }
-            e.target.classList.toggle('active')
+            cb.classList.toggle('active')
         })
-
-        /* if(cb.classList.contains('active')){
-            cb.querySelector('input')
-        } */
     })
 
 

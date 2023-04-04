@@ -4,6 +4,19 @@
         margin-bottom: 40px;
         font-family: Forum;
         
+        @media (max-width: $tablet){
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $mobileL){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle{
+        @media (max-width: $mobileL){
+            font-size: 17px;
+        }
     }
 
     &__content{
@@ -18,6 +31,10 @@
 
             margin: 0 auto;
         }
+
+        @media (max-width: $tablet){
+            padding: 30px 20px;
+        }
     }
 
     &__number{
@@ -26,15 +43,29 @@
         line-height: 150%;
 
         margin-bottom: 10px;
+
+        @media (max-width: 539px){
+            font-size: 40px;
+        }
+
+        @media (max-width: $mobileL){
+            font-size: 30px;
+        }
     }
 
     &__block{
         display: flex;
+        gap: 20px;
         
         margin-bottom: 20px;
 
         &_between{
             justify-content: space-between;
+
+            @media (max-width: 690px){
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
 
         &_column{
@@ -46,6 +77,11 @@
     &__schedule{
         font-size: 20px;
         line-height: 140%;
+
+        @media (max-width: $mobileL){
+            font-size: 15px;
+            width: 168px;
+        }
     }
     &__social{
         line-height: 150%;
@@ -54,20 +90,36 @@
         li:not(:last-child){
             margin-bottom: 10px;
         }
+
+        @media (max-width: 690px){
+            text-align: start;
+        }
     }
 
     &__messanger{
         font-size: 25px;
         line-height: 150%;
         color: $grey;
+
+        @media (max-width: $mobileL){
+            font-size: 17px;
+        }
     }
     &__messanger-link{
         font-size: 25px;
         line-height: 150%;
+
+        @media (max-width: $mobileL){
+            font-size: 17px;
+        }
     }
 
     &__text{
         line-height: 150%;
+
+        @media (max-width: $mobileL){
+            font-size: 15px;
+        }
     }
 
     &__subtitle{
@@ -82,6 +134,16 @@
         font-weight: 700;
         font-size: 17px;
         line-height: 150%;
+        
+        @media (max-width: $mobileL){
+            font-size: 15px;
+        }
+    }
+
+    &__point{
+        @media (max-width: $mobileL){
+            font-size: 15px;
+        }
     }
 
     &__grid{
@@ -96,7 +158,8 @@
         @media (max-width: 1260px){
             position: fixed;
 
-            bottom: 20%;
+            top: 50%;
+            transform: translateY(-50%);
             right: 0;
 
             z-index: 10;
