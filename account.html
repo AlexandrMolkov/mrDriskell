@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Кастомизация автомобилей">
+    <link rel="shortcut icon" href="img/logo/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header ">
+        <div class="blur"></div>
+        <div class="container">
+          <div class="header__content" data-aos="fade-in">
+            <div class="header__content-row header__content-row_dec header__top">
+              <address class="address address_header">
+                <div class="address__row"><a class="contact-phone" href="tel:79525525252">+7 952 552-52-52</a><a class="contact-mail" href="mailto:Mr.Driskell@mail.ru">Mr.Driskell@mail.ru</a></div>
+                <div class="address__row"><a class="address__soc-link" href="#">Viber </a><a class="address__soc-link" href="#">Whats App </a><a class="address__soc-link" href="#">Telegram </a></div>
+              </address><a class="logo" href="index.html"><img class="logo__image-main" src="img/logo/logo.svg" alt="лого" width="186" height="63"></a>
+              <div class="header__buttons">
+                <button class="btn-cart">37 280 ₽<span class="btn-cart__count">17</span></button>
+                <button class="btn-favorite"> </button>
+                <button class="btn-account"> </button>
+              </div>
+            </div>
+            <div class="header__content-row">
+              <div class="burg header-burg" id="burger" data-target="#mobile-menu">
+                <div class="burg__content">Меню</div>
+                <div class="burg__icon"></div>
+              </div>
+              <button class="btn-catalog" data-target=".header__catalog"><span class="btn-catalog__content">Каталог</span><span class="btn-catalog__icon"> </span></button>
+              <form class="form form_search form_search-header" action="#">
+                <input class="form__input form__input_header" placeholder="Поиск">
+              </form>
+              <div class="header__buttons header__buttons_mobile">
+                <button class="btn-cart">37 280 ₽<span class="btn-cart__count">17</span></button>
+                <button class="btn-favorite"> </button>
+                <button class="btn-account"> </button>
+              </div>
+              <nav class="nav header__nav" id="headNav">
+                <ul class="nav__ul">
+                  <li class="nav__li"><a class="nav__link" href="promo.html">Промокоды</a></li>
+                  <li class="nav__li"><a class="nav__link" href="catalog.html">Скидки</a></li>
+                  <li class="nav__li"><a class="nav__link" href="help.html">Помощь</a></li>
+                  <li class="nav__li"><a class="nav__link" href="404.html">О нас</a></li>
+                  <li class="nav__li"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__catalog">
+              <div class="container">
+                <div class="header__catalog-wrapper">
+                  <div class="tabs header__tabs">
+                    <div class="tabs__buttons">
+                      <button class="tabs__button" data-target="#tab1">По категории<span class="dec-line dec-line__button dec-line__button_switchable dec-line_square dec-line_square-small"></span></button>
+                      <button class="tabs__button" data-target="#tab2">По брендам<span class="dec-line dec-line__button dec-line__button_switchable dec-line_square dec-line_square-small"></span></button>
+                    </div>
+                    <div class="dec-line"></div>
+                    <div class="tabs__content tabs__content_active" id="tab1">
+                      <ul class="header__catalog-list">
+                        <li class="header__catalog-list-item"><a href="catalog.html">Новинки </a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Наборы для татуировок</a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Тату машинки</a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Тату краски</a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Тату иглы</a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Тату держатели</a></li>
+                      </ul>
+                      <ul class="header__catalog-list">
+                        <li class="header__catalog-list-item"><a href="catalog.html">Тату наконечники </a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Блоки питания</a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Педали и провода</a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Аксессуары</a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Принтеры и планшеты</a></li>
+                        <li class="header__catalog-list-item"><a href="catalog.html">Защита, ёмкости, расходные материалы</a></li>
+                      </ul>
+                    </div>
+                    <div class="tabs__content" id="tab2">
+                      <ul class="header__catalog-list">
+                        <li class="header__catalog-list-item"><a href="brands.html">Aliance</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Aloe Tattoo</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Anchored by Nikko Hurtado</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">BC Invention Comrany</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Beauty Bit</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Bishop Rotary</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Burlak Tattoo Machines</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Cheyenne HAWK</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Critical Tattoo</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Dermalize Protective</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Dynamic Colors</a></li>
+                      </ul>
+                      <ul class="header__catalog-list">
+                        <li class="header__catalog-list-item"><a href="brands.html">EGO Bez’s Rotary</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Eikon Device Inc.</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Electrum</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">EQUALISER by Kwadron</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Eternal</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Excalibur</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Fantasia Art Supply</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">FKirons</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Hanafy</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">HM Tattoo Machines</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Ink Machines </a></li>
+                      </ul>
+                      <ul class="header__catalog-list">
+                        <li class="header__catalog-list-item"><a href="brands.html">InkJecta Tattoo Machine</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Intenze</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">JACK & ALEXX</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Kashalot Rotary</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Kuro Sumi</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">KWADRON™</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Lauro Paolini</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Lithuanian Irons</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Lucky Supply</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Mercator Medical</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Millenium Mom’s Ink</a></li>
+                      </ul>
+                      <ul class="header__catalog-list">
+                        <li class="header__catalog-list-item"><a href="brands.html">NEMESIS</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Nocturnal Tattoo Ink</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Panthera</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Perma Blend</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Precision Needles</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Precision Tattoo Supply</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Premier Products</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Radiant</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Reprofx® Spirit™</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Right Stuuf</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">S8TATTOO</a></li>
+                      </ul>
+                      <ul class="header__catalog-list">
+                        <li class="header__catalog-list-item"><a href="brands.html">Skinductor</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Starbrite</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Tattoorevive</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">TURANIUM Fabrika Rotary</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">UNI–CART</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">Vlad Blad</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">World Famous Bala</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">World Famous Tattoo Ink</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">2K2BT</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">БРОВИ</a></li>
+                        <li class="header__catalog-list-item"><a href="brands.html">КРАСКА Tattoo Ink</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu header__mobile-menu" id="mobile-menu">
+          <div class="mobile-menu__wrapper">
+            <nav class="nav nav_mobile root-nav" id="mobile_nav">
+              <ul class="nav__ul">
+                <li class="nav__li "> <span class="nav__submenu">Каталог</span>
+                  <ul class="nav__ul sub-menu">
+                    <div class="vertical-dec"></div>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Новинки</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Наборы для татуировок</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Тату машинки</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Тату краски</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Тату иглы</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Тату держатели</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Тату наконечники</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Блоки питания</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Педали и провода</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Аксессуары</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Принтеры и планшеты</a></li>
+                    <li class="nav__li "><a class="nav__link nav" href="catalog.html">Защита, ёмкости, расходн…</a></li>
+                  </ul>
+                </li>
+                <li class="nav__li"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                <li class="nav__li"><a class="nav__link" href="promo.html">Промокоды</a></li>
+                <li class="nav__li"><a class="nav__link" href="catalog.html">Скидки</a></li>
+                <li class="nav__li"><a class="nav__link" href="help.html">Помощь</a></li>
+                <li class="nav__li"><a class="nav__link" href="404.html">О нас</a></li>
+                <li class="nav__li"><a class="nav__link" href="404.html">Избранное</a></li>
+                <li class="nav__li"><a class="nav__link" href="account.html">Личный кабинет</a></li>
+              </ul>
+            </nav>
+            <form class="form form_search form_search-mobile" action="#">
+              <input class="form__input form__input_search" placeholder="Поиск">
+            </form>
+            <address class="address">
+              <div class="address__row"><a class="contact-phone" href="tel:79525525252">+7 952 552-52-52</a></div>
+              <div class="address__row"><a class="address__soc-link address__soc-link_icon-telegram" href="#"></a><a class="address__soc-link address__soc-link_icon-watsapp" href="#"></a><a class="address__soc-link address__soc-link_icon-viber" href="#"> </a></div>
+              <div class="address__row">
+                <div class="address__time">Время работы: с 9:00 до 20:00 по мск</div>
+              </div>
+              <div class="address__row"><a class="contact-mail" href="mailto:Mr.Driskell@mail.ru">Mr.Driskell@mail.ru</a></div>
+            </address>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="account">
+          <div class="container">
+            <div class="breadcrumbs"><a class="breadcrumbs__item" href="index.html">Главная</a><a class="breadcrumbs__item" href="#">Личный кабинет</a></div>
+            <div class="account__content">
+              <div class="account__main">
+                <h2 class="title account__title">Личный кабинет</h2>
+                <form class="form account__form" action="#"></form>
+                <div class="form form__main">
+                  <div class="form__item">          
+                    <div class="form__flex-row">
+                      <div class="form__row-title form__row-title_gcol_span_6">Информация о получателе</div>
+                      <button class="btn-underline btn-underline_edit">Редактировать
+                        <div class="dec-underline"></div>
+                      </button>
+                    </div>
+                    <div class="form__row">
+                      <lable class="form__label form__label_md">ФИО*
+                        <input class="form__input" type="text" placeholder="Иванов Иван Иванович">
+                      </lable>
+                      <lable class="form__label form__label_tel">Телефон*
+                        <input class="form__input" type="tel" placeholder="8(800)555-35-35">
+                      </lable>
+                      <lable class="form__label form__label_md">Эл. почта
+                        <input class="form__input" type="email" placeholder="Ivanov2021@mail.ru">
+                      </lable>
+                    </div>
+                  </div>
+                  <div class="form__item">
+                    <div class="form__flex-row">
+                      <div class="form__row-title form__row-title_gcol_span_6"> Адрес доставки</div>
+                      <button class="btn-underline btn-underline_edit">Редактировать
+                        <div class="dec-underline"></div>
+                      </button>
+                    </div>
+                    <div class="form__row form__row_mb_30">
+                      <lable class="form__label form__label_md">Город*
+                        <input class="form__input" type="text" placeholder="Москва">
+                      </lable>
+                      <lable class="form__label form__label_bg">Улица, дом*
+                        <input class="form__input" type="text" placeholder="ул. Ленина д. 25">
+                      </lable>
+                    </div>
+                    <div class="form__row">
+                      <lable class="form__label form__label_sm"> <span>Квартира / офис*</span>
+                        <input class="form__input" type="text" placeholder="589">
+                      </lable>
+                      <lable class="form__label form__label_sm"> <span>Подъезд</span>
+                        <input class="form__input" type="text" placeholder="5">
+                      </lable>
+                      <lable class="form__label form__label_sm"> <span>Этаж</span>
+                        <input class="form__input" type="text" placeholder="5">
+                      </lable>
+                      <lable class="form__label form__label_sm"><span>Домофон</span>
+                        <input class="form__input" type="text" placeholder="7350">
+                      </lable>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="account__person-card-wrapper">
+                <div class="person-card">
+                  <div class="person-card__content">
+                    <div class="person-card__main">
+                      <div class="person-card__image-wrapper"><img class="person-card__image" src="img/avatar_3.jpg" alt=""></div>
+                      <div class="person-card__main-info">
+                        <p class="person-card__your-manager">Ваш менеджер:</p>
+                        <p class="person-card__name">Валерия</p>
+                        <p class="person-card__status">Не в сети</p>
+                      </div>
+                    </div>
+                    <div class="person-card__info"><a class="contact-phone contact-phone_black person-card__phone" href="tel:89098162300">8(909)816-23-00</a>
+                      <div class="person-card__social"><a class="person-card__social-link" href="#">Viber</a><a class="person-card__social-link" href="#">Whats App</a><a class="person-card__social-link" href="#">Telegram</a></div><a class="contact-phone contact-phone_black" href="tel:88006006191">8(800)600-61-91</a>
+                      <p>(Звонок бесплатный)</p><a class="person-card__mail contact-mail contact-mail_black" href="mailto:Mr.Driskell@mail.ru">Mr.Driskell@mail.ru</a>
+                      <p>
+                        Понедельник — Пятница<br>
+                        с 7:00 до 15: 00 (МСК)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="person-card__discount">Ваша Персональная скидка:<span class="person-card__discount-value">15%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-mob-off">
+            <div class="order-history"> 
+              <h3 class="order-history__title">История заказов</h3>
+              <div class="drop order-history__drop">
+                <div class="drop__label">
+                  <div class="drop__label-item">
+                    <div class="drop__label-item-title">Дата:</div>
+                    <div class="drop__label-item-text">10.05.2021</div>
+                  </div>
+                  <div class="drop__label-item">
+                    <div class="drop__label-item-title">Номер заказа:</div>
+                    <div class="drop__label-item-text">58145</div>
+                  </div>
+                  <div class="drop__label-item">
+                    <div class="drop__label-item-title">Кол-во товаров:</div>
+                    <div class="drop__label-item-text">25</div>
+                  </div>
+                  <div class="drop__label-item">
+                    <div class="drop__label-item-title">На сумму:</div>
+                    <div class="drop__label-item-text">58 180 ₽</div>
+                  </div>
+                  <div class="drop__label-item drop__label-item_mr_40">
+                    <div class="drop__label-item-title">Статус:</div>
+                    <div class="drop__label-item-text">Доставка</div>
+                  </div>
+                </div>
+                <div class="drop__content">
+                  <div class="dec-line"></div>
+                  <div class="drop__item-block">
+                    <div class="drop__item-block-item">
+                      <p class="drop__item-block-title">Информация о заказе</p>
+                      <div class="drop__item-block-group">
+                        <p>Номер заказа:</p>
+                        <div class="drop__item-block-group-text">58145 от 02.10.2021, 20:56:40</div>
+                      </div>
+                      <div class="drop__item-block-group">
+                        <p>Адрес:</p>
+                        <div class="drop__item-block-group-text">Г. Москва, ул. Ленина, д. 50, кв. 50</div>
+                      </div>
+                      <div class="drop__item-block-group">
+                        <p>Сумма заказа:</p>
+                        <div class="drop__item-block-group-text">37 820 ₽</div>
+                      </div>
+                    </div>
+                    <div class="drop__item-block-item">
+                      <p class="drop__item-block-title">Контактное лицо</p>
+                      <div class="drop__item-block-group">
+                        <p>ФИО</p>
+                        <div class="drop__item-block-group-text">Иванов Иван Иванович</div>
+                      </div>
+                      <div class="drop__item-block-group">
+                        <p>Телефон</p>
+                        <div class="drop__item-block-group-text">8 800 555-35-35</div>
+                      </div>
+                      <div class="drop__item-block-group">
+                        <p>Эл. почта</p>
+                        <div class="drop__item-block-group-text">Ivanov2021@mail.ru</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dec-line"></div>
+                  <div class="drop__item-block"> 
+                    <p class="drop__item-block-title">Содержимое заказа</p>
+                    <table class="cart-table">
+                      <thead>
+                        <tr>
+                          <th>Наименование</th>
+                          <th>Цена</th>
+                          <th>Количество</th>
+                          <th>Стоимость</th>
+                        </tr>
+                      </thead>
+                      <tbody> 
+                        <tr class="cart-item">
+                          <td class="cart-item__td-group">
+                            <div class="cart-item__group">
+                              <div class="cart-item__image-wrapper"><img class="cart-item__image" src="img/cart/foxxx_viper_fox_golden_vintage.png" alt="foxxx viper fox golden vintage"></div>
+                              <div class="cart-item__name"> 
+                                <div>Foxxx Viper Fox Golden Vintage Lot #1 RCA</div>
+                                <div class="cart-item__price-mobile"> <span>Цена: 9000₽</span></div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="cart-item__price">9000₽</td>
+                          <td>
+                            <div class="product-main__count">
+                              <button class="product-main__count-button product-main__count-button_subtr" id="prodCountSubtr"></button>
+                              <input class="product-main__input" type="text" value="1">
+                              <button class="product-main__count-button product-main__count-button_add" id="prodCountAdd"></button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="cart-item__cost"><span class="cart-item__cost_mobile">Стоимость: </span><span>34 920₽</span></div>
+                          </td>
+                          <td>
+                            <button class="cart-item__delete"></button>
+                          </td>
+                          <td class="cart-item__line-mobile">
+                            <div class="dec-line"></div>
+                          </td>
+                        </tr>
+                        <tr class="cart-item">
+                          <td class="cart-item__td-group">
+                            <div class="cart-item__group">
+                              <div class="cart-item__image-wrapper"><img class="cart-item__image" src="img/cart/verge_grip.png" alt="verge grip"></div>
+                              <div class="cart-item__name">
+                                <div>Verge Grip 35 мм</div>
+                                <div class="cart-item__price-mobile"> <span>Цена: 1400₽</span></div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="cart-item__price">1400₽</div>
+                          </td>
+                          <td>
+                            <div class="product-main__count">
+                              <button class="product-main__count-button product-main__count-button_subtr" id="prodCountSubtr"></button>
+                              <input class="product-main__input" type="text" value="1">
+                              <button class="product-main__count-button product-main__count-button_add" id="prodCountAdd"></button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="cart-item__cost"><span class="cart-item__cost_mobile">Стоимость: </span><span>1400₽</span></div>
+                          </td>
+                          <td>
+                            <button class="cart-item__delete"></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="drop order-history__drop">
+                <div class="drop__label">
+                  <div class="drop__label-item">
+                    <div class="drop__label-item-title">Дата:</div>
+                    <div class="drop__label-item-text">10.05.2021</div>
+                  </div>
+                  <div class="drop__label-item">
+                    <div class="drop__label-item-title">Номер заказа:</div>
+                    <div class="drop__label-item-text">58145</div>
+                  </div>
+                  <div class="drop__label-item">
+                    <div class="drop__label-item-title">Кол-во товаров:</div>
+                    <div class="drop__label-item-text">25</div>
+                  </div>
+                  <div class="drop__label-item">
+                    <div class="drop__label-item-title">На сумму:</div>
+                    <div class="drop__label-item-text">58 180 ₽</div>
+                  </div>
+                  <div class="drop__label-item drop__label-item_mr_40">
+                    <div class="drop__label-item-title">Статус:</div>
+                    <div class="drop__label-item-text">Доставка</div>
+                  </div>
+                </div>
+                <div class="drop__content">
+                  <div class="dec-line"></div>
+                  <div class="drop__item-block">
+                    <div class="drop__item-block-item">
+                      <p class="drop__item-block-title">Информация о заказе</p>
+                      <div class="drop__item-block-group">
+                        <p>Номер заказа:</p>
+                        <div class="drop__item-block-group-text">58145 от 02.10.2021, 20:56:40</div>
+                      </div>
+                      <div class="drop__item-block-group">
+                        <p>Адрес:</p>
+                        <div class="drop__item-block-group-text">Г. Москва, ул. Ленина, д. 50, кв. 50</div>
+                      </div>
+                      <div class="drop__item-block-group">
+                        <p>Сумма заказа:</p>
+                        <div class="drop__item-block-group-text">37 820 ₽</div>
+                      </div>
+                    </div>
+                    <div class="drop__item-block-item">
+                      <p class="drop__item-block-title">Контактное лицо</p>
+                      <div class="drop__item-block-group">
+                        <p>ФИО</p>
+                        <div class="drop__item-block-group-text">Иванов Иван Иванович</div>
+                      </div>
+                      <div class="drop__item-block-group">
+                        <p>Телефон</p>
+                        <div class="drop__item-block-group-text">8 800 555-35-35</div>
+                      </div>
+                      <div class="drop__item-block-group">
+                        <p>Эл. почта</p>
+                        <div class="drop__item-block-group-text">Ivanov2021@mail.ru</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dec-line"></div>
+                  <div class="drop__item-block"> 
+                    <p class="drop__item-block-title">Содержимое заказа</p>
+                    <table class="cart-table">
+                      <thead>
+                        <tr>
+                          <th>Наименование</th>
+                          <th>Цена</th>
+                          <th>Количество</th>
+                          <th>Стоимость</th>
+                        </tr>
+                      </thead>
+                      <tbody> 
+                        <tr class="cart-item">
+                          <td class="cart-item__td-group">
+                            <div class="cart-item__group">
+                              <div class="cart-item__image-wrapper"><img class="cart-item__image" src="img/cart/foxxx_viper_fox_golden_vintage.png" alt="foxxx viper fox golden vintage"></div>
+                              <div class="cart-item__name"> 
+                                <div>Foxxx Viper Fox Golden Vintage Lot #1 RCA</div>
+                                <div class="cart-item__price-mobile"> <span>Цена: 9000₽</span></div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="cart-item__price">9000₽</td>
+                          <td>
+                            <div class="product-main__count">
+                              <button class="product-main__count-button product-main__count-button_subtr" id="prodCountSubtr"></button>
+                              <input class="product-main__input" type="text" value="1">
+                              <button class="product-main__count-button product-main__count-button_add" id="prodCountAdd"></button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="cart-item__cost"><span class="cart-item__cost_mobile">Стоимость: </span><span>34 920₽</span></div>
+                          </td>
+                          <td>
+                            <button class="cart-item__delete"></button>
+                          </td>
+                          <td class="cart-item__line-mobile">
+                            <div class="dec-line"></div>
+                          </td>
+                        </tr>
+                        <tr class="cart-item">
+                          <td class="cart-item__td-group">
+                            <div class="cart-item__group">
+                              <div class="cart-item__image-wrapper"><img class="cart-item__image" src="img/cart/verge_grip.png" alt="verge grip"></div>
+                              <div class="cart-item__name">
+                                <div>Verge Grip 35 мм</div>
+                                <div class="cart-item__price-mobile"> <span>Цена: 1400₽</span></div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="cart-item__price">1400₽</div>
+                          </td>
+                          <td>
+                            <div class="product-main__count">
+                              <button class="product-main__count-button product-main__count-button_subtr" id="prodCountSubtr"></button>
+                              <input class="product-main__input" type="text" value="1">
+                              <button class="product-main__count-button product-main__count-button_add" id="prodCountAdd"></button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="cart-item__cost"><span class="cart-item__cost_mobile">Стоимость: </span><span>1400₽</span></div>
+                          </td>
+                          <td>
+                            <button class="cart-item__delete"></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__item"><a class="logo" href="index.html"><img class="logo__image-main" src="img/logo/logo.svg" alt="лого" width="186" height="63"></a><a href="#">Политика конфенедциальности</a></div>
+            <div class="footer__item">
+              <ul class="footer__list">
+                <li class="footer__list-item"><a class="footer__link" href="#">Промокоды</a></li>
+                <li class="footer__list-item"><a class="footer__link" href="#">Скидки</a></li>
+                <li class="footer__list-item"><a class="footer__link" href="#">Помощь</a></li>
+              </ul>
+            </div>
+            <div class="footer__item">
+              <ul class="footer__list">
+                <li class="footer__list-item"><a class="footer__link" href="#">О нас</a></li>
+                <li class="footer__list-item"><a class="footer__link" href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer__item footer__item_flex-end">
+              <address class="address">
+                <div class="address__row"><a class="contact-phone contact-phone_mr_25" href="tel:79525525252">+7 952 552-52-52</a>
+                  <div class="address__social"><a class="address__soc-link address__soc-link_icon-telegram" href="#"></a><a class="address__soc-link address__soc-link_icon-watsapp" href="#"></a><a class="address__soc-link address__soc-link_icon-viber" href="#"> </a></div>
+                </div>
+                <div class="address__row">
+                  <div class="address__time">Время работы: с 9:00 до 20:00 по мск</div>
+                </div>
+                <div class="address__row"><a class="contact-mail" href="mailto:Mr.Driskell@mail.ru">Mr.Driskell@mail.ru</a></div>
+              </address>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="js/app.min.js"></script>
+    </div>
+    <div class="popup popup-account">
+      <div class="popup__inner account">
+        <button class="popup__close-btn"></button>
+        <div class="popup__title">Личный кабинет</div>
+        <div class="form popup__form">
+          <div class="form__flex-row">
+            <label class="form__label">Введите номер
+              <input class="form__input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ">
+            </label>
+          </div>
+          <div class="form__flex-row">
+            <button class="form__btn btn btn_orange" id="getcode">Получить код в SMS</button>
+          </div>
+          <div class="form__flex-row">
+            <label class="custom-checkbox-label form-cb">
+              <input class="checkbox hidden" type="checkbox" name="option1"/><span class="custom-checkbox custom-checkbox_after"></span><span class="custom-checkbox-text">При воходе или регистрации вы соглашаетесь с условиями предоставления сервиса</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="popup__inner code">
+        <button class="popup__close-btn"></button>
+        <div class="popup__title popup__title_center">Введите код</div>
+        <div class="form popup__form">
+          <div class="form__flex-row form__flex-row_code">
+            <input class="form__input form__input_num" type="text" min="0" max="9">
+            <input class="form__input form__input_num" type="text" min="0" max="9">
+            <input class="form__input form__input_num" type="text" min="0" max="9">
+            <input class="form__input form__input_num" type="text" min="0" max="9">
+            <button class="form__btn form__btn_small">ok</button>
+          </div>
+          <div class="form__flex-row form__flex-row_wrap form__flex-row_wrap-gap-5">
+            <p>Вам потупит звонок на <b>+7 (999)529-00-01</b></p>
+            <p>Введите последние 4 цифры звонящего номера.</p>
+            <p>Получить новый код можно будет через 01:48</p>
+          </div>
+          <div class="form__flex-row">
+            <button class="form__btn btn_code">Не приходит код<span class="dec-line dec-line__button dec-line_square dec-line_square-small"></span></button>
+          </div>
+          <div class="form__flex-row">
+            <label class="custom-checkbox-label form-cb">
+              <input class="checkbox hidden" type="checkbox" name="option1"/><span class="custom-checkbox custom-checkbox_after"></span><span class="custom-checkbox-text">При воходе или регистрации вы соглашаетесь с условиями предоставления сервиса</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
