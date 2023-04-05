@@ -51,7 +51,9 @@
 
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
+
+        background-color: $bgCard;
 
         img {
             width: 100%;
@@ -175,6 +177,10 @@
     &__share{
         color: $grey2;
     }
+
+    &__gallery-hidden{
+        display: none;
+    }
 }
 
 
@@ -191,5 +197,38 @@
     &__old{
         color: $grey;
         text-decoration: line-through;
+    }
+}
+
+.product-gallery-thumb{
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.animopacity{
+    animation: animopacity 0.7s;
+}
+
+@keyframes animopacity {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 1000%;
+    }
+}
+
+.fancybox__toolbar{
+    display: none;
+}
+.fancybox__container{
+    --fancybox-bg: rgba(24, 24, 27, 0.75);
+}
+.f-panzoom__content{
+    &:hover{
+        cursor: zoom-in;
+        
     }
 }

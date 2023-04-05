@@ -6,13 +6,13 @@
 section.hero#hero
     .hero__wrapper
         h1.hero__title.visually-hidden Товары для татуировок
-        .swiper.hero__slider.slider-main
+        .swiper.hero__slider.slider-main(data-aos="fade-in")
             .swiper-wrapper
 
                 each slide in slides
                     .swiper-slide(data-hash="slide1")
                         .slider-main__slide(data-background="img/hero.png")
-                            .container
+                            .container(data-swiper-parallax="-800" data-swiper-parallax-duration="600")
                                 h2.slider-main__title Лучшие товары в мире татуировок
                                 .slider-main__subtitle.
                                     Оборудование и расходники для самых ярких и качественных работ

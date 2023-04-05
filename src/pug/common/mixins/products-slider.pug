@@ -1,6 +1,6 @@
 include card-slide
 
-mixin product-slider(data, title='', sliderClass='', sectionClass='')
+mixin product-slider(data, title='', sliderClass='', sectionClass='', sliderNavId='')
     -var datahash= `slide` + i
     section.products-slider(class=sectionClass)
         .container_big
@@ -13,6 +13,6 @@ mixin product-slider(data, title='', sliderClass='', sectionClass='')
                             .swiper-wrapper
                                 each slide,i in data
                                     +card(slide,i + 1)
-                            .reviews__slider-pagination#reviews-slider-pagination
-                    .slider-button.slider-button-prev#reviews-slide-prev
-                    .slider-button.slider-button-next#reviews-slide-next 
+                            .reviews__slider-pagination(id=sliderNavId + '-pagination')
+                    .slider-button.slider-button_prev.btn-arrow.btn-arrow_left(id=sliderNavId + '-prev')
+                    .slider-button.slider-button_next.btn-arrow.btn-arrow_right(id=sliderNavId + '-next')

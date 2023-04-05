@@ -4,7 +4,31 @@ import '../libs/inputmask.js'
 import AOS from 'aos';
 import Choices from "choices.js"
 import ellipsis from 'ellipsis.js'
+import { Fancybox, Panzoom } from "@fancyapps/ui";
 
+Fancybox.bind("[data-fancybox]", {
+    hideScrollbar: false,
+});
+
+
+if(document.getElementById("myPanzoom")) {
+    const zoom = new Panzoom(document.getElementById("myPanzoom"), { click: "iterateZoom", dblClick: "toggleCover", panMode: "mousemove", panOnlyZoomed: false });
+
+        window.addEventListener('resize', () =>  {
+            document.querySelector('.panz').style.cssText = `
+                width: 100%;
+                height: auto;
+            `
+            
+        });
+
+}
+
+
+
+/* document.getElementById("myPanzoom").addEventListener("click", () => {
+    zoom.flipX();
+  }); */
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -131,6 +155,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+    // product gallery
+        document.querySelectorAll('.product-gallery-thumb').forEach( th => {
+            th.addEventListener('click', () => {
+                const main = document.querySelector('.product-gallery-main')
+                main.src = th.dataset.src
+                main.classList.remove('animopacity')
+
+                setTimeout(() => {
+                    main.classList.add('animopacity')
+                }, 0);
+                
+                
+            })
+        })
+
+
+
 
     window.addEventListener('resize', () =>  {
         document.body.classList.remove(`lock`)
@@ -229,6 +270,36 @@ document.addEventListener('DOMContentLoaded', () => {
         closeAllSubMenu(e.target.nextElementSibling)
         e.target.nextElementSibling.classList.toggle('sub-menu-active')
     })
+
+
+
+
+    
+const cards = document.querySelectorAll('.card3d')
+
+cards.forEach((c) => {
+    const cardWrapper = c.querySelector('.card3d-wrapper')
+
+    let deg = 6
+    let tr = '0.1s'
+    
+
+
+    c.addEventListener('mousemove', (e) => {
+        let h = c.clientHeight / (deg * 2)
+        let w = c.clientWidth / (deg * 2)
+        h = -h; w = -w
+    
+        let x = ((e.clientY - c.getBoundingClientRect().y) / h) + deg
+        let y = ((e.clientX - c.getBoundingClientRect().x) / w) + deg
+        y *= -1
+        cardWrapper.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`
+        cardWrapper.style.transition = `${tr}s linear`
+    })
+
+    c.addEventListener('mouseleave', () => cardWrapper.style.transform = `rotateX(0deg) rotateY(0deg)`)
+})
+
 
 })
 

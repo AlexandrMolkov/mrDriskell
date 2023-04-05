@@ -2,22 +2,18 @@
     .product-main__gallery
         .product-main__gallery-thumbs
             .product-main__gallery-thumb-image
-                a.gallery__item(data-fancybox="gallery" data-caption="Optional caption" href="img/product/Foxxx_Viper_Fox_Golden_Vintage_1.png")
-                    img(src="img/product/thumb_1.png" alt="Foxxx Viper Fox Golden Vintage 1" width="83" height="92")
+                img.product-gallery-thumb(src="img/product/thumb_1.png" data-src="img/product/Foxxx_Viper_Fox_Golden_Vintage_1.png" alt="Foxxx Viper Fox Golden Vintage 1" width="83" height="92")
             .product-main__gallery-thumb-image
-                a.gallery__item(data-fancybox="gallery" data-caption="Optional caption" href="img/product/Foxxx_Viper_Fox_Golden_Vintage_2.png")
-                    img(src="img/product/thumb_2.png" alt="Foxxx Viper Fox Golden Vintage 1" width="83" height="92")
+                img.product-gallery-thumb(src="img/product/thumb_2.png" alt="Foxxx Viper Fox Golden Vintage 1" width="83" height="92" data-src="img/product/Foxxx_Viper_Fox_Golden_Vintage_2.png")
             .product-main__gallery-thumb-image
-                a.gallery__item(data-fancybox="gallery" data-caption="Optional caption" href="img/product/Foxxx_Viper_Fox_Golden_Vintage_3.png")
-                    img(src="img/product/thumb_3.png" alt="Foxxx Viper Fox Golden Vintage 1" width="83" height="92")
+                img.product-gallery-thumb(src="img/product/thumb_3.png" alt="Foxxx Viper Fox Golden Vintage 1" width="83" height="92" data-src="img/product/Foxxx_Viper_Fox_Golden_Vintage_3.png")
             .product-main__gallery-thumb-image
-                a.gallery__item(data-fancybox="gallery" data-caption="Optional caption" href="img/product/Foxxx_Viper_Fox_Golden_Vintage_4.png")
-                    img(src="img/product/thumb_4.png" alt="Foxxx Viper Fox Golden Vintage 1" width="83" height="92")
+                img.product-gallery-thumb(src="img/product/thumb_4.png" alt="Foxxx Viper Fox Golden Vintage 1" width="83" height="92" data-src="img/product/Foxxx_Viper_Fox_Golden_Vintage_4.png")
         .product-main__gallery-image
-            picture
-                source(srcset="img/product/Foxxx_Viper_Fox_Golden_Vintage_1.webp" type="image/webp")
-                img(src="img/product/Foxxx_Viper_Fox_Golden_Vintage_1.png" alt="Foxxx Viper Fox Golden Vintage" width="470" height="400")
-            .favourite-cb
+            .f-panzoom#myPanzoom
+                img.product-gallery-main.f-panzoom__content.panz(src="img/product/Foxxx_Viper_Fox_Golden_Vintage_1.png" alt="Foxxx Viper Fox Golden Vintage" width="470" height="400" data-src="img/product/Foxxx_Viper_Fox_Golden_Vintage_4.png" )
+            label.product-card__favourite
+                input.product-card__favourite-checbox(type="checkbox")
                 svg(width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg")
                     path(class="favourite-inner"  fill="#f5f5f5" fill-rule="evenodd" clip-rule="evenodd" d="M18.262 9.62586V9.62282C18.7615 9.10014 19.1543 8.4846 19.418 7.81058C19.697 7.09752 19.8254 6.33445 19.7952 5.56936C19.765 4.80427 19.5768 4.0537 19.2424 3.36487C18.9081 2.67604 18.4348 2.06385 17.8524 1.56679C17.27 1.06974 16.591 0.698571 15.8582 0.476641C15.1253 0.254712 14.3545 0.186818 13.5942 0.277231C12.8339 0.367644 12.1005 0.614406 11.4401 1.002C10.8934 1.32291 10.4065 1.73462 9.99998 2.21855C9.59345 1.73462 9.10659 1.32291 8.55986 1.002C7.89951 0.614406 7.16612 0.367644 6.40578 0.277231C5.64545 0.186818 4.87463 0.254712 4.14181 0.476641C3.40899 0.698571 2.73002 1.06974 2.14759 1.56679C1.56517 2.06385 1.0919 2.67604 0.757544 3.36487C0.423189 4.0537 0.234984 4.80427 0.204764 5.56936C0.174544 6.33445 0.302964 7.09752 0.581948 7.81058C0.860931 8.52363 1.28446 9.17127 1.82587 9.71272L9.99997 17.8858L18.262 9.62586Z")
 
@@ -36,8 +32,16 @@
         .product-main__descr.
             Описание: <br>
                 Viper - машинка собрана на мощном моторе, рама данной модели сделана из прочного и лёгкого алюминиевого сплава. В связи с этим вес данной машины всего 120 грамм
-        button.product-main__examples Работы сделанные этой машинкой
+        a.product-main__examples(data-fancybox="gallery" href="img/gallery/tattoo_1.png") Работы сделанные этой машинкой
             span.dec-underline
+        .product-main__gallery-hidden
+            .product-main__examples(data-fancybox="gallery" href="img/gallery/tattoo_2.png")
+            .product-main__examples(data-fancybox="gallery" href="img/gallery/tattoo_3.png")
+            .product-main__examples(data-fancybox="gallery" href="img/gallery/tattoo_4.png")
+            .product-main__examples(data-fancybox="gallery" href="img/gallery/tattoo_5.png")
+            .product-main__examples(data-fancybox="gallery" href="img/gallery/tattoo_6.png")
+            .product-main__examples(data-fancybox="gallery" href="img/gallery/tattoo_7.png")
+            
         .product-main__row
             .product-main__count
                 button.product-main__count-button.product-main__count-button_subtr#prodCountSubtr

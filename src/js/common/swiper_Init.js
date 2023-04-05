@@ -1,13 +1,15 @@
-import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay} from 'swiper';
+import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay, Parallax} from 'swiper';
 
 
     const heroSlider = new Swiper('.hero__slider', {
-        modules: [Navigation,Autoplay,Pagination],
+        modules: [Navigation,Autoplay,Pagination, Parallax],
         direction: 'horizontal',
         loop: false,
         slidesPerView: 1,
         spaceBetween: 0,
         speed: 300,
+
+        parallax: true,
 
         autoplay: {
             delay: 3000,
@@ -111,11 +113,11 @@ import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay} from 'swiper';
         speed: 300,
 
         navigation: {
-            nextEl: '#reviews-slide-next',
-            prevEl: '#reviews-slide-prev',
+            nextEl: '#brand-next',
+            prevEl: '#brand-prev',
         },
         pagination: {
-            el: '#reviews-slider-pagination',
+            el: '#brand-pagination',
             type: 'bullets',
             clickable: 'false',
             dynamicBullets: false,
@@ -141,11 +143,11 @@ import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay} from 'swiper';
         speed: 300,
 
         navigation: {
-            nextEl: '#reviews-slide-next',
-            prevEl: '#reviews-slide-prev',
+            nextEl: '#recomended-next',
+            prevEl: '#recomended-prev',
         },
         pagination: {
-            el: '#reviews-slider-pagination',
+            el: '#recomended-pagination',
             type: 'bullets',
             clickable: 'false',
             dynamicBullets: false,
@@ -171,11 +173,11 @@ import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay} from 'swiper';
         speed: 300,
 
         navigation: {
-            nextEl: '#reviews-slide-next',
-            prevEl: '#reviews-slide-prev',
+            nextEl: '#similar-next',
+            prevEl: '#similar-prev',
         },
         pagination: {
-            el: '#reviews-slider-pagination',
+            el: '#similar-pagination',
             type: 'bullets',
             clickable: 'false',
             dynamicBullets: false,

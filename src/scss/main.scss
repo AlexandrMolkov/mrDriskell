@@ -284,6 +284,7 @@ body {
             border-top: 10px solid transparent;
             border-bottom: 10px solid transparent;
             border-left: 20px solid $accent;
+            left: 1px;
         }
         &::after {
             border-top: 8px solid transparent;
@@ -291,14 +292,15 @@ body {
             border-left: 16px solid $background;
             top: 50%;
             transform: translateY(-50%);
+            right: 1px;
         }
     }
     &__dec-left{
-        left: -20px;
+        left: -19px;
         transform: rotate(180deg) translateY(50%);
     }
     &__dec-right{
-        right: -20px;
+        right: -19px;
     }
 
     &_code{
@@ -779,4 +781,13 @@ a{
     }
 
 
+}
+
+.card3d {
+    perspective: 500px;
+    width: 300px;
+
+}
+.card3d-wrapper{
+    width: 100%;
 }

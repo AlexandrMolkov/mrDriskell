@@ -87,11 +87,11 @@ const images = ()=> {
             optipng({optimizationLevel: 7}),
         ]))
         .pipe(gulp.dest(`${BUILD_FOLDER}/img`))
-        .pipe(gulp.src(`${SOURCE_FOLDER}/img/**/*`))
-        .pipe(webp({
+        //.pipe(gulp.src(`${SOURCE_FOLDER}/img/**/*`))
+/*         .pipe(webp({
             quality: 70
         }))
-        .pipe(gulp.dest(`${BUILD_FOLDER}/img`)) 
+        .pipe(gulp.dest(`${BUILD_FOLDER}/img`))  */
 }
 
 const js = () => {

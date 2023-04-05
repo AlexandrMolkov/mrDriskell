@@ -35,7 +35,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@fancyapps/ui": "4.0",
+    "@fancyapps/ui": "5.0",
     "aos": "^3.0.0-beta.6",
     "choices.js": "^10.2.0",
     "ellipsis.js": "^0.1.3",

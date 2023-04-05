@@ -27,3 +27,8 @@
         @include container();
     }
 }
+.container-tab-off {
+    @media (min-width: $tablet){
+        @include container();
+    }
+}
