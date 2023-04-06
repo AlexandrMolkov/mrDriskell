@@ -63,12 +63,19 @@
 
     &_sm{
         grid-column: span 3;
+
+        @media (max-width: 630px){
+            grid-column: span 10;
+        }
     }
     &_md{
         grid-column: span 4;
 
         @media (max-width: $tablet){
             grid-column: span 5;
+        }
+        @media (max-width: 630px){
+            grid-column: span 10;
         }
     }
     &_bg{
@@ -77,11 +84,18 @@
         @media (max-width: $tablet){
             grid-column: span 7;
         }
+        @media (max-width: 630px){
+            grid-column: span 10;
+        }
     }
 
     &_tablet-6{
         @media (max-width: $tablet){
             grid-column: span 6;
+        }
+
+        @media (max-width: 630px){
+            grid-column: span 10;
         }
     }
 
@@ -101,7 +115,7 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 130%;
-        white-space: nowrap;
+        //white-space: nowrap;
         
         &::after {
             content: "";
