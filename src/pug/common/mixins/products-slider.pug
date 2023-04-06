@@ -14,5 +14,5 @@ mixin product-slider(data, title='', sliderClass='', sectionClass='', sliderNavI
                                 each slide,i in data
                                     +card(slide,i + 1)
                             .reviews__slider-pagination(id=sliderNavId + '-pagination')
-                    .slider-button.slider-button_prev.btn-arrow.btn-arrow_left(id=sliderNavId + '-prev')
-                    .slider-button.slider-button_next.btn-arrow.btn-arrow_right(id=sliderNavId + '-next')
+                    .slider-button.slider-button_prev.btn-arrow.btn-arrow_left.mobile-hidden(id=sliderNavId + '-prev')
+                    .slider-button.slider-button_next.btn-arrow.btn-arrow_right.mobile-hidden(id=sliderNavId + '-next')

@@ -125,10 +125,17 @@ import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay, Parallax} from '
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                spaceBetween: -30
+                spaceBetween: 20
             },
-
-            769: {
+            425: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1024: {
                 slidesPerView: 4,
                 spaceBetween: 20
             },
@@ -155,10 +162,17 @@ import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay, Parallax} from '
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                spaceBetween: -30
+                spaceBetween: 20
             },
-
-            769: {
+            425: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1024: {
                 slidesPerView: 4,
                 spaceBetween: 20
             },
@@ -185,57 +199,19 @@ import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay, Parallax} from '
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                spaceBetween: -30
+                spaceBetween: 20
             },
-
-            769: {
+            425: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1024: {
                 slidesPerView: 4,
                 spaceBetween: 20
             },
         },
     })
-/*     const prod1Slider = new Swiper('.products__slider-cat-1', {
-        modules: [Pagination],
-        direction: 'horizontal',
-        loop: false,
-        slidesPerView: 4,
-        spaceBetween: 0,
-        speed: 300,
-
-        breakpoints: {
-            320: {
-                slidesPerView: 3,
-                spaceBetween: 0
-            },
-
-            768: {
-                slidesPerView: 999,
-                spaceBetween: 0
-            },
-        },
-        pagination: {
-            el: '#products-slider-pagination',
-            type: 'bullets',
-            clickable: 'false',
-            dynamicBullets: false,
-        },
-    }) */
-/*     const tabBtnsSlider = new Swiper('#tabs-buttons-slider', {
-        direction: 'horizontal',
-        loop: false,
-        slidesPerView: 2.5,
-        spaceBetween: 0,
-        speed: 300,
-
-        breakpoints: {
-            1: {
-                slidesPerView: 1.5,
-                spaceBetween: 0
-            },
-
-            320: {
-                slidesPerView: 999,
-                spaceBetween: 0
-            },
-        },
-    }) */

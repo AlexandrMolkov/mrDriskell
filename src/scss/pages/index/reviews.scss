@@ -2,9 +2,22 @@
 
     padding-bottom: 72px;
 
+
+    &__content{
+        @media (max-width: $laptop){
+            overflow: hidden;
+            padding-bottom: 63px;
+        }
+    }
+
     &__title{
         text-align: center;
         margin-bottom: 30px;
+        font-family: Forum;
+
+        @media (max-width: $tablet){
+            text-align: start;
+        }
     }
 
     &__slider-wrapper{
@@ -83,12 +96,20 @@
         flex-direction: column;
         height: auto;
         flex-grow: 1;
+
+        @media (max-width: $mobileL){
+            padding: 0 20px;
+        }
     }
 
     &__text{
         padding: 50px 0;
         
         flex-grow: 1;
+
+        @media (max-width: $mobileL){
+            font-size: 15px;
+        }
 
     }
 

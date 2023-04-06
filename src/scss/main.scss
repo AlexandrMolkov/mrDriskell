@@ -98,6 +98,12 @@ body {
     }
 }
 
+.mobile-hidden{
+    @media (max-width: $mobileL){
+        display: none;
+    }
+}
+
 .tablet-hidden{
     @media (max-width: $tablet){
         display: none;
@@ -787,7 +793,13 @@ a{
     perspective: 500px;
     width: 300px;
 
+    background-color: transparent;
+
 }
 .card3d-wrapper{
     width: 100%;
+}
+
+.product-slider__title{
+    margin-bottom: 40px;
 }

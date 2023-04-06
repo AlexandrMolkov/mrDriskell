@@ -25,6 +25,8 @@
         max-width: 947px;
         margin-bottom: 20px;
 
+        overflow-x: auto;
+
        $gap: 40px;
        
        display: flex;
@@ -32,11 +34,13 @@
        justify-content: space-between;
        align-items: flex-start;
        gap: $gap;
-
        
        > * {
         flex: 1 1 calc((100% / 3) - ($gap*2));
        }
+
+
+
        .product-card{
             &:hover{
                 transform: none;

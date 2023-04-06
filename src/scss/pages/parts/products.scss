@@ -2,6 +2,11 @@
     padding-top: 120px;
     padding-bottom: 120px;
 
+    @media (max-width: $laptop){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
     &__content{
         display: flex;
         flex-direction: column;
@@ -11,6 +16,12 @@
     &__tabs{
 
         .tabs__buttons{
+
+            flex-wrap: wrap;
+
+            @media (max-width: $laptop){
+                gap: 15px;
+            }
 
             &::-webkit-scrollbar {   
                 display: none;            

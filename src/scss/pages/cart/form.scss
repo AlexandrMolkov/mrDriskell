@@ -41,6 +41,10 @@
                 padding-right: 0px !important;
             }
         }
+
+        &.no-padding{
+            padding-right: 0;
+        }
     }
     td{
         padding-bottom: 20px;

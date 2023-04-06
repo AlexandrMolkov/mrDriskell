@@ -105,6 +105,10 @@
         display: flex;
         flex-wrap: wrap;
         padding: 40px;
+
+        @media (max-width: $mobileL){
+            padding: 20px;
+        }
     }
     &__item-block-item{
         &:not(:last-child){

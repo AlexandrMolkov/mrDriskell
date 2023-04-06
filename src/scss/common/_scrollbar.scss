@@ -2,15 +2,15 @@
     width: 12px;               
 }
 *::-webkit-scrollbar-track {
-    background: $accent;    
+    background: $darkOrange;    
     opacity: 0.05;  
 
 }
 *::-webkit-scrollbar-thumb {
-    background-color: $black;    
+    background-color: $accent;    
     border-radius: 0px;    
     opacity: 0.05;     
-    border: 3px solid $accent;  
+    border: 3px solid $darkOrange;  
 }
 *{
     scrollbar-color: $black $accent;

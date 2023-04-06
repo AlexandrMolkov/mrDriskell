@@ -1,5 +1,9 @@
 .about{
     padding: 120px 0;
+
+    max-width: 1920px;
+    margin: 0 auto;
+    
     &__content{
 
         display: grid;
@@ -10,7 +14,7 @@
             grid-column: span 6;
         }
         
-        @media (max-width: $tablet){
+        @media (max-width: $laptop){
         
             > * {
                 grid-column: span 12;
@@ -25,9 +29,11 @@
         height: auto; 
         max-height: 635px;  
         
-        @media (max-width: $tablet){
+        @media (max-width: $laptop){
+            max-width: none;
             height: 400px;
             object-fit: cover;
+            object-position: top;
 
         }
         
@@ -43,6 +49,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: $laptop){
+        max-width: 768px;
+        margin: 0 auto;
+        padding-left: 20px;
+    }
 
     &__title{
         font-size: 50px;

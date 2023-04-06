@@ -4,25 +4,19 @@
     padding-top: 30px;
     padding-bottom: 48px;
 
-    $gap: 45px;
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: $gap;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
     
     > * {
-        flex: 1 1 calc((100% / 2) - ($gap*2));
+        grid-column: span 1;
     }
     
-    @media (max-width: $tablet){
-        align-items: center;
-        justify-content: center;
+    @media (max-width: 767px){
     
         > * {
-            flex: 1 1 calc((100% / 1) - ($gap*2));
+            grid-column: span 2;
         }
     }
 
@@ -30,6 +24,12 @@
     &__gallery{
         display: flex;
         gap: 20px;
+
+        @media (max-width: $laptop){
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 390px;
+        }
 
         @media (max-width: $tablet){
             align-items: center;
@@ -41,6 +41,12 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @media (max-width: $laptop){
+            flex-direction: row;
+            order: 2;
+            gap: 20px;
+        }
     }
     &__gallery-image{
         max-width:470px; 
@@ -67,6 +73,27 @@
         gap: 25px;
         justify-content: space-between;
         align-items: flex-start;
+
+        @media (max-width: $tablet){
+            margin: 0 auto;
+            max-width: 390px;
+        }
+    }
+
+    &__title-tab{
+        display: none;
+        color: $dark;   
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 115%;
+
+        @media (max-width: $tablet){
+            display: block;
+        }
+
+        @media (max-width: $mobileL){
+            font-size: 20px;
+        }
     }
 
     &__title{
@@ -74,15 +101,30 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 115%;
+
+        @media (max-width: $tablet){
+            display: none;
+        }
+
+        @media (max-width: $mobileL){
+            font-size: 20px;
+        }
     }
 
     &__row{
+        position: relative;
         display: flex;
         align-items: center;
         gap: 30px;
+
+        width: 100%;
     }
     &__availability{
         color: $grey2;
+
+        @media (max-width: $tablet){
+            font-size: 17px;
+        }
     }
     &__availability-value{
         color: $accent;
@@ -176,6 +218,12 @@
 
     &__share{
         color: $grey2;
+
+        @media (max-width: 900px){
+            position: absolute;
+            bottom: -30px;
+            right: 0px;
+        }
     }
 
     &__gallery-hidden{
@@ -188,22 +236,39 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    white-space: pre;
+
     &__new{
         font-weight: 700;
         font-size: 24px;
         line-height: 130%;
         color: $accent;
+
+        @media (max-width: $tablet){
+            font-size: 17px;
+        }
     }
     &__old{
         color: $grey;
         text-decoration: line-through;
+
+        @media (max-width: $tablet){
+            font-size: 15px;
+        }
     }
+
+
 }
 
 .product-gallery-thumb{
 
     &:hover{
         cursor: pointer;
+    }
+
+    @media (max-width: $mobileL){
+        width: 100%;
+        height: auto;
     }
 }
 
