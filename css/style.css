@@ -7893,7 +7893,6 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 130%;
-  white-space: nowrap;
 }
 
 .catalog-item__link::after {
@@ -11137,6 +11136,26 @@ body {
 
   .form_search-header {
     display: none;
+  }
+
+  .catalog-item_sm {
+    -ms-grid-column-span: 10;
+    grid-column: span 10;
+  }
+
+  .catalog-item_md {
+    -ms-grid-column-span: 10;
+    grid-column: span 10;
+  }
+
+  .catalog-item_bg {
+    -ms-grid-column-span: 10;
+    grid-column: span 10;
+  }
+
+  .catalog-item_tablet-6 {
+    -ms-grid-column-span: 10;
+    grid-column: span 10;
   }
 
   .cart-side_left {
