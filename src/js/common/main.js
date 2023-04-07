@@ -3,7 +3,7 @@ import {burgInit, burgResize} from './burger.js'
 import '../libs/inputmask.js'
 import AOS from 'aos';
 import Choices from "choices.js"
-import ellipsis from 'ellipsis.js'
+import Ellipsis from 'ellipsis.js'
 import { Fancybox, Panzoom } from "@fancyapps/ui";
 
 Fancybox.bind("[data-fancybox]", {
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('#closefilter')?.addEventListener('click', () => {
         document.querySelector('.catalog-page__filter-mobile').classList.remove('active')
-        document.querySelector('header').classList.add('back')
+        document.querySelector('header').classList.remove('back')
         document.body.classList.remove('lock')
     })
 
@@ -127,10 +127,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.btn-catalog').addEventListener('click', e => {
         e.target.closest('.btn-catalog').classList.toggle('open')
        document.querySelector(e.target.closest('.btn-catalog').dataset.target)
-            .classList.toggle('header__catalog_active',
-                e.target.closest('.btn-catalog').classList.contains('open')
-            )
+            .classList.toggle('active', e.target.closest('.btn-catalog').classList.contains('open'))
     })
+
+/*     document.addEventListener('click', e => {
+        const btn = document.querySelector('.btn-catalog')
+        if(!e.target.classList.closest('btn-catalog')) {
+            btn.classList.remove('open')
+            document.querySelector(btn.dataset.target).classList.remove('open')
+        }
+    }) */
 
 
     //  smooth scroll

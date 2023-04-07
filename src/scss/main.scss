@@ -46,11 +46,13 @@ body {
     font-size: 60px;
     line-height: 100%;
 
+    font-family: Forum;
+
     @media (max-width: $tablet){
-        font-size: 50px;
+        font-size: 40px;
     }
     @media (max-width: $mobileL){
-        font-size: 25px;
+        font-size: 30px;
     }
 
     &_center{
@@ -163,7 +165,7 @@ body {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 20px;
     }
 }
 .btn{
@@ -213,15 +215,6 @@ body {
 
     @media (max-width: $mobileL){
         min-width: fit-content;
-    }
-
-    &_cat{
-        min-width: auto;
-        padding: 14px 24px;
-        background-color: $bgCard;
-        font-size: 20px;
-        line-height: 100%;
-        width: auto;
     }
 
     &_orange{
@@ -309,7 +302,7 @@ body {
         right: -19px;
     }
 
-    &_code{
+    &-code{
         font-size: 20px;
         line-height: 150%;
         color: $accent;
@@ -360,7 +353,7 @@ body {
         position: absolute;
         top: -8px;
         right: -12px;
-
+        text-align: center;
         background-color: $accent;
         font-size: 14px;
    }
@@ -465,6 +458,7 @@ body {
 .dec-line{
     border-bottom: 1px solid $grey;
     position: relative;
+    display: block;
 
     &::before {
         content: "";
@@ -493,7 +487,7 @@ body {
         border-left: 0;
     }
 
-    &__button{
+    &_button{
         width: 100%;
         border-bottom: 1px solid $accent;
         display: block;
@@ -517,7 +511,7 @@ body {
             transition: .3s;
             transform: scaleX(0);
 
-            .active &{
+            .active > &{
                 opacity: 1;
                 transform: scaleX(1);
             }
@@ -802,4 +796,20 @@ a{
 
 .product-slider__title{
     margin-bottom: 40px;
+}
+
+.scroll-horizontal{
+    overflow: auto;
+    white-space: pre;
+
+    &::-webkit-scrollbar {
+        display: none;           
+    }
+}
+
+.tooltip{
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/svg/icons/help.svg');
+    background-repeat: no-repeat;
 }

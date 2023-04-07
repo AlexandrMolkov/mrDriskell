@@ -4,12 +4,7 @@
 
     &__buttons{
         display: flex;
-        border-bottom: $borderWeight solid $borderColor;
-        width: 100%;
         gap: 30px;
-        margin: 0 auto;
-
-
     }
 
     &__button{
@@ -42,6 +37,11 @@
         line-height: 150%;
 
         display: none;
+
+@media (max-width: $tablet){
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
         @media (max-width: 1200px){
             position: relative;

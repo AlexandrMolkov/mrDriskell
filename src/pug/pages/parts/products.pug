@@ -109,19 +109,19 @@ section.products
         .products__content
             h2.products__title.visually-hidden Товары
             .tabs.products__tabs
-                .tabs__buttons
+                .tabs__buttons.scroll-horizontal
                     button.tabs__button(data-target="#prodtab1") Хиты продаж
-                        span.dec-line.dec-line__button.dec-line__button_switchable.dec-line_square
+                        span.dec-line.dec-line_button.dec-line_button_switchable.dec-line_square
                     button.tabs__button(data-target="#prodtab2") Самые популярные
-                        span.dec-line.dec-line__button.dec-line__button_switchable.dec-line_square
+                        span.dec-line.dec-line_button.dec-line_button_switchable.dec-line_square
                     button.tabs__button(data-target="#prodtab3") Новые поступления
-                        span.dec-line.dec-line__button.dec-line__button_switchable.dec-line_square
+                        span.dec-line.dec-line_button.dec-line_button_switchable.dec-line_square
                     button.tabs__button(data-target="#prodtab4") Акционные товары
-                        span.dec-line.dec-line__button.dec-line__button_switchable.dec-line_square
+                        span.dec-line.dec-line_button.dec-line_button_switchable.dec-line_square
                     
                 .tabs__content#prodtab1
                     .swiper.products__slider-cat-1
-                        .products__grid.swiper-wrapper
+                        .products-grid.swiper-wrapper
                             each product,i in products
                                 +card(product,i + 1)
                         .swiper-pagination.slider-main-pagination#products-slider-pagination

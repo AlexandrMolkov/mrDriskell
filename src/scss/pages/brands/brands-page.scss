@@ -7,16 +7,29 @@
     }
 
     &__categories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
+
+        @media (max-width: $tablet){
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+
+        
     }
 
-    &__btn{
-        margin: 0 auto;   
+    &__categories-btn{
+        min-width: auto;
+        padding: 14px 24px;
+        background-color: $bgCard;
+        font-size: 20px;
+        line-height: 100%;
+        width: auto;
+        color: $accent;
+
+        border: 1px solid $accent;
     }
-}
-.brands-page__categories{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }

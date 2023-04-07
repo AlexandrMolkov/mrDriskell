@@ -3,6 +3,8 @@
     max-width: 600px;
     width: 100%;
 
+    aspect-ratio: 1/1;
+
     &__wrapper{
         overflow: hidden;
     }
@@ -34,30 +36,40 @@
     &__pagination{
         padding: 5px 0;
         position: relative;
-        //bottom: 50px;
-        //left: 50%;
         z-index: 10;
 
         display: flex;
         justify-content: center;
-        gap: 8px;
-
-        //transform: translateX(-50%);
+        gap: 4px;
     }
 
     &__pagination-btn{
-        width: 6px;
-        height: 6px;
+        width: 12px;
+        height: 12px;
         border: 0;
 
-        
-        background: #E3E3E3;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;   
+            background: #E3E3E3;
+        }
 
         &:hover{
             cursor: pointer;
         }
         &_active{
-            background-color: $darkOrange;
+
+            &::before {
+                background-color: $darkOrange;
+                
+            }
         }
     }
 

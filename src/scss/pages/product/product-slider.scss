@@ -6,6 +6,10 @@
 
     &_pb_200{
         padding-bottom: 200px;
+
+        @media (max-width: $mobileL){
+            padding-bottom: 80px;
+        }
     }
 
 

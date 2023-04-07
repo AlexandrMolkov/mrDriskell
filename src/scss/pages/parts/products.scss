@@ -16,22 +16,8 @@
     &__tabs{
 
         .tabs__buttons{
-
-            flex-wrap: wrap;
-
-            @media (max-width: $laptop){
-                gap: 15px;
-            }
-
-            &::-webkit-scrollbar {   
-                display: none;            
-            }
-            &::-webkit-scrollbar-track {   
-                display: none; 
-            }
-            &::-webkit-scrollbar-thumb {
-                display: none; 
-            }
+            max-width: 100vw;
+            padding: 0 20px 5px;
         }
 
         .tabs__button{
@@ -60,50 +46,109 @@
             }
         }
     }
-
-    &__grid{
-        padding-top: 37px;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 15px;
-        height: auto;
-
-        margin-bottom: 50px;
-        
-        > * {
-            grid-column: span 3;
-        }
-        
-        @media (max-width: $laptop){
-        
-            > * {
-                grid-column: span 4;
-            }
-        }
-
-        @media (max-width: $tablet){
-            > * {
-                grid-column: span 6;
-            }
-        }
-
-        @media (max-width: $mobileL){
-            > * {
-                grid-column: span 12;
-            }
-        }
-
-        &_tablet-grid-off {
-            @media (max-width: $tablet){
-                display: flex;
-                max-width: 100vw;
-            }
-        }
-
-    }
-
     .swiper{
         overflow: visible;
     }
 }
 
+.products-grid{
+    padding-top: 37px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    height: auto;
+
+    margin-bottom: 50px;
+    
+    > * {
+        grid-column: span 3;
+    }
+    
+    @media (max-width: $laptop){
+    
+        > * {
+            grid-column: span 4;
+        }
+    }
+
+    @media (max-width: $tablet){
+        > * {
+            grid-column: span 6;
+        }
+    }
+
+    @media (max-width: $mobileL){
+        > * {
+            grid-column: span 12;
+        }
+    }
+
+    &_tablet-grid-off {
+        @media (max-width: $tablet){
+            display: flex;
+            max-width: 100vw;
+        }
+    }
+
+}
+
+.product-count {
+    margin-right: 20px;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    &__button{
+        color: #3e424b;
+        position: relative;
+        width: 15px;
+        height: 40px;
+
+        &_subtr{
+            &::before {
+                content: "";
+                position: absolute;
+                width: 11px;
+                height: 1px;
+                background-color: #3e424b;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%);   
+            }
+        }
+
+        &_add{
+            &::before {
+                content: "";
+                position: absolute;
+                width: 11px;
+                height: 1px;
+                background-color: #3e424b;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%);   
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 11px;
+                height: 1px;
+                background-color: #3e424b;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%) rotate(90deg);
+            }
+        }
+    }
+
+    &__input{
+        width: 40px;
+        height: 40px;
+        border: 2px solid #bb8c5f;
+        color: #3e424b;
+        background-color: #eee;
+        text-align: center;
+    }
+}

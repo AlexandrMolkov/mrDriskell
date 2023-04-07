@@ -2,17 +2,17 @@
 .product-description{
     padding-bottom: 70px;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 45px;
     
     > * {
-        grid-column: span 6;
+        grid-column: span 1;
     }
     
     @media (max-width: $tablet){
     
         > * {
-            grid-column: span 12;
+            grid-column: span 2;
         }
     }
 

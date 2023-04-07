@@ -5,7 +5,6 @@ export const burgInit = () => {
 
     document.addEventListener('click', (e) => {
         if(e.target.classList.contains('blur') || e.target.classList.contains('mobile-menu')){
-            console.log('blur')
             document.querySelectorAll(`.burg`)
                 .forEach( b => {
                     b.classList.remove(`open`)

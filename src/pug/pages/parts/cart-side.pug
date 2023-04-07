@@ -15,7 +15,7 @@
                     span Итого:
                     span#total 37 820₽
         .cart-side__row
-            lable.cart-side__label Промокод
+            label.cart-side__label Промокод
                 input.cart-side__input.cart-side__input_border(type="text" placeholder="Driskell2000|")  
         .cart-side__row
             button.btn-underline.btn-underline_p-top_15 Активировать промокод    
@@ -30,19 +30,19 @@
                     <input class="hidden" type="radio" name="payment" checked required="" value="Онлайн на сайте">
                     <span class="custom-radio custom-radio_after"></span>
                     <span class="custom-radio-text">Онлайн на сайте</span>
-                    span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                    span.tooltip(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
                 </label>
                 <label class="custom-radio-label">
                 <input class="hidden" type="radio" name="payment" required value="Наложенным платежом">
                     <span class="custom-radio custom-radio_after"></span>
                     <span class="custom-radio-text">Наложенным платежом</span>
-                    span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                    span.tooltip(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
                 </label>
                 <label class="custom-radio-label">
                 <input class="hidden" type="radio" name="payment" required value="Безналичный расчет">
                     <span class="custom-radio custom-radio_after"></span>
                     <span class="custom-radio-text">Безналичный расчет</span>
-                    span.custom-radio-info(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
+                    span.tooltip(title='Оплата товара наличными при получении в отделении Почты России, дополнительно оплачивается сбор в размере 2% от суммы платежа')
                 </label>
             </div>
         .cart-side__row
@@ -53,14 +53,15 @@
                     <input class="hidden" type="radio" name="delivery" checked="" required="" value="Курьерская служба">
                     <span class="custom-radio custom-radio_after"></span>
                     <span class="custom-radio-text">Курьерская служба</span>
-                    span.custom-radio-info(title='Стоимость доставки рассчитывается при звонке менеджером')
+                    span.tooltip(title='Стоимость доставки рассчитывается при звонке менеджером')
                 </label>
                 <label class="custom-radio-label">
                     <input class="hidden" type="radio" name="delivery" required="" value="Почта России">
                     <span class="custom-radio custom-radio_after"></span>
                     <span class="custom-radio-text">Почта России</span>
                     <span class="custom-radio-text">Курьерская служба</span>
-                    span.custom-radio-info(title='Стоимость доставки рассчитывается при звонке менеджером')
+                    span.tooltip(title='Стоимость доставки рассчитывается при звонке менеджером')
+                        span.tooltip-content
                 </label>
             </div>
 

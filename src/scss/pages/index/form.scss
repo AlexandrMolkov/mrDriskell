@@ -5,6 +5,11 @@
     max-width: 1920px;
     margin: 0 auto;
 
+    @media (max-width: $mobileL){
+        padding-top: 80px;
+        padding-bottom: 120px;
+    }
+
     &__title{
         font-family: Forum;
         margin-bottom: 30px;

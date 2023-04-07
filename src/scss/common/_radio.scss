@@ -41,15 +41,11 @@
 }
 input:focus{
     ~ .custom-radio{
-        /* outline: 2px solid $accent; */
 
         &::before {
             opacity: 0;
         }
     }
-/*     ~ .custom-checkbox{
-        outline: 2px solid $accent;
-    } */
 }
 
 // Checked
@@ -62,7 +58,6 @@ input:checked{
     }
 }
 input.hidden{
-    //visibility: hidden;
     width: 0;
     height: 0;
     position: absolute;
@@ -89,10 +84,4 @@ input.hidden{
 .custom-radio-text{
     font-size: 1rem;
     margin-right: 10px;
-}
-.custom-radio-info{
-    width: 20px;
-    height: 20px;
-    background-image: url('../img/svg/icons/help.svg');
-    background-repeat: no-repeat;
 }

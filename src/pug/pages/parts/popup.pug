@@ -16,10 +16,10 @@
         .popup__title.popup__title_center Введите код
         .form.popup__form
             .form__flex-row.form__flex-row_code
-                    input.form__input.form__input_num(type="text" min="0" max="9")
-                    input.form__input.form__input_num(type="text" min="0" max="9")
-                    input.form__input.form__input_num(type="text" min="0" max="9")
-                    input.form__input.form__input_num(type="text" min="0" max="9")
+                    input.form__input.form__input_num(type="text")
+                    input.form__input.form__input_num(type="text")
+                    input.form__input.form__input_num(type="text")
+                    input.form__input.form__input_num(type="text")
                     button.form__btn.form__btn_small ok
 
             .form__flex-row.form__flex-row_wrap.form__flex-row_wrap-gap-5
@@ -27,7 +27,7 @@
                 p Введите последние 4 цифры звонящего номера.
                 p Получить новый код можно будет через 01:48
             .form__flex-row
-                button.form__btn.btn_code Не приходит код
-                    span.dec-line.dec-line__button.dec-line_square.dec-line_square-small
+                button.form__btn.btn-code Не приходит код
+                    span.dec-line.dec-line_button.dec-line_square.dec-line_square-small
             .form__flex-row
                 +checkbox('При воходе или регистрации вы соглашаетесь с условиями предоставления сервиса','option1',false,'after',false)(class='form-cb')

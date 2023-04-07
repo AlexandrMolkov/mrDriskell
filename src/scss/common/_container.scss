@@ -9,15 +9,15 @@
     @include container()
 }
 
-.container_big {
+.container-big {
     @include container(1376px);
 }
-.container_laptop-on {
+.container-laptop-on {
     @media (max-width: $laptop){
         @include container();
     }
 }
-.container_laptop-off {
+.container-laptop-off {
     @media (min-width: $laptop){
         @include container();
     }

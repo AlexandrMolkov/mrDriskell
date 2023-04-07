@@ -15,8 +15,19 @@
         margin-bottom: 40px;
 
         display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
+        gap: 20px;
+    }
+    &__categories-btn{
+
+        min-width: auto;
+        padding: 14px 24px;
+        background-color: $bgCard;
+        font-size: 20px;
+        line-height: 100%;
+        width: auto;
+        color: $accent;
+
+        border: 1px solid $accent;
     }
 
     &__btn{

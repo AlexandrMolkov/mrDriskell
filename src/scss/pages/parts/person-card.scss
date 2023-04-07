@@ -6,9 +6,11 @@
     padding: 40px;
     background-color: $bgCard;
 
+    
+
     @media (max-width: 1260px){
         padding: 0px;
-        
+        box-shadow: -4px 0 15px 5px rgba(0,0,0,0.1);
     }
 
     &__main{

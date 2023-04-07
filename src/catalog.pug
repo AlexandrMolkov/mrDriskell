@@ -14,12 +14,12 @@ block content
                     a.breadcrumbs__item(href="catalog.html") Каталог
                     a.breadcrumbs__item Тату машинки
                 .catalog-page__content
-                    h2.title.catalog-page__title Тату машинки
-                    .catalog-page__categories
-                        button.btn.btn_cat Для начинающих
-                        button.btn.btn_cat От билдеров
-                        button.btn.btn_cat Для профессионалов
-                        button.btn.btn_cat Расходники
+                    h1.title.catalog-page__title Тату машинки
+                    .catalog-page__categories.scroll-horizontal
+                        a.catalog-page__categories-btn Для начинающих
+                        a.catalog-page__categories-btn От билдеров
+                        a.catalog-page__categories-btn Для профессионалов
+                        a.catalog-page__categories-btn Расходники
                     
                     button.catalog-page__filter-btn Фильтр
                     .catalog-page__filter-mobile
@@ -27,10 +27,10 @@ block content
                             .catalog-page__filter-mobile-close-btn#closefilter
                             p.catalog-page__filter-mobile-title Фильтр
                             .filter__item 
-                                label.filter__label Цена
-                                    input#filter-price.filter__input(type="number", name="price-min" min="0" value="4500")
+                                .filter__label Цена
+                                    input#filter-price-min.filter__input(type="number", name="price-min" min="0" value="4500")
                                     span.filter__dec 
-                                    input#filter-price.filter__input(type="number", name="price-max" min="0" value="38000")
+                                    input#filter-price-max.filter__input(type="number", name="price-max" min="0" value="38000")
                             .dec-line
             
                             .filter__item
@@ -60,10 +60,10 @@ block content
 
                     .catalog-page__filter.filter
                         .filter__item 
-                            label.filter__label Цена
-                                input#filter-price.filter__input(type="number", name="price-min" min="0" value="4500")
+                            .filter__label Цена
+                                input.filter__input(type="number", name="price-min" min="0" value="4500")
                                 span.filter__dec 
-                                input#filter-price.filter__input(type="number", name="price-max" min="0" value="38000")
+                                input.filter__input(type="number", name="price-max" min="0" value="38000")
                         .filter__item
                             label.filter__label Тип машинки
                                 select.js-choice.js-choice-type.filter__select(name="type")

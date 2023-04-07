@@ -51,7 +51,7 @@ import Swiper, {Navigation,Pagination,EffectCoverflow,Autoplay, Parallax} from '
         },
         breakpoints: {
             320: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 0
             },
             425: {
