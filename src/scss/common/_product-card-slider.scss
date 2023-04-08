@@ -9,8 +9,15 @@
         overflow: hidden;
     }
 
-    &__slide{
+    &.init &__slide{
         opacity: 0;
+    }
+    &.init &__slide.active{
+        opacity: 1;
+    }
+
+    &__slide{
+        opacity: 1;
         transition: opacity .6s;
 
         &:not(:first-child){
@@ -19,10 +26,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-        }
-
-        &_active{
-            opacity: 1;
         }
 
         & img{

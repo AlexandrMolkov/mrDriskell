@@ -9,9 +9,10 @@ document.querySelectorAll(`.${sliderClassName}`)
         let curentSlide = 0
         let prevBtn
         let nextBtn
+        sl.classList.add('init')
 
         const removeClasses = () => {
-            slides.forEach(s => s.classList.remove(`${sliderClassName}__slide_active`))
+            slides.forEach(s => s.classList.remove(`active`))
             sliderPagiBtns.forEach(btn => btn.classList.remove(`${sliderClassName}__pagination-btn_active`))
         }
         const navBtnclassesToggle = () => {
@@ -31,7 +32,7 @@ document.querySelectorAll(`.${sliderClassName}`)
             sl.addEventListener('click', (e) => {
                 if (e.target.classList.contains(`${sliderClassName}__pagination-btn`)){
                     removeClasses()
-                    slides[sliderPagiBtns.indexOf(e.target)].classList.add(`${sliderClassName}__slide_active`)
+                    slides[sliderPagiBtns.indexOf(e.target)].classList.add(`active`)
                     e.target.classList.add(`${sliderClassName}__pagination-btn_active`)
                     curentSlide = sliderPagiBtns.indexOf(e.target)
 
@@ -49,7 +50,7 @@ document.querySelectorAll(`.${sliderClassName}`)
             prevBtn.classList.add('disabled')
 
             const addClasses = () => {
-                slides[curentSlide].classList.add(`${sliderClassName}__slide_active`)
+                slides[curentSlide].classList.add(`active`)
                 if(pagi) pagi.children[curentSlide].classList.add(`${sliderClassName}__pagination-btn_active`)
             }
 
@@ -74,5 +75,5 @@ document.querySelectorAll(`.${sliderClassName}`)
             })
         }
 
-        slides[0].classList.add('product-card-slider__slide_active')
+        slides[0].classList.add('active')
     })

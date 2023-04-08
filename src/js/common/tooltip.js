@@ -1,30 +1,44 @@
 "use strict"
 
-const tooltip = document.querySelector('.tooltip-content')
-tooltip.innerText = "HI"
-document.querySelectorAll('.tooltip').forEach(t => {
-    t.addEventListener('mouseenter', e => {
-        const offset = 5
-        tooltip.classList.add('active')
-        tooltip.innerText = t.textContent
+if(document.querySelector('.tooltip')) {
 
-        const width = tooltip.getBoundingClientRect().width + 20 
+    const tooltip = document.createElement('div')
+    tooltip.classList.add('tooltip-content')
+    document.body.append(tooltip)
 
-        if(e.clientX + width > window.innerWidth){
-            tooltip.style.left = e.pageX - width + offset + 'px'
-            tooltip.style.top = e.pageY + offset + 'px'
-        } else{
-            tooltip.style.left = e.pageX + offset + 'px'
-            tooltip.style.top = e.pageY + offset + 'px'
+    document.querySelectorAll('.tooltip').forEach(t => {
+        if(!tooltip) {
         }
-    })
-    t.addEventListener('mouseout', e => {
-        tooltip.classList.remove('active')
-    })
+        t.addEventListener('mouseenter', e => {
+            const offset = 5
+            tooltip.classList.add('active')
+            tooltip.innerText = t.textContent
+    
+            const width = tooltip.getBoundingClientRect().width + 20 
+    
+            if(e.clientX + width > window.innerWidth){
+                tooltip.style.left = e.pageX - width + offset + 'px'
+            } else{
+                tooltip.style.left = e.pageX + offset + 'px'
+               
+            }
+            if(tooltip.getBoundingClientRect().height + e.pageY > window.innerWidth){
+                console.log('if')
+                
+                tooltip.style.top = e.pageY - tooltip.getBoundingClientRect().height - offset + 'px'
+            } else{
+                tooltip.style.top = e.pageY + offset + 'px'
+            }
 
-    window.addEventListener('resize', () =>  {
-        tooltip.style.left = 0
-        tooltip.style.top = 0
-        
-    });
-})
+        })
+        t.addEventListener('mouseout', e => {
+            tooltip.classList.remove('active')
+        })
+    
+        window.addEventListener('resize', () =>  {
+            tooltip.style.left = 0
+            tooltip.style.top = 0
+            
+        });
+    })
+}

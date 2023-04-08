@@ -44,6 +44,10 @@ body {
         align-items: flex-start;
         flex-wrap: wrap;
         gap: 30px;
+
+        @media (max-width: 539px){
+            flex-direction: column;
+        }
         
     }
 
@@ -63,5 +67,12 @@ body {
 
     .logo{
         margin-bottom: 50px;
+    }
+
+    .contact-phone{
+        font-size: 20px;
+    }
+    .contact-mail{
+        font-size: 20px;
     }
 }
